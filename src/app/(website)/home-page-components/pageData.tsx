@@ -63,17 +63,31 @@ export const homePageData = {
         images: ["/temple1.png", "/temple2.png"],
       },
       {
-        title: "Dawn",
-        subtitle: "Temple bells, first",
+        title: "Morning",
+        subtitle: "A sattvic table",
         description:
-          "Before the resort wakes, the on site temple does. Guests who rise early join the first aarti of the day, the courtyard still cool.",
+          "Breakfast under open corridors — pure vegetarian, unhurried, taken in the company of pillars older-looking than they are.",
         images: ["/temple2.png", "/temple1.png"],
       },
       {
-        title: "Dawn",
-        subtitle: "Temple bells, first",
+        title: "Afternoon",
+        subtitle: "Stillness, indoors",
         description:
-          "Before the resort wakes, the on site temple does. Guests who rise early join the first aarti of the day, the courtyard still cool.",
+          "The wellness spa and meditation lawns hold the heat of the day at bay — quiet spaces built for nothing but rest.",
+        images: ["/temple1.png", "/temple2.png"],
+      },
+      {
+        title: "Evening",
+        subtitle: "Evening aarti",
+        description:
+          "The courtyard fills. Devotees, wedding guests, and travelers stand shoulder to shoulder for the day's second offering of light.",
+        images: ["/temple1.png", "/temple2.png"],
+      },
+      {
+        title: "Night",
+        subtitle: "Dinner, under the stars",
+        description:
+          "The rooftop restaurant closes the day the way it opened — slowly, with good food and the temple lights visible in the distance.",
         images: ["/temple1.png", "/temple2.png"],
       },
     ],

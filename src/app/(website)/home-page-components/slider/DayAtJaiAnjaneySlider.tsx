@@ -52,14 +52,14 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
       className="
         grid
         grid-cols-1
-        md:grid-cols-[0.52fr_1fr]
+        md:grid-cols-[0.58fr_1fr]
         gap-10
         lg:gap-14
         items-center
       "
     >
       <div className="flex flex-col gap-4 text-right">
-        <Tagline eyebrow={title} />
+       <p className="text-lg italic font-secondary text-primary capitalize font-semibold">{title}</p>
 
         <h3 className="text-dark lg:text-3xl text-2xl font-primary">
           {subtitle}

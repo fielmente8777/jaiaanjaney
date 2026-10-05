@@ -127,30 +127,50 @@
 
 .bg-image {
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-  }
-
   &::before {
     content: "";
     position: absolute;
-    background-size: cover;
-    background-image: url("/landing-page/bg.png");
+    background-size: contain;
+    background-image: url("/bg.png");
+    background-repeat: no-repeat;
     z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 25%;
-    rotate: 180deg;
-    opacity: 0.8;
-    @media (width < 668px) {
-      height: 8%;
-      rotate: -180deg;
-      width: 200%;
+    width: 360px;
+    height: 315px;
+    animation: bg-rotate 20s linear infinite;
+    @media (max-width: 768px) {
+      display: none;
     }
+  }
+}
+
+@keyframes bg-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.bg-left {
+  &::before {
+    left: -185px;
+    top: 0px;
+  }
+}
+
+.bg-right {
+  &::before {
+    right: -175px;
+    top: 0px;
+  }
+}
+
+.bg-bottom-left {
+  &::before {
+    left: -185px;
+    bottom: 0px;
   }
 }
 

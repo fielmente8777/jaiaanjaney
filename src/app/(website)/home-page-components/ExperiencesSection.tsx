@@ -12,7 +12,9 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
   image,
 }) => {
   return (
-    <SectionWithContainer>
+    <SectionWithContainer sectionClassName="relative bg-image bg-left">
+      <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-12 gap-6">
         {/* content */}
         <div className="flex flex-col justify-center items-center text-center gap-4">

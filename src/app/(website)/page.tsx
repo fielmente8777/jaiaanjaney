@@ -14,7 +14,7 @@ import Banner from "@/components/banner/Banner";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-[#FAF6EC] after:z-[-3]">
       <Banner {...homePageData.hero} />
       <Highlights items={homePageData.highlights} />
       <AboutSection {...homePageData.aboutSection} />

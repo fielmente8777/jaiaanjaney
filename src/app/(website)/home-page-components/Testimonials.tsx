@@ -22,9 +22,9 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
           sizes="100vw"
         />
       </div>
-      <div className="lg:pl-7 max-lg:px-4  py-16 flex flex-col gap-6 bg-linear-to-l from-secondary to-primary ">
+      <div className="lg:pl-7 max-lg:px-4  py-16 flex flex-col gap-6 -bg-linear-90 from-secondary to-primary ">
         <div className="flex flex-col gap-2 items-center text-center">
-          <Tagline eyebrow={eyebrow} textColor="text-white" />
+          <Tagline eyebrow={eyebrow} textColor="text-white" showIcon={false} />
           <SectionHeading title={title} titleColor="white" />
         </div>
         <Image src="/google-icon.png" alt="Google Reviews" width={50} height={50} className="mx-auto" />

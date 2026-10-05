@@ -32,7 +32,7 @@ const WebsiteNav = () => {
         </Container>
       </div>
       {/* logo and page links */}
-      <nav>
+      <nav className="bg-[#FAF6EC]">
         <Container className="flex items-center justify-between py-4">
           <Link href="/" className="relative block w-[120px] aspect-4/3">
             <Image
@@ -42,7 +42,7 @@ const WebsiteNav = () => {
               alt="logo"
             />
           </Link>
-          <ul className="flex items-center justify-center gap-4">
+          <ul className="flex items-center justify-center gap-10">
             {NavLink.links
               .slice(0, NavLink.links.length - 1)
               .map((link, index) => (
