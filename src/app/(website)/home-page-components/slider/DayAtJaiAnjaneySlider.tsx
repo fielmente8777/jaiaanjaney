@@ -32,7 +32,7 @@ const DayAtJaiAnjaneySlider: React.FC<{
         renderSlide={(item) => <DayAtJaiAnjaneyCard {...item} />}
       />
 
-      <div className="absolute z-50 top-1/2 -translate-y-1/2 left-[31.5%] rotate-90 flex justify-center items-center">
+      <div className="lg:absolute z-50 lg:top-1/2 -top-15 lg:-translate-y-1/2 lg:left-[31.5%] lg:rotate-90 flex justify-center items-center">
         <div className="day-pagination gap-6 flex justify-center items-center" />
       </div>
     </div>
@@ -59,16 +59,31 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
       "
     >
       <div className="flex flex-col gap-4 text-right">
-       <p className="text-lg italic font-secondary text-primary capitalize font-semibold">{title}</p>
+        <p className="text-lg italic font-secondary text-primary capitalize font-semibold">
+          {title}
+        </p>
 
         <h3 className="text-dark lg:text-3xl text-2xl font-primary">
           {subtitle}
         </h3>
+        <div className="grid grid-cols-2 gap-6 items-center md:hidden">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className={clsx(
+                "w-full relative",
+                index === 0 ? "aspect-[2/2.5]" : "aspect-square"
+              )}
+            >
+              <Image src={image} alt={title} fill className="object-cover" />
+            </div>
+          ))}
+        </div>
 
         <p className="text-light">{description}</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="grid grid-cols-2 gap-6 items-center max-md:hidden">
         {images.map((image, index) => (
           <div
             key={index}

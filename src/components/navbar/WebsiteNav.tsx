@@ -1,21 +1,24 @@
 "use client";
+import { useWebContext } from "@/context-api/WebContext";
+import clsx from "clsx";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { BiMenu } from "react-icons/bi";
+import LinkButton from "../buttons/LinkButton";
 import { Container } from "../sectionComponants";
 import { NavLink, NavUpperLinks } from "./navlink";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import clsx from "clsx";
-import LinkButton from "../buttons/LinkButton";
 
 const WebsiteNav = () => {
   const pathName = usePathname();
+  const { setIsOpenNav } = useWebContext();
   return (
     <header className=" max_screen_width">
       {/* Upper Nav */}
       <div className="bg-linear-to-r from-primary to-secondary">
-        <Container className="flex items-center justify-between py-2 text-white">
+        <Container className="flex items-center justify-center lg:justify-between py-2 text-white">
           <p className="">{NavUpperLinks.text}</p>
-          <ul className="flex items-center divide-x divide-white ">
+          <ul className="flex max-lg:hidden items-center divide-x divide-white ">
             {NavUpperLinks.links.map((link, index) => (
               <li key={index}>
                 <Link
@@ -34,7 +37,11 @@ const WebsiteNav = () => {
       {/* logo and page links */}
       <nav className="bg-[#FAF6EC]">
         <Container className="flex items-center justify-between py-4">
-          <Link href="/" className="relative block w-[120px] aspect-4/3">
+          {/* logo */}
+          <Link
+            href="/"
+            className="relative block lg:w-[120px] w-[90px] aspect-4/3"
+          >
             <Image
               fill
               className="object-cover"
@@ -42,7 +49,8 @@ const WebsiteNav = () => {
               alt="logo"
             />
           </Link>
-          <ul className="flex items-center justify-center gap-10">
+          {/* page links */}
+          <ul className="flex max-lg:hidden items-center justify-center gap-10">
             {NavLink.links
               .slice(0, NavLink.links.length - 1)
               .map((link, index) => (
@@ -59,11 +67,19 @@ const WebsiteNav = () => {
                 </li>
               ))}
           </ul>
+          {/* button book-now */}
           <LinkButton
             href={NavLink.links[NavLink.links.length - 1].href}
             label={NavLink.links[NavLink.links.length - 1].label}
-            className="uppercase text-white bg-primary hover:bg-secondary lg:px-6 lg:py-3"
+            className="uppercase text-white bg-primary hover:bg-secondary lg:px-6 lg:py-3 max-lg:hidden"
           />
+          {/* nav menu */}
+          <button
+            onClick={() => setIsOpenNav((prev) => !prev)}
+            className="lg:hidden"
+          >
+            <BiMenu className="relative w-8 h-8 col" />
+          </button>
         </Container>
       </nav>
     </header>

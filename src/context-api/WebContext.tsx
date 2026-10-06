@@ -3,14 +3,14 @@ import { createContext, useContext, useState } from "react";
 interface WebContextType {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  selectedVilla: string | null;
-  setSelectedVilla: React.Dispatch<React.SetStateAction<string | null>>;
+  isOpenNav: boolean;
+  setIsOpenNav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 export const WebContext = createContext<WebContextType>({
   isOpen: false,
   setIsOpen: () => {},
-  selectedVilla: null,
-  setSelectedVilla: () => {},
+  isOpenNav: false,
+  setIsOpenNav: () => {},
 });
 
 export const WebContextProvider = ({
@@ -19,12 +19,10 @@ export const WebContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedVilla, setSelectedVilla] = useState<string | null>(null);
+  const [isOpenNav, setIsOpenNav] = useState(false);
 
   return (
-    <WebContext.Provider
-      value={{ isOpen, setIsOpen, selectedVilla, setSelectedVilla }}
-    >
+    <WebContext.Provider value={{ isOpen, setIsOpen, isOpenNav, setIsOpenNav }}>
       {children}
     </WebContext.Provider>
   );

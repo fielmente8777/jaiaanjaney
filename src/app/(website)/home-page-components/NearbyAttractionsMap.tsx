@@ -174,15 +174,6 @@ const NearbyAttractionsMap: React.FC<Props> = ({ origin, places }) => {
               {active + 1}/{total}
             </p>
           </div>
-
-          <a
-            href={directionsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm uppercase tracking-wider text-primary underline-offset-4 hover:underline"
-          >
-            Get directions ↗
-          </a>
         </div>
       </Container>
     </div>

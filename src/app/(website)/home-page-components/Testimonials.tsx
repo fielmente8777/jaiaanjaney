@@ -13,7 +13,7 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
 }) => {
   return (
     <Section className="grid lg:grid-cols-2 grid-cols-1">
-      <div className="w-full relative aspect-4/3.25">
+      <div className="w-full relative aspect-4/3.25 max-lg:hidden">
         <Image
           src={image}
           alt={title}
@@ -26,8 +26,23 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
         <div className="flex flex-col gap-2 items-center text-center">
           <Tagline eyebrow={eyebrow} textColor="text-white" showIcon={false} />
           <SectionHeading title={title} titleColor="white" />
+          <div className="w-full relative aspect-4/3.25 lg:hidden">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
         </div>
-        <Image src="/google-icon.png" alt="Google Reviews" width={50} height={50} className="mx-auto" />
+        <Image
+          src="/google-icon.png"
+          alt="Google Reviews"
+          width={50}
+          height={50}
+          className="mx-auto"
+        />
         <TestimonialsSlider items={items} />
       </div>
     </Section>

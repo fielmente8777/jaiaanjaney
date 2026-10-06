@@ -9,7 +9,7 @@ const Banner: React.FC<HeroType> = ({ title, description, images, video }) => {
       <div className="absolute inset-0 bg-black/30 z-10" />
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
         <h1 className="text-3xl md:text-5xl font-primary">{title}</h1>
-        <p className="mt-4 text-lg md:text-xl max-w-3xl font-light">{description}</p>
+        <p className="mt-4 text-lg md:text-xl max-w-3xl font-light max-lg:hidden">{description}</p>
       </div>
     </Section>
   );

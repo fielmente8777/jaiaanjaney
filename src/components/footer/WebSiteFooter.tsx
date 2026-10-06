@@ -10,7 +10,7 @@ const WebSiteFooter = () => {
       <Container>
         <div className="grid lg:grid-cols-[1.2fr_1fr_1fr_1fr_auto] md:grid-cols-2 grid-cols-1 gap-10">
           {/* logo */}
-          <Link href="/" className="block relative w-[200px] aspect-4/3.25">
+          <Link href="/" className="block relative w-[200px] max-md:mx-auto aspect-4/3.25">
             <Image src="/logo.png" alt="logo" fill className="object-cover" />
           </Link>
           {/* links */}
@@ -33,7 +33,7 @@ const WebSiteFooter = () => {
           />
         </div>
         <div className="w-full h-px bg-white my-10" />
-        <div className="flex justify-between items-center font-secondary italic">
+        <div className="flex max-lg:flex-col justify-center max-lg:text-center gap-4 lg:justify-between items-center font-secondary italic">
           <p>
             © 2026 Jai Anjaney Resort, All rights reserved. A Sacred Destination
             - Churu District, Rajasthan

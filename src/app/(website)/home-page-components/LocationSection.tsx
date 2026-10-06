@@ -19,6 +19,7 @@ const LocationSection: React.FC<LocationSectionType> = ({
           <Tagline eyebrow={eyebrow} />
           <SectionHeading
             title={title}
+            wrapperClassName="max-md:text-center"
           />
         </div>
       </Container>
