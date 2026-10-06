@@ -3,6 +3,7 @@ import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./style.scss";
+import { WebContextProvider } from "@/context-api/WebContext";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -23,17 +24,41 @@ const trajanPro = localFont({
 const avenir = localFont({
   src: [
     { path: "./fonts/AvenirLTProLight.woff2", weight: "300", style: "normal" },
-    { path: "./fonts/AvenirLTProLightOblique.woff2", weight: "300", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProLightOblique.woff2",
+      weight: "300",
+      style: "italic",
+    },
     { path: "./fonts/AvenirLTProBook.woff2", weight: "350", style: "normal" },
-    { path: "./fonts/AvenirLTProBookOblique.woff2", weight: "350", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProBookOblique.woff2",
+      weight: "350",
+      style: "italic",
+    },
     { path: "./fonts/AvenirLTProRoman.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/AvenirLTProOblique.woff2", weight: "400", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProOblique.woff2",
+      weight: "400",
+      style: "italic",
+    },
     { path: "./fonts/AvenirLTProMedium.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/AvenirLTProMediumOblique.woff2", weight: "500", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProMediumOblique.woff2",
+      weight: "500",
+      style: "italic",
+    },
     { path: "./fonts/AvenirLTProHeavy.woff2", weight: "800", style: "normal" },
-    { path: "./fonts/AvenirLTProHeavyOblique.woff2", weight: "800", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProHeavyOblique.woff2",
+      weight: "800",
+      style: "italic",
+    },
     { path: "./fonts/AvenirLTProBlack.woff2", weight: "900", style: "normal" },
-    { path: "./fonts/AvenirLTProBlackOblique.woff2", weight: "900", style: "italic" },
+    {
+      path: "./fonts/AvenirLTProBlackOblique.woff2",
+      weight: "900",
+      style: "italic",
+    },
   ],
   variable: "--font-avenir",
   display: "swap",
@@ -49,9 +74,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${cormorantGaramond.variable} ${trajanPro.variable} ${avenir.variable}`}
-      suppressHydrationWarning={true}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased" suppressHydrationWarning={true}>
+        <WebContextProvider>{children}</WebContextProvider>
+      </body>
     </html>
   );
 }

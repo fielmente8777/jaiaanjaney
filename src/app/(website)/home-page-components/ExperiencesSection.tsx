@@ -1,16 +1,19 @@
+"use client";
 import { ExperiencesSectionType } from "@/@types/homePage";
 import Accordion from "@/components/accordion/Accordion";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import SectionHeading from "@/components/typography/SectionHeading";
 import Tagline from "@/components/typography/Tagline";
 import Image from "next/image";
+import { useState } from "react";
 
 const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
   eyebrow,
   title,
   items,
-  image,
 }) => {
+  const [selectTitle, setSelectTitle] = useState<string>("");
+  const filteredImage = items.find((item) => item.title === selectTitle);
   return (
     <SectionWithContainer sectionClassName="relative bg-image bg-left">
       <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
@@ -21,15 +24,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
           <Tagline eyebrow={eyebrow} />
           <SectionHeading title={title} wrapperClassName="md:max-w-lg" />
           {/* show image in md screen */}
-          <div className="relative w-full aspect-square md:hidden">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
+          
           <div className="w-full border-t border-secondary">
             {items.map((item, index) => (
               <Accordion
@@ -37,6 +32,8 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
                 q={item.title}
                 a={item.description}
                 i={index}
+                setSelectTitle={setSelectTitle}
+                image={filteredImage?.image || ""}
               />
             ))}
           </div>
@@ -44,7 +41,7 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
         {/* show image in md screen */}
         <div className="relative w-full aspect-square hidden md:block">
           <Image
-            src={image}
+            src={filteredImage?.image || ""}
             alt={title}
             fill
             className="object-cover"

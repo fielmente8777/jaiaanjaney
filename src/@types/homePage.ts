@@ -22,10 +22,10 @@ export interface dayAtJaiAnjaneyType {
 export interface ExperiencesSectionType {
   eyebrow: string;
   title: string;
-  image: string;
   items: {
     title: string;
     description: string;
+    image: string;
   }[];
 }
 

@@ -11,7 +11,10 @@ import { NavLink, NavUpperLinks } from "./navlink";
 
 const WebsiteNav = () => {
   const pathName = usePathname();
-  const { setIsOpenNav } = useWebContext();
+  const { setIsOpenNav, isOpenNav } = useWebContext();
+  const openNav = () => {
+    setIsOpenNav(!isOpenNav);
+  };
   return (
     <header className=" max_screen_width">
       {/* Upper Nav */}
@@ -75,10 +78,13 @@ const WebsiteNav = () => {
           />
           {/* nav menu */}
           <button
-            onClick={() => setIsOpenNav((prev) => !prev)}
+            type="button"
+            onClick={openNav}
+            aria-label="Open mobile navigation"
+            aria-expanded={isOpenNav}
             className="lg:hidden"
           >
-            <BiMenu className="relative w-8 h-8 col" />
+            <BiMenu className="relative h-8 w-8 text-primary" />
           </button>
         </Container>
       </nav>

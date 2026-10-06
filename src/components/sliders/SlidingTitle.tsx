@@ -1,4 +1,3 @@
-import { JSX } from "react/jsx-runtime";
 import "./sliding.title.scss";
 
 export default function SlidingTitle({
@@ -8,11 +7,11 @@ export default function SlidingTitle({
   items: string[];
   ariaHidden?: boolean;
 }) {
-  const titles = [...items, ...items, ...items, ...items, ...items];
+  const titles = [...items, ...items, ...items];
 
   return (
     <div
-      className="relative overflow-hidden py-3 border border-primary text-background-dark max_screen_width bg-white"
+      className="relative overflow-hidden py-3 text-white max_screen_width bg-linear-to-r from-primary to-secondary"
       aria-hidden={ariaHidden}
     >
       <div className="marquee-wrapper">
@@ -21,12 +20,12 @@ export default function SlidingTitle({
             <span
               key={i}
               aria-hidden={i >= items.length}
-              className="marquee-item  uppercase tracking-widest"
+              className="marquee-item  tracking-widest"
             >
               <span dangerouslySetInnerHTML={{ __html: t }}></span>
-              <span className="separator">
+              {/* <span className="separator">
                 <ICon />
-              </span>
+              </span> */}
             </span>
           ))}
         </div>

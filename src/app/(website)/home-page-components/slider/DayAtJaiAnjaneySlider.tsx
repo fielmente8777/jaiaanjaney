@@ -11,7 +11,7 @@ const DayAtJaiAnjaneySlider: React.FC<{
   items: dayAtJaiAnjaneyType["items"];
 }> = ({ items }) => {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative max-lg:pb-8">
       <SwiperCarousel
         data={items}
         slidesPerView={1}
@@ -32,7 +32,7 @@ const DayAtJaiAnjaneySlider: React.FC<{
         renderSlide={(item) => <DayAtJaiAnjaneyCard {...item} />}
       />
 
-      <div className="lg:absolute z-50 lg:top-1/2 -top-15 lg:-translate-y-1/2 lg:left-[31.5%] lg:rotate-90 flex justify-center items-center">
+      <div className="absolute z-50 lg:top-1/2 -bottom-4 -translate-y-1/2 left-[31.5%]  lg:rotate-90 flex justify-center items-center">
         <div className="day-pagination gap-6 flex justify-center items-center" />
       </div>
     </div>

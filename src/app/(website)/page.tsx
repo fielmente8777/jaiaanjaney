@@ -11,6 +11,7 @@ import {
 } from "./home-page-components";
 import { homePageData } from "./home-page-components/pageData";
 import Banner from "@/components/banner/Banner";
+import SlidingTitle from "@/components/sliders/SlidingTitle";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <DayAtJaiAnjaney {...homePageData.dayAtJaiAnjaney} />
       <ExperienceSection {...homePageData.experiencesSection} />
       <RoomsSection {...homePageData.roomsSection} />
+      <SlidingTitle items={homePageData.slidingTitleItems} />
       <AmenitiesSection {...homePageData.amenitiesSection} />
       <LocationSection {...homePageData.locationSection} />
       <Testimonials {...homePageData.testimonials} />

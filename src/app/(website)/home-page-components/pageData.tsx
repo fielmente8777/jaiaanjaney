@@ -1,6 +1,4 @@
 export const homePageData = {
- 
-
   hero: {
     title: "Where Spirituality Meets Luxury",
     description:
@@ -96,24 +94,24 @@ export const homePageData = {
   experiencesSection: {
     eyebrow: "Four Occasions, One Sacred Ground",
     title: "One Destination. Endless Experiences.",
-    image: "/wedding.png",
+
     items: [
       {
         title: "Weddings",
         description:
           "Residential & non residential celebrations across 150 rooms, two banquet halls, open lawns, and an on site temple for pre wedding rituals.",
+        image: "/wedding.png",
       },
       {
         title: "Pilgrimage",
         description: "",
+        image: "/wedding.png",
       },
-      {
-        title: "Kathas & Spiritual Events",
-        description: "",
-      },
+
       {
         title: "MICE",
         description: "",
+        image: "/weddin.png",
       },
     ],
   },
@@ -128,7 +126,9 @@ export const homePageData = {
     },
     images: ["/room.png", "/room.png", "/room.png"],
   },
-
+  slidingTitleItems: [
+    "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
+  ],
   amenitiesSection: {
     eyebrow: "Beyond The Stay",
     title: "An estate built for rest, ritual, & celebration",
