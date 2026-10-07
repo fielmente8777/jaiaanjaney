@@ -29,13 +29,13 @@ const RoomsSection: React.FC<RoomsSectionType> = ({ title, cta, images }) => {
       />
       <SectionHeading
         title={title}
-        wrapperClassName="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 max-w-sm text-center"
+        wrapperClassName="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 max-w-xl text-center"
         titleColor="white"
-        titleClassName="max-lg:text-2xl"
+        titleClassName="text-2xl sm:text-3xl md:text-[56px] md:leading-[64px]"
       />
       <Link
         href={cta.link}
-        className="absolute max-lg:text-sm bottom-4 left-1/2 -translate-x-1/2 z-10  text-white py-1  uppercase font-light border-b border-white  transition-all"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 text-white font-body font-medium text-sm leading-5 uppercase text-center border-b border-white py-1 transition-all"
       >
         {cta.text}
       </Link>

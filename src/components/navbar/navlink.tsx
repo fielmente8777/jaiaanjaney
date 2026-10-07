@@ -5,27 +5,31 @@ export const  NavLink = {
     logo: "/logo.png",
     links: [
         {
-            label: "The Resort",
+            label: "THE RESORT",
             href: "/",
         },
         {
-            label: "Rooms & Suites",
+            label: "ABOUT US",
             href: "",
         },
         {
-            label: "Dining & Banquets",
+            label: "ROOMS & SUITES",
             href: "",
         },
         {
-            label: "Wellness",
+            label: "DINING",
             href: "",
         },
         {
-            label: "Gallery",
+            label: "BANQUETS & LAWNS",
             href: "",
         },
         {
-            label: "Contact",
+            label: "GALLERY",
+            href: "",
+        },
+        {
+            label: "CONTACT",
             href: "",
         },
         {
@@ -42,11 +46,13 @@ export const NavUpperLinks = {
             label: contact.phone[0],
             href: "tel:" + contact.phone[0],
             icon: <FillCallIcon />,
+            className: "font-body font-light text-base leading-6",
         },
         {
             label: "Salasar, Churu District, Rajasthan",
             href: contact.addressLink,
             icon: <FillLocationIcon />,
+            className: "font-secondary font-semibold italic text-lg leading-6",
         },
     ],
 }

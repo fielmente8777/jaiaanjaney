@@ -20,13 +20,18 @@ const WebsiteNav = () => {
       {/* Upper Nav */}
       <div className="bg-linear-to-r from-primary to-secondary">
         <Container className="flex items-center justify-center lg:justify-between py-2 text-white">
-          <p className="">{NavUpperLinks.text}</p>
+          <p className="font-secondary text-lg leading-6 font-semibold">
+            {NavUpperLinks.text}
+          </p>
           <ul className="flex max-lg:hidden items-center divide-x divide-white ">
             {NavUpperLinks.links.map((link, index) => (
               <li key={index}>
                 <Link
                   href={link.href}
-                  className="flex items-center gap-2 font-medium hover:text-gray-300 px-3"
+                  className={clsx(
+                    "flex items-center gap-2 hover:text-gray-300 px-3",
+                    link.className
+                  )}
                 >
                   <span className="">{link.icon}</span>
                   <span className="sr-only">{link.label}</span>
@@ -61,7 +66,7 @@ const WebsiteNav = () => {
                   <Link
                     href={link.href}
                     className={clsx(
-                      "text-dark text-lg hover:text-primary",
+                      "text-dark text-base leading-6 hover:text-primary",
                       pathName === link.href && "text-primary"
                     )}
                   >

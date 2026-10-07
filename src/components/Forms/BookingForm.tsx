@@ -71,7 +71,7 @@ export default function BookingForm() {
 
   const fieldCls =
     "relative flex items-center gap-2.5 px-5 h-14 border border-white transition-colors";
-  const labelCls = "text-white tracking-wide whitespace-nowrap";
+  const labelCls = "text-white tracking-wide whitespace-nowrap text-sm font-medium leading-5";
 
   return (
     <div className="w-full">
@@ -92,7 +92,7 @@ export default function BookingForm() {
             placeholderText="Check-in — Check-out"
             dateFormat="MMM d, yyyy"
             aria-label="Select check-in and check-out dates"
-            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-[13px] placeholder:tracking-wide text-white outline-none cursor-pointer"
+            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none cursor-pointer"
             wrapperClassName="w-full"
           />
         </div>
@@ -109,7 +109,7 @@ export default function BookingForm() {
             <FillUserIcon />
             <span
               className={`${labelCls} ${
-                adults || children ? "" : "uppercase text-[13px]"
+                adults || children ? "" : "uppercase"
               }`}
             >
               {adults || children ? guestLabel : "Occupancy"}
@@ -140,7 +140,7 @@ export default function BookingForm() {
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
             placeholder="Promo Code"
-            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-[13px] placeholder:tracking-wide text-white outline-none"
+            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none"
           />
         </div>
 
@@ -149,7 +149,7 @@ export default function BookingForm() {
           type="button"
           onClick={handleSearch}
           // disabled={!startDate || !endDate}
-          className="h-14 px-7 bg-primary text-white uppercase font-medium tracking-widest  transition-colors whitespace-nowrap disabled:cursor-not-allowed disabled:opacity-60"
+          className="h-14 px-7 bg-primary text-white uppercase text-sm font-medium leading-5 tracking-widest transition-colors whitespace-nowrap disabled:cursor-not-allowed disabled:opacity-60"
         >
           Book Now
         </button>
