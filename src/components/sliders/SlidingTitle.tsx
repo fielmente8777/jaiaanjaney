@@ -20,7 +20,7 @@ export default function SlidingTitle({
             <span
               key={i}
               aria-hidden={i >= items.length}
-              className="marquee-item  tracking-widest"
+              className="marquee-item font-secondary font-semibold italic text-lg leading-6 tracking-normal text-center"
             >
               <span dangerouslySetInnerHTML={{ __html: t }}></span>
               {/* <span className="separator">

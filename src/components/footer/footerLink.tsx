@@ -2,7 +2,7 @@ export const WebsiteFooterLinks = {
   logo: "/logo.png",
   listLinks: [
     {
-      title: "Resort",
+      title: "RESORT",
       links: [
         {
           label: "Home",
@@ -17,8 +17,8 @@ export const WebsiteFooterLinks = {
           href: "/rooms-and-suites",
         },
         {
-          label: "Experiences",
-          href: "/experiences",
+          label: "Dining",
+          href: "/dining",
         },
         {
           label: "Gallery",
@@ -35,19 +35,19 @@ export const WebsiteFooterLinks = {
       ],
     },
     {
-      title: "Explore",
+      title: "EXPLORE",
       links: [
         {
-          label: "Wedding",
-          href: "/wedding",
+          label: "Banquets & Lawns",
+          href: "/banquets-and-lawns",
+        },
+        {
+          label: "Weddings",
+          href: "/weddings",
         },
         {
           label: "Pilgrimage",
           href: "/pilgrimage",
-        },
-        {
-          label: "Kathas & Events",
-          href: "/kathas-and-events",
         },
         {
           label: "MICE",
@@ -56,7 +56,7 @@ export const WebsiteFooterLinks = {
       ],
     },
     {
-        title:"Social",
+        title:"SOCIAL",
         links:[
             {
                 label:"Facebook",

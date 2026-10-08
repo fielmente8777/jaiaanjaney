@@ -2,7 +2,7 @@
 
 import { dayAtJaiAnjaneyType } from "@/@types/homePage";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
-import Tagline from "@/components/typography/Tagline";
+import { Description, Tagline } from "@/components/typography";
 import Image from "next/image";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import clsx from "clsx";
@@ -58,11 +58,11 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
       "
     >
       <div className="flex flex-col gap-4 text-right">
-        <p className="text-lg italic font-secondary text-primary capitalize font-semibold">
+        <p className="text-lg leading-6 italic font-secondary text-primary capitalize font-semibold text-right">
           {title}
         </p>
 
-        <h3 className="text-dark lg:text-3xl text-2xl font-primary">
+        <h3 className="text-dark text-2xl md:text-[32px] font-primary">
           {subtitle}
         </h3>
         <div className="grid grid-cols-2 gap-6 items-center md:hidden">
@@ -79,7 +79,7 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
           ))}
         </div>
 
-        <p className="text-light">{description}</p>
+        <Description>{description}</Description>
       </div>
 
       <div className="grid grid-cols-2 gap-6 items-center max-md:hidden">

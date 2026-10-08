@@ -117,7 +117,7 @@ export const homePageData = {
   },
 
   roomsSection: {
-    title: "A Glimpse of Jai Anjaney",
+    title: "A Glimpse of <br /> Jai Anjaney",
     description:
       "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
     cta: {

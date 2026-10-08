@@ -1,6 +1,5 @@
 import { SectionWithContainer } from "@/components/sectionComponants";
-import { SectionHeading } from "@/components/typography";
-import Tagline from "@/components/typography/Tagline";
+import { Description, SectionHeading, Tagline } from "@/components/typography";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -49,9 +48,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           <Tagline eyebrow={eyebrow} />
           <SectionHeading title={title} />
           {description.map((item, index) => (
-            <p key={index} className="text-light">
-              {item}
-            </p>
+            <Description key={index}>{item}</Description>
           ))}
           <Link
             href={cta.link}
