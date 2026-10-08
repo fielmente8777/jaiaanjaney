@@ -39,13 +39,18 @@ import { SectionHeading } from "../typography";
 import Image from "next/image";
 import Link from "next/link";
 
-type WelcomeNoteProps = FinalCtaSectionType | AboutCtaType;
+type WelcomeNoteProps = (FinalCtaSectionType | AboutCtaType) & {
+  wrapperClassName?: string;
+  descriptionClassName?: string;
+};
 
 const WelComeNote: React.FC<WelcomeNoteProps> = ({
   eyebrow,
   description,
   note,
   cta,
+  wrapperClassName,
+  descriptionClassName,
 }) => {
   return (
     <SectionWithContainer
@@ -64,8 +69,14 @@ const WelComeNote: React.FC<WelcomeNoteProps> = ({
         <SectionHeading title={eyebrow} />
       </div>
 
-      <div className="flex flex-col justify-center items-center text-center gap-4 max-w-xl mx-auto">
-        <p className="text-light text-center">{description}</p>
+      <div
+        className={`flex flex-col justify-center items-center text-center gap-4 ${
+          wrapperClassName || "max-w-xl"
+        } mx-auto`}
+      >
+        <p className={`text-light text-center ${descriptionClassName || ""}`}>
+          {description}
+        </p>
 
         {note && <Tagline eyebrow={note} showIcon={false} />}
 

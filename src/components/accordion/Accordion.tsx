@@ -71,15 +71,17 @@ const Accordion: React.FC<{
         }`}
       >
         <div className="overflow-hidden">
-          <div className="relative w-full aspect-square md:hidden mb-3">
-            <Image
-              src={image || ""}
-              alt={question}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
+          {image && (
+            <div className="relative w-full aspect-square md:hidden mb-3">
+              <Image
+                src={image}
+                alt={question}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          )}
           <p className="">{answer}</p>
         </div>
       </div>

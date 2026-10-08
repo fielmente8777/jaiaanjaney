@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
+import { Cormorant_Garamond, Cinzel, Nunito_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./style.scss";
@@ -7,6 +6,20 @@ import { WebContextProvider } from "@/context-api/WebContext";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const nunitoSans = Nunito_Sans({
+  variable: "--font-nunito-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
@@ -64,6 +77,8 @@ const avenir = localFont({
   display: "swap",
 });
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "Jai Aanjaney",
   description: "",
@@ -73,7 +88,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${trajanPro.variable} ${avenir.variable}`}
+      className={`${cormorantGaramond.variable} ${cinzel.variable} ${nunitoSans.variable} ${trajanPro.variable} ${avenir.variable}`}
     >
       <body className="font-sans antialiased" suppressHydrationWarning={true}>
         <WebContextProvider>{children}</WebContextProvider>
