@@ -9,7 +9,7 @@ export const WebsiteFooterLinks = {
           href: "/",
         },
         {
-          label: "About",
+          label: "About Us",
           href: "/about-us",
         },
         {

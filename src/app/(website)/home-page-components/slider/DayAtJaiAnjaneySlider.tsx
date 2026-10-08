@@ -31,7 +31,6 @@ const DayAtJaiAnjaneySlider: React.FC<{
         speed={800}
         renderSlide={(item) => <DayAtJaiAnjaneyCard {...item} />}
       />
-
       <div className="absolute z-50 lg:top-1/2 -bottom-4 -translate-y-1/2 left-[31.5%]  lg:rotate-90 flex justify-center items-center">
         <div className="day-pagination gap-6 flex justify-center items-center" />
       </div>

@@ -143,6 +143,24 @@
   }
 }
 
+.bg-image-after {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-image: url("/bg.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 360px;
+    height: 315px;
+    animation: bg-rotate 20s linear infinite;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 @keyframes bg-rotate {
   from {
     transform: rotate(0deg);
@@ -170,6 +188,21 @@
 .bg-bottom-left {
   &::before {
     left: -185px;
+    bottom: 0px;
+  }
+}
+
+.bg-right-center {
+  &::before {
+    right: -175px;
+    top: 30%;
+    transform: translateY(-50%);
+  }
+}
+
+.bg-bottom-right{
+  &::after {
+    right: -185px;
     bottom: 0px;
   }
 }

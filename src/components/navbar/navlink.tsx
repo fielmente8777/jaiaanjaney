@@ -10,11 +10,11 @@ export const  NavLink = {
         },
         {
             label: "ABOUT US",
-            href: "",
+            href: "/about-us",
         },
         {
             label: "ROOMS & SUITES",
-            href: "",
+            href: "/rooms-and-suites",
         },
         {
             label: "DINING",
