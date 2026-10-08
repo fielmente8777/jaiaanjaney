@@ -9,6 +9,10 @@ export const  NavLink = {
             href: "/",
         },
         {
+            label:"About Us",
+            href: "/about-us",
+        },
+        {
             label: "Rooms & Suites",
             href: "",
         },
