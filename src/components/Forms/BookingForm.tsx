@@ -4,8 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FillCalenderIcon, FillUserIcon } from "./BookingFormIcons";
+import { usePathname } from "next/navigation";
 
 export default function BookingForm() {
+  const isRoomsPage = usePathname()?.startsWith("/rooms-and-suites") ?? false;
+
   const [guestOpen, setGuestOpen] = useState(false);
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
@@ -69,16 +72,33 @@ export default function BookingForm() {
     console.log("book rooms", query);
   };
 
-  const fieldCls =
-    "relative flex items-center gap-2.5 px-5 h-14 border border-white transition-colors";
-  const labelCls = "text-white tracking-wide whitespace-nowrap text-sm font-medium leading-5";
+  const theme = isRoomsPage
+    ? {
+        wrapper: "bg-white shadow-md",
+        field: "border-black text-black hover:bg-black/5",
+        placeholder: "placeholder:text-black",
+        icon: "text-black",
+      }
+    : {
+        wrapper: "bg-white/20 backdrop-blur-sm",
+        field: "border-white text-white hover:bg-white/5",
+        placeholder: "placeholder:text-white",
+        icon: "text-white",
+      };
+
+  const fieldCls = `relative flex items-center gap-2.5 px-5 h-14 border transition-colors ${theme.field}`;
+  const labelCls =
+    "tracking-wide whitespace-nowrap text-sm font-medium leading-5";
+  const inputCls = `w-full bg-transparent ${theme.placeholder} placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-sm font-medium leading-5 outline-none`;
 
   return (
     <div className="w-full">
-      <div className="grid w-full lg:grid-cols-[1fr_1fr_1fr_auto] md:grid-cols-2 grid-cols-1 gap-4 items-stretch bg-white/20 p-4 backdrop-blur-sm">
+      <div
+        className={`grid w-full lg:grid-cols-[1fr_1fr_1fr_auto] md:grid-cols-2 grid-cols-1 gap-4 items-stretch p-4 ${theme.wrapper} `}
+      >
         {/* Dates */}
-        <div className={`${fieldCls} cursor-pointer hover:bg-white/5`}>
-          <FillCalenderIcon />
+        <div className={`${fieldCls} cursor-pointer `}>
+          <FillCalenderIcon className={theme.icon} />
           <DatePicker
             selected={startDate}
             onChange={(dates: [Date | null, Date | null]) => {
@@ -92,13 +112,14 @@ export default function BookingForm() {
             placeholderText="Check-in — Check-out"
             dateFormat="MMM d, yyyy"
             aria-label="Select check-in and check-out dates"
-            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none cursor-pointer"
+            // className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none cursor-pointer"
+            className={`${inputCls} cursor-pointer`}
             wrapperClassName="w-full"
           />
         </div>
 
         {/* Guests */}
-        <div ref={guestRef} className={`${fieldCls} cursor-pointer hover:bg-white/5`}>
+        <div ref={guestRef} className={`${fieldCls} cursor-pointer `}>
           <button
             type="button"
             onClick={() => setGuestOpen((o) => !o)}
@@ -106,11 +127,9 @@ export default function BookingForm() {
             aria-expanded={guestOpen}
             className="flex w-full items-center gap-2.5 text-left"
           >
-            <FillUserIcon />
+            <FillUserIcon className={theme.icon} />
             <span
-              className={`${labelCls} ${
-                adults || children ? "" : "uppercase"
-              }`}
+              className={`${labelCls} ${adults || children ? "" : "uppercase"}`}
             >
               {adults || children ? guestLabel : "Occupancy"}
             </span>
@@ -123,8 +142,20 @@ export default function BookingForm() {
               className="absolute left-0 top-full z-50 mt-0.5 w-64 rounded-b-md bg-background p-4 shadow-xl bg-white"
               onClick={(e) => e.stopPropagation()}
             >
-              <GuestRow label="Adults" value={adults} min={1} max={10} onChange={setAdults} />
-              <GuestRow label="Children" value={children} min={0} max={6} onChange={setChildren} />
+              <GuestRow
+                label="Adults"
+                value={adults}
+                min={1}
+                max={10}
+                onChange={setAdults}
+              />
+              <GuestRow
+                label="Children"
+                value={children}
+                min={0}
+                max={6}
+                onChange={setChildren}
+              />
             </div>
           )}
         </div>
@@ -140,7 +171,8 @@ export default function BookingForm() {
             value={promoCode}
             onChange={(e) => setPromoCode(e.target.value)}
             placeholder="Promo Code"
-            className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none"
+            // className="w-full bg-transparent placeholder:text-white placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-white text-sm font-medium leading-5 outline-none"
+            className={inputCls}
           />
         </div>
 

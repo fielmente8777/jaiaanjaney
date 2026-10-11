@@ -1,6 +1,7 @@
 "use client";
 
-import { ValuesSectionType } from "@/@types/homePage";
+
+import { ValuesSectionType } from "@/@types/aboutPage";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
 import Tagline from "@/components/typography/Tagline";

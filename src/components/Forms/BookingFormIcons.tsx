@@ -1,9 +1,16 @@
+interface IconProps {
+  className?: string;
+}
+
+
 export const FillLocation = () => (
   <svg
     width={16}
     height={16}
     viewBox="0 0 16 16"
     fill="none"
+
+
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -13,12 +20,13 @@ export const FillLocation = () => (
   </svg>
 );
 
-export const FillUserIcon = () => (
+export const FillUserIcon = ({className= ""}: IconProps) => (
   <svg
     width={16}
     height={16}
     viewBox="0 0 16 16"
     fill="none"
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
@@ -27,23 +35,25 @@ export const FillUserIcon = () => (
     />
     <path
       d="M13.3334 11.6667C13.3334 13.3234 13.3334 14.6667 8.00008 14.6667C2.66675 14.6667 2.66675 13.3234 2.66675 11.6667C2.66675 10.01 5.05475 8.66669 8.00008 8.66669C10.9454 8.66669 13.3334 10.01 13.3334 11.6667Z"
-      fill="white"
+      fill="currentColor"
     />
   </svg>
 );
 
 
-export const FillCalenderIcon = () => (
+export const FillCalenderIcon = ({className = ""}: IconProps) => (
   <svg
     width={16}
     height={16}
     viewBox="0 0 16 16"
     fill="none"
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
   >
+
     <path
       d="M1.33325 12.6666C1.33325 13.8 2.19992 14.6666 3.33325 14.6666H12.6666C13.7999 14.6666 14.6666 13.8 14.6666 12.6666V7.33331H1.33325V12.6666ZM12.6666 2.66665H11.3333V1.99998C11.3333 1.59998 11.0666 1.33331 10.6666 1.33331C10.2666 1.33331 9.99992 1.59998 9.99992 1.99998V2.66665H5.99992V1.99998C5.99992 1.59998 5.73325 1.33331 5.33325 1.33331C4.93325 1.33331 4.66658 1.59998 4.66658 1.99998V2.66665H3.33325C2.19992 2.66665 1.33325 3.53331 1.33325 4.66665V5.99998H14.6666V4.66665C14.6666 3.53331 13.7999 2.66665 12.6666 2.66665Z"
-      fill="white"
+      fill="currentColor"
     />
   </svg>
 )

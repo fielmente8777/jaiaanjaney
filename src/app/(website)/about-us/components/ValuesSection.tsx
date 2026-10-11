@@ -1,6 +1,7 @@
-import { ValuesSectionType } from "@/@types/homePage";
+
 import { SectionWithContainer } from "@/components/sectionComponants";
 import ValuesSlider from "../slider/ValueSlider";
+import { ValuesSectionType } from "@/@types/aboutPage";
 
 const ValuesSection: React.FC<ValuesSectionType> = ({
   eyebrow,
