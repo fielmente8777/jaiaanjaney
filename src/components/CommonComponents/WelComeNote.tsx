@@ -32,12 +32,13 @@
 
 // export default WelComeNote;
 
-import { AboutCtaType, FinalCtaSectionType } from "@/@types/homePage";
+import {  FinalCtaSectionType } from "@/@types/homePage";
 import { SectionWithContainer } from "../sectionComponants";
 import Tagline from "../typography/Tagline";
 import { SectionHeading } from "../typography";
 import Image from "next/image";
 import Link from "next/link";
+import { AboutCtaType } from "@/@types/aboutPage";
 
 type WelcomeNoteProps = FinalCtaSectionType | AboutCtaType;
 
