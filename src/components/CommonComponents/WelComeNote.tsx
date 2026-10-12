@@ -1,37 +1,3 @@
-// import { FinalCtaSectionType } from "@/@types/homePage";
-// import { SectionWithContainer } from "../sectionComponants";
-// import Tagline from "../typography/Tagline";
-// import { SectionHeading } from "../typography";
-// import Image from "next/image";
-
-// const WelComeNote: React.FC<FinalCtaSectionType> = ({
-//   eyebrow,
-//   description,
-//   note,
-// }) => {
-//   return (
-//     <SectionWithContainer containerClassName="md:space-y-8 space-y-4" sectionClassName="relative bg-image  bg-bottom-left bg-bottom-right bg-image-after ">
-
-//       <div className="flex flex-col justify-center items-center text-center gap-4">
-//         <Image
-//           src="/tagline.png"
-//           alt="tagline"
-//           width={74}
-//           height={17}
-//           className="mx-auto"
-//         />
-//         <SectionHeading title={eyebrow} />
-//       </div>
-//       <div className="flex flex-col justify-center items-center text-center gap-4 max-w-xl mx-auto">
-//         <p className="text-light text-center">{description}</p>
-//         <Tagline eyebrow={note} showIcon={false} />
-//       </div>
-//     </SectionWithContainer>
-//   );
-// };
-
-// export default WelComeNote;
-
 import { AboutCtaType, FinalCtaSectionType } from "@/@types/homePage";
 import { SectionWithContainer } from "../sectionComponants";
 import Tagline from "../typography/Tagline";
@@ -42,6 +8,7 @@ import Link from "next/link";
 type WelcomeNoteProps = (FinalCtaSectionType | AboutCtaType) & {
   wrapperClassName?: string;
   descriptionClassName?: string;
+  sectionClassName?: string;
 };
 
 const WelComeNote: React.FC<WelcomeNoteProps> = ({
@@ -51,11 +18,14 @@ const WelComeNote: React.FC<WelcomeNoteProps> = ({
   cta,
   wrapperClassName,
   descriptionClassName,
+  sectionClassName,
 }) => {
   return (
     <SectionWithContainer
-      containerClassName="md:space-y-8 space-y-4"
-      sectionClassName="relative bg-image bg-bottom-left bg-bottom-right bg-image-after"
+      containerClassName="relative z-10 md:space-y-8 space-y-4"
+      sectionClassName={`relative bg-[#FCF9F4] bg-image bg-bottom-left bg-bottom-right bg-image-after ${
+        sectionClassName || ""
+      }`}
     >
       <div className="flex flex-col justify-center items-center text-center gap-4">
         <Image

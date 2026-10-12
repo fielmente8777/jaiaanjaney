@@ -133,7 +133,8 @@
     background-size: contain;
     background-image: url("/bg.png");
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
     width: 360px;
     height: 315px;
     animation: bg-rotate 20s linear infinite;
@@ -151,7 +152,8 @@
     background-size: contain;
     background-image: url("/bg.png");
     background-repeat: no-repeat;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
     width: 360px;
     height: 315px;
     animation: bg-rotate 20s linear infinite;

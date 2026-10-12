@@ -18,7 +18,7 @@ export const  NavLink = {
         },
         {
             label: "DINING",
-            href: "",
+            href: "/dining",
         },
         {
             label: "BANQUETS & LAWNS",
@@ -30,7 +30,7 @@ export const  NavLink = {
         },
         {
             label: "CONTACT",
-            href: "",
+            href: "/contact",
         },
         {
             label: "Book Now",
