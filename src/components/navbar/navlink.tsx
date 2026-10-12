@@ -26,7 +26,7 @@ export const  NavLink = {
         },
         {
             label: "GALLERY",
-            href: "",
+            href: "/gallery",
         },
         {
             label: "CONTACT",

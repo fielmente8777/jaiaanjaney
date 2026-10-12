@@ -1,4 +1,5 @@
-import { AboutCtaType, FinalCtaSectionType } from "@/@types/homePage";
+import { FinalCtaSectionType } from "@/@types/homePage";
+import { AboutCtaType } from "@/@types/aboutPage";
 import { SectionWithContainer } from "../sectionComponants";
 import Tagline from "../typography/Tagline";
 import { SectionHeading } from "../typography";

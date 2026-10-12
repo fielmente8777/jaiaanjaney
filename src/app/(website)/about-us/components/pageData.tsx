@@ -1,10 +1,5 @@
-import {
-  AboutCtaType,
-  AboutHeroType,
-  StorySectionType,
-  ValuesSectionType,
-  VisionSectionType,
-} from "@/@types/homePage";
+import { AboutCtaType, AboutHeroType, StorySectionType, ValuesSectionType, VisionSectionType } from "@/@types/aboutPage";
+
 
 interface AboutPageData {
   hero: AboutHeroType;

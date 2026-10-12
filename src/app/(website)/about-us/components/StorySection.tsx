@@ -1,4 +1,5 @@
-import { StorySectionType } from "@/@types/homePage";
+
+import { StorySectionType } from "@/@types/aboutPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import Tagline from "@/components/typography/Tagline";

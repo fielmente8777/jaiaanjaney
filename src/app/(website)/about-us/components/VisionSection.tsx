@@ -50,7 +50,7 @@
 // export default VisionSection;
 
 "use client";
-import { VisionSectionType } from "@/@types/homePage";
+
 import { Section } from "@/components/sectionComponants";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
@@ -59,6 +59,7 @@ import { useEffect, useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { Autoplay, Controller } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
+import { VisionSectionType } from "@/@types/aboutPage";
 
 const SPEED = 1000;
 
