@@ -38,10 +38,7 @@ export default function DiningPage() {
       <BookTableSection {...diningPageData.bookTable} />
 
       {/* 7. Welcome Blessing Note */}
-      <WelComeNote
-        {...diningPageData.welcomeNote}
-        wrapperClassName="max-w-3xl"
-      />
+      <WelComeNote {...diningPageData.welcomeNote} />
     </main>
   );
 }

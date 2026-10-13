@@ -33,7 +33,7 @@ const DiningHero: React.FC<DiningHeroProps> = ({
         />
       </div>
 
-      {/* Figma Exact Gradient Overlay (Clear at top, deep warm dark gradient towards bottom) */}
+      {/* Ambient Visual Contrast Overlay */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{

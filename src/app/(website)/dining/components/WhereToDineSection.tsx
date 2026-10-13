@@ -20,7 +20,7 @@ const WhereToDineCard: React.FC<DiningVenueType> = ({
 }) => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center w-full mx-auto py-1">
-      {/* Left: Expanded Image (Increased Width & Height to remove extra surrounding padding) */}
+      {/* Venue Visual Media Showcase */}
       <div className="w-full">
         <div className="relative w-full aspect-[640/460] sm:aspect-[640/440] min-h-[380px] sm:min-h-[450px] lg:min-h-[490px] overflow-hidden shadow-xl border border-[#DF951D]/40 bg-white">
           <Image
@@ -31,12 +31,12 @@ const WhereToDineCard: React.FC<DiningVenueType> = ({
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
 
-          {/* 1px Inset Border Frame (Figma) */}
+          {/* Decorative Inset Border Frame */}
           <div className="absolute inset-4 sm:inset-5 border border-white/80 pointer-events-none z-20" />
         </div>
       </div>
 
-      {/* Right: Venue Content Box */}
+      {/* Venue Narrative & Dining Details */}
       <div className="w-full flex justify-center lg:justify-start">
         <div className="w-full max-w-[615px] flex flex-col justify-center gap-3.5 text-left pl-0 lg:pl-4 xl:pl-8">
           <span className="font-secondary italic text-[18px] leading-[26px] text-primary font-semibold">
@@ -53,19 +53,22 @@ const WhereToDineCard: React.FC<DiningVenueType> = ({
             {description}
           </Description>
 
-          {/* Timings with Diamond Accent */}
+          {/* Operating Hours & Schedule */}
           <div className="flex items-center gap-2 text-sm sm:text-base text-dark font-medium font-nunito-sans pt-1">
             <span className="text-primary text-xs">◆</span>
             <span>{timings}</span>
           </div>
 
-          {/* Action Link */}
+          {/* Menu Navigation CTA */}
           <div className="pt-2">
             <Link
               href={ctaLink}
-              className="inline-flex items-center gap-2 font-cinzel text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#DF951D] hover:text-primary transition-colors uppercase"
+              className="group inline-flex items-center gap-3 sm:gap-4 w-fit border-b border-primary pb-1 font-nunito-sans font-normal text-[13px] sm:text-[14px] tracking-[0.14em] uppercase text-dark hover:text-primary transition-colors"
             >
-              <span>{ctaText}</span>
+              <span>{ctaText.replace(/→$/, "").trim()}</span>
+              <span className="text-[14px] transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
           </div>
         </div>
@@ -84,7 +87,7 @@ const WhereToDineSection: React.FC<WhereToDineSectionType> = ({
       defaultPadding={false}
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden py-16 md:py-24 border-b-[5px] border-[#E9621C]"
     >
-      {/* 411x411 Gradient Blur Effect (Figma exact) */}
+      {/* Background Radial Accent Glow */}
       <div className="absolute -top-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" />
 
       {/* Section Header */}
@@ -97,7 +100,7 @@ const WhereToDineSection: React.FC<WhereToDineSectionType> = ({
         />
       </div>
 
-      {/* Slider using Home Page Swiper & Pagination Mechanism */}
+      {/* Interactive Venue Carousel Slider */}
       <div className="w-full relative max-lg:pb-12">
         <SwiperCarousel
           data={items}
@@ -119,7 +122,7 @@ const WhereToDineSection: React.FC<WhereToDineSectionType> = ({
           renderSlide={(item) => <WhereToDineCard {...item} />}
         />
 
-        {/* Vertical Pagination Dots centered exactly in the gap between Left Image & Right Content */}
+        {/* Carousel Pagination Indicators */}
         <div className="absolute z-30 lg:top-1/2 -bottom-4 lg:-translate-y-1/2 left-1/2 -translate-x-1/2 lg:rotate-90 flex justify-center items-center pointer-events-auto">
           <div className="day-pagination dining-pagination gap-6 flex justify-center items-center" />
         </div>

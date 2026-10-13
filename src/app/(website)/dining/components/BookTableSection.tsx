@@ -44,37 +44,49 @@ const BookTableSection: React.FC<BookTableSectionType> = ({
       containerClassName="w-full"
     >
       {/* Featured Dining Visual (Desktop) */}
-      <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-0 overflow-hidden shadow-xl">
+      <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[41%] xl:w-[41.5%] z-0 overflow-hidden shadow-xl">
         <Image
           src={image}
           alt={imageCaption}
           fill
           className="object-cover object-center"
-          sizes="50vw"
+          sizes="42vw"
           priority={false}
         />
         {/* Visual Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
 
         {/* Ambient Caption */}
-        <div className="absolute inset-x-0 bottom-8 lg:bottom-12 z-20 px-8 xl:px-14">
-          <p className="font-secondary italic text-2xl sm:text-[32px] leading-tight text-white drop-shadow-md">
+        <div className="absolute inset-x-0 bottom-8 lg:bottom-12 z-20 px-8 xl:px-12">
+          <p
+            style={{
+              fontFamily: "var(--font-cormorant-garamond)",
+              fontWeight: 400,
+              fontStyle: "italic",
+              fontSize: "32px",
+              lineHeight: "40px",
+            }}
+            className="font-secondary italic font-normal text-[32px] leading-[40px] text-white drop-shadow-md"
+          >
             {imageCaption}
           </p>
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-14 items-center py-14 sm:py-16 md:py-20">
-        {/* Layout Column Spacer */}
-        <div className="hidden lg:block pointer-events-none" aria-hidden="true" />
+      <div className="relative z-10 flex flex-col lg:flex-row items-center py-12 sm:py-16 lg:py-20">
+        {/* Media Column Spacer (Desktop) */}
+        <div
+          className="hidden lg:block lg:w-[41%] xl:w-[41.5%] shrink-0 pointer-events-none"
+          aria-hidden="true"
+        />
 
         {/* Table Reservation Form Container */}
-        <div className="w-full flex flex-col justify-center lg:pl-4 xl:pl-8">
-          <div className="max-w-[600px] w-full mx-auto lg:mx-0 flex flex-col gap-3 mb-8">
+        <div className="w-full lg:flex-1 flex flex-col justify-center px-0 lg:pl-[100px] xl:pl-[100px] lg:pr-8 xl:pr-12">
+          <div className="max-w-[720px] w-full mx-auto lg:mx-0 flex flex-col gap-3 mb-8">
             <Tagline
               eyebrow={eyebrow}
               wrapperClassName="items-start"
-              className="!font-normal !text-[20px] !leading-[26px]"
+              className="!font-normal !text-[18px] sm:!text-[20px] !leading-[26px]"
             />
             <Headings
               level={2}
@@ -83,7 +95,7 @@ const BookTableSection: React.FC<BookTableSectionType> = ({
             />
 
             {/* Featured Dining Visual (Mobile) */}
-            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[400px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2">
+            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[360px] sm:min-h-[400px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2">
               <Image
                 src={image}
                 alt={imageCaption}
@@ -94,21 +106,30 @@ const BookTableSection: React.FC<BookTableSectionType> = ({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
 
-              <div className="absolute inset-x-0 bottom-8 z-20 px-6 sm:px-10">
-                <p className="font-secondary italic text-2xl sm:text-[32px] leading-tight text-white drop-shadow-md">
+              <div className="absolute inset-x-0 bottom-6 sm:bottom-8 z-20 px-4 sm:px-6">
+                <p
+                  style={{
+                    fontFamily: "var(--font-cormorant-garamond)",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    fontSize: "32px",
+                    lineHeight: "40px",
+                  }}
+                  className="font-secondary italic font-normal text-[26px] sm:text-[32px] leading-[34px] sm:leading-[40px] text-white drop-shadow-md"
+                >
                   {imageCaption}
                 </p>
               </div>
             </div>
 
-            <Description className="text-light text-[18px] leading-[26px]">
+            <Description className="text-light text-base sm:text-[18px] leading-[24px] sm:leading-[26px]">
               {subtitle}
             </Description>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="max-w-[600px] w-full mx-auto lg:mx-0 flex flex-col gap-4"
+            className="max-w-[720px] w-full mx-auto lg:mx-0 flex flex-col gap-4"
           >
             {submitted && (
               <div className="bg-green-50 border border-green-300 text-green-800 p-4 rounded text-sm mb-2 font-nunito-sans">

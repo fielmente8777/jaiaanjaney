@@ -1,7 +1,5 @@
+import React, { useId } from "react";
 import clsx from "clsx";
-
-/** Id of the shared <clipPath>; identical on every dome, so duplicates are harmless. */
-const DOME_CLIP_ID = "arch-frame-dome";
 
 /** Onion-dome silhouette in objectBoundingBox units (0–1), so it scales with the frame. */
 const DOME_PATH =
@@ -30,20 +28,35 @@ const ArchFrame: React.FC<ArchFrameProps> = ({
   outlineClassName = "text-cream/70",
 }) => {
   const isDome = shape === "dome";
+  const rawId = useId();
+  const clipId = `arch-frame-dome-${rawId.replace(/:/g, "")}`;
 
   return (
     <div className={clsx("relative", className)}>
       {isDome && (
-        <svg aria-hidden width={0} height={0} className="absolute">
-          <clipPath id={DOME_CLIP_ID} clipPathUnits="objectBoundingBox">
-            <path d={DOME_PATH} />
-          </clipPath>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
+        >
+          <defs>
+            <clipPath id={clipId} clipPathUnits="objectBoundingBox">
+              <path d={DOME_PATH} />
+            </clipPath>
+          </defs>
         </svg>
       )}
 
       <div
-        className="absolute inset-0"
-        style={isDome ? { clipPath: `url(#${DOME_CLIP_ID})` } : undefined}
+        className="absolute inset-0 overflow-hidden"
+        style={
+          isDome
+            ? {
+                clipPath: `url(#${clipId})`,
+                WebkitClipPath: `url(#${clipId})`,
+              }
+            : undefined
+        }
       >
         {children}
       </div>

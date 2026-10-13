@@ -14,6 +14,9 @@
   --color-accent: #a2400d;
   --color-cream: #faf6ec;
   --color-espresso: #3f2416;
+  --color-ground-ivory: #fbf8f2;
+  --color-ground-ivory-light: #fbf8f2;
+  --color-line-default: #e3d3bc;
 
   /* Fonts */
   --font-primary: var(--font-trajan-pro);

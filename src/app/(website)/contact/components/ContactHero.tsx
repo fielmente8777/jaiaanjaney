@@ -19,28 +19,13 @@ const ContactHero: React.FC<ContactHeroType> = ({
       sectionId="contact-hero"
       defaultPadding={false}
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden border-b-[5px] border-[#E9621C]"
-      containerClassName="w-full"
+      containerClassName="!max-w-full !p-0 w-full"
     >
-      {/* Background Accent Glow */}
-      <div className="absolute -top-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" />
-
-      {/* Featured Architecture Visual (Desktop) */}
-      <div className="hidden lg:block absolute inset-y-0 right-0 w-1/2 z-0 overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="50vw"
-        />
-      </div>
-
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[500px] lg:min-h-[784px]">
-        {/* Hero Content Column */}
-        <div className="w-full flex flex-col items-center justify-center text-center py-12 sm:py-16 lg:py-20 lg:pr-6 xl:pr-10">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[720px] xl:min-h-[784px]">
+        {/* Left Column: Full bleed to the left edge of viewport */}
+        <div className="w-full flex flex-col items-center justify-center text-center py-12 sm:py-16 lg:py-20 relative z-10">
           {/* Eyebrow Tagline */}
-          <div className="px-6 text-center">
+          <div className="px-6 sm:px-10 max-w-[560px] text-center">
             <Tagline
               eyebrow={eyebrow}
               wrapperClassName="items-center justify-center"
@@ -49,16 +34,16 @@ const ContactHero: React.FC<ContactHeroType> = ({
           </div>
 
           {/* Section Heading */}
-          <div className="px-6 text-center mt-3 sm:mt-4">
+          <div className="px-6 sm:px-10 max-w-[560px] text-center mt-3 sm:mt-4">
             <Headings
               level={1}
               heading={title}
-              className="text-4xl sm:text-5xl lg:text-[68px] lg:leading-[76px] font-cinzel font-normal text-dark uppercase tracking-wide text-center"
+              className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[68px] lg:leading-[72px] font-cinzel font-normal text-dark uppercase tracking-wide text-center"
             />
           </div>
 
-          {/* Service Bell Motif */}
-          <div className="w-full my-4 sm:my-6 lg:my-8">
+          {/* Decorative Concierge Bell Graphic */}
+          <div className="w-full my-6 sm:my-8 lg:my-10">
             <ContactUsBell className="w-full h-auto block" />
           </div>
 
@@ -75,8 +60,8 @@ const ContactHero: React.FC<ContactHeroType> = ({
           </div>
 
           {/* Introductory Description */}
-          <div className="px-6 max-w-[480px] text-center">
-            <Description className="text-light text-base sm:text-[18px] leading-relaxed text-center">
+          <div className="px-6 sm:px-10 max-w-[520px] text-center">
+            <Description className="text-light text-base sm:text-[18px] leading-relaxed text-center font-light">
               {description}
             </Description>
           </div>
@@ -94,8 +79,17 @@ const ContactHero: React.FC<ContactHeroType> = ({
           </div>
         </div>
 
-        {/* Layout Column Spacer */}
-        <div className="hidden lg:block pointer-events-none" aria-hidden="true" />
+        {/* Right Column: Full bleed visual touching the right edge */}
+        <div className="hidden lg:block relative w-full h-full min-h-[500px] lg:min-h-[720px] xl:min-h-[784px] overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="(max-width: 1600px) 50vw, 800px"
+          />
+        </div>
       </div>
     </SectionWithContainer>
   );

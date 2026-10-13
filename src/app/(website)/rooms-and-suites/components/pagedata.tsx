@@ -198,20 +198,40 @@ export const RoomPageData: RoomPageDataType = {
   },
 
   thoughtfulComforts: {
-    eyebrow: "Everything in Place",
+    eyebrow: "In Every Room & Villa",
     title: "Thoughtful Comforts",
     subtitle:
-      "Small details that make a long journey easy. From early-morning tea to late returns from the temple.",
+      "The small things, done with care, so rest comes easily, whatever brought you to Salasar.",
     items: [
       {
         title: "High-Speed Wi-Fi",
-        subtitle: "Across rooms & gardens",
+        subtitle: "Across the estate",
         icon: "wifi",
       },
       {
-        title: "Climate Control",
-        subtitle: "Individual AC & heating",
+        title: "Air Conditioning",
+        subtitle: "Individually controlled",
         icon: "ac",
+      },
+      {
+        title: "King-Size Beds",
+        subtitle: "Fine linen & pillows",
+        icon: "bed",
+      },
+      {
+        title: "In-Room Dining",
+        subtitle: "Pure vegetarian menu",
+        icon: "dining",
+      },
+      {
+        title: "Smart TV",
+        subtitle: "Satellite & streaming",
+        icon: "tv",
+      },
+      {
+        title: "In-Room Safe",
+        subtitle: "For valuables & papers",
+        icon: "safe",
       },
       {
         title: "Bath Amenities",

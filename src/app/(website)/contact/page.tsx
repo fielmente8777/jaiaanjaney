@@ -34,10 +34,7 @@ export default function ContactPage() {
       <FaqSection {...contactPageData.faqs} />
 
       {/* 6. Sacred Welcome Blessing Note */}
-      <WelComeNote
-        {...contactPageData.welcomeNote}
-        wrapperClassName="max-w-3xl"
-      />
+      <WelComeNote {...contactPageData.welcomeNote} />
     </main>
   );
 }

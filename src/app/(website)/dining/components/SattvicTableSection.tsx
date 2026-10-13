@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { SattvicTableSectionType } from "@/@types/diningPage";
+import ArchFrame from "@/components/CommonComponents/ArchFrame";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { Description, Headings, Tagline } from "@/components/typography";
 
@@ -9,40 +10,19 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
   title,
 }) => {
   return (
-    <div className="relative w-full max-w-[520px] aspect-[520/693] mx-auto lg:ml-auto lg:mr-0">
-      {/* Traditional Arch Frame */}
-      <div
-        className="relative w-full h-full overflow-hidden shadow-xl"
-        style={{
-          clipPath: "url(#rajasthani-pointed-arch)",
-          WebkitClipPath: "url(#rajasthani-pointed-arch)",
-        }}
-      >
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover object-center"
-          sizes="(max-width: 1024px) 100vw, 520px"
-        />
-
-        {/* Arch Inset Outline */}
-        <div className="absolute inset-0 pointer-events-none z-20">
-          <svg
-            viewBox="0 0 520 693"
-            preserveAspectRatio="none"
-            className="w-full h-full"
-          >
-            <path
-              d="M 18,675 L 18,270 C 18,158 142,117 171,98 C 203,77 246,58 260,42 C 274,58 317,77 349,98 C 378,117 502,158 502,270 L 502,675 Z"
-              fill="none"
-              stroke="#F6C77A"
-              strokeWidth="1.5"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
+    <ArchFrame
+      shape="dome"
+      outlineClassName="text-secondary/70"
+      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none"
+    >
+      <Image
+        src={image}
+        alt={title}
+        fill
+        sizes="(max-width: 1024px) 90vw, 45vw"
+        className="object-cover"
+      />
+    </ArchFrame>
   );
 };
 
@@ -59,23 +39,6 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
       defaultPadding={false}
       sectionClassName="relative bg-[#F7F3EB] overflow-hidden py-16 md:py-24 border-y-[5px] border-[#E9621C]"
     >
-      {/* SVG Clip Path Definition */}
-      <svg
-        width="0"
-        height="0"
-        className="absolute pointer-events-none"
-        style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
-        aria-hidden="true"
-      >
-        <defs>
-          <clipPath
-            id="rajasthani-pointed-arch"
-            clipPathUnits="objectBoundingBox"
-          >
-            <path d="M 0,1 L 0,0.3896 C 0,0.2165 0.2577,0.1515 0.3173,0.1227 C 0.3846,0.0902 0.4712,0.0606 0.5,0.0346 C 0.5288,0.0606 0.6154,0.0902 0.6827,0.1227 C 0.7423,0.1515 1,0.2165 1,0.3896 L 1,1 Z" />
-          </clipPath>
-        </defs>
-      </svg>
       {/* Background Accent Glow */}
       <div className="absolute -bottom-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" />
 

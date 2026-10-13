@@ -22,7 +22,7 @@ export const  NavLink = {
         },
         {
             label: "BANQUETS & LAWNS",
-            href: "",
+            href: "/banquets-and-lawns",
         },
         {
             label: "GALLERY",

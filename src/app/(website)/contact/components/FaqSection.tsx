@@ -41,55 +41,80 @@ const FaqSection: React.FC<FaqSectionType> = ({
             heading={title}
             className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] font-cinzel font-normal text-dark uppercase tracking-wide"
           />
-          <Description className="text-light text-[17px] leading-[26px] mt-1">
-            {subtitle}
-          </Description>
 
-          <div className="flex items-center gap-3 pt-4">
-            <div className="shrink-0 flex items-center justify-center">
-              <Contact />
+          {/* Support Narrative & Contact Information (Desktop) */}
+          <div className="hidden lg:flex flex-col gap-4">
+            <Description className="text-light text-[17px] leading-[26px] mt-1">
+              {subtitle}
+            </Description>
+
+            <div className="flex items-center gap-3 pt-4">
+              <div className="shrink-0 flex items-center justify-center">
+                <Contact />
+              </div>
+              <Link
+                href={`tel:${phone.replace(/\s+/g, "")}`}
+                className="font-cinzel text-xl sm:text-2xl text-primary hover:text-dark transition-colors tracking-wide font-normal"
+              >
+                {phone}
+              </Link>
             </div>
-            <Link
-              href={`tel:${phone.replace(/\s+/g, "")}`}
-              className="font-cinzel text-xl sm:text-2xl text-primary hover:text-dark transition-colors tracking-wide font-normal"
-            >
-              {phone}
-            </Link>
           </div>
         </div>
 
-        {/* Accordion List */}
-        <div className="lg:col-span-7 flex flex-col w-full divide-y divide-[#E8BF73]/50 border-t border-b border-[#E8BF73]/50">
-          {faqs.map((faq, index) => {
-            const isOpen = openIndices.includes(index);
-            return (
-              <div key={index} className="py-4 sm:py-5">
-                <button
-                  type="button"
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex items-center justify-between gap-4 text-left group cursor-pointer"
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-cinzel text-base sm:text-lg lg:text-[19px] text-dark font-normal tracking-wide uppercase group-hover:text-primary transition-colors">
-                    {faq.question}
-                  </span>
-                  <span
-                    className={`shrink-0 transition-transform duration-300 text-primary ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+        {/* Interactive FAQ Accordion */}
+        <div className="lg:col-span-7 flex flex-col w-full">
+          <div className="flex flex-col w-full divide-y divide-[#E8BF73]/50 border-t border-b border-[#E8BF73]/50">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndices.includes(index);
+              return (
+                <div key={index} className="py-4 sm:py-5">
+                  <button
+                    type="button"
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between gap-4 text-left group cursor-pointer"
+                    aria-expanded={isOpen}
                   >
-                    <ChevronDown />
-                  </span>
-                </button>
+                    <span className="font-cinzel text-base sm:text-lg lg:text-[19px] text-dark font-normal tracking-wide uppercase group-hover:text-primary transition-colors">
+                      {faq.question}
+                    </span>
+                    <span
+                      className={`shrink-0 transition-transform duration-300 text-primary ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      <ChevronDown />
+                    </span>
+                  </button>
 
-                {isOpen && (
-                  <div className="pt-3 pr-6 text-light font-nunito-sans text-sm sm:text-base leading-relaxed animate-fadeIn">
-                    <p>{faq.answer}</p>
-                  </div>
-                )}
+                  {isOpen && (
+                    <div className="pt-3 pr-6 text-light font-nunito-sans text-sm sm:text-base leading-relaxed animate-fadeIn">
+                      <p>{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Support Narrative & Contact Information (Mobile) */}
+          <div className="lg:hidden flex flex-col items-center text-center gap-2.5 mt-8 pt-2">
+            <Description className="text-light text-base sm:text-[17px] leading-[25px] text-center max-w-md mx-auto">
+              {subtitle}
+            </Description>
+
+            <div className="flex items-center justify-center gap-3 pt-1">
+              <div className="shrink-0 flex items-center justify-center">
+                <Contact />
               </div>
-            );
-          })}
+              <Link
+                href={`tel:${phone.replace(/\s+/g, "")}`}
+                className="font-cinzel text-xl sm:text-2xl text-primary hover:text-dark transition-colors tracking-wide font-normal"
+              >
+                {phone}
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </SectionWithContainer>

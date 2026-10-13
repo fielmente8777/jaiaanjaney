@@ -14,8 +14,9 @@ const ContactDetailsSection: React.FC<ContactDetailsType> = ({
     <SectionWithContainer
       sectionId="contact-details"
       defaultPadding={false}
-      sectionClassName="relative overflow-hidden border-b-[5px] border-[#E9621C] bg-[#E9621C]"
-      containerClassName="w-full"
+      sectionClassName="relative overflow-hidden border-b-[5px] border-[#E9621C] bg-gradient-to-b from-[#E9621C] to-[#DF951D]"
+      sectionStyle={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
+      containerClassName="w-full max-lg:!px-0 max-lg:!max-w-none"
     >
       {/* Interior Visual (Desktop) */}
       <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-0 overflow-hidden">
@@ -43,7 +44,10 @@ const ContactDetailsSection: React.FC<ContactDetailsType> = ({
         <div className="hidden lg:block pointer-events-none" aria-hidden="true" />
 
         {/* Contact Information Panel */}
-        <div className="w-full bg-[#E9621C] text-white flex flex-col justify-center px-8 sm:px-12 md:px-16 lg:px-14 xl:px-18 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div
+          style={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
+          className="w-full bg-gradient-to-b from-[#E9621C] to-[#DF951D] text-white flex flex-col justify-center px-8 sm:px-12 md:px-16 lg:px-14 xl:px-18 py-12 sm:py-16 md:py-20 lg:py-24"
+        >
           <div className="max-w-xl w-full mx-auto lg:mx-0 flex flex-col">
             {/* Email Contact */}
             <div className="flex flex-col">

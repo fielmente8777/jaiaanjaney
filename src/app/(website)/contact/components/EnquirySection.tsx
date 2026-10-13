@@ -36,55 +36,59 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
     }, 5000);
   };
 
+  const renderMapCard = () => (
+    <div className="relative bg-[#E9621C] p-5 sm:p-7 min-h-[480px] sm:min-h-[520px] lg:min-h-[560px] flex flex-col justify-between shadow-xl">
+      {/* Inner Border Frame */}
+      <div className="relative flex-1 border-2 border-dashed border-white/90 p-5 sm:p-7 flex flex-col justify-between">
+        {/* Map Location Placeholder */}
+        <div className="flex-1 flex flex-col items-center justify-center text-center py-8 sm:py-10">
+          <svg
+            width={34}
+            height={34}
+            viewBox="0 0 24 24"
+            fill="white"
+            className="drop-shadow"
+          >
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-white mt-3">
+            INTERACTIVE MAP HERE
+          </span>
+        </div>
+
+        {/* Destination Details Box */}
+        <div className="bg-white p-6 sm:p-7 shadow-md flex flex-col gap-2 text-left relative z-10">
+          <h3 className="font-cinzel text-xl sm:text-2xl uppercase tracking-wider text-dark font-normal">
+            {mapHeading}
+          </h3>
+          <p className="font-nunito-sans text-sm sm:text-[15px] text-[#6B655B] leading-relaxed">
+            {mapAddress}
+          </p>
+          <div className="pt-2">
+            <Link
+              href={mapDirectionsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-nunito-sans text-xs sm:text-sm font-bold tracking-[0.14em] uppercase text-dark hover:text-primary transition-colors underline underline-offset-4"
+            >
+              {mapDirectionsText}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <SectionWithContainer
       sectionId="enquiry"
       defaultPadding={false}
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden py-16 md:py-24 border-b-[5px] border-[#E9621C]"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 xl:gap-16 items-center w-full">
-        {/* Map Information Card */}
-        <div className="w-full max-w-[560px] mx-auto lg:mx-0">
-          <div className="relative bg-[#E9621C] p-5 sm:p-7 min-h-[500px] sm:min-h-[540px] lg:min-h-[560px] flex flex-col justify-between shadow-xl">
-            {/* Inner Border Frame */}
-            <div className="relative flex-1 border-2 border-dashed border-white/90 p-5 sm:p-7 flex flex-col justify-between">
-              {/* Map Location Placeholder */}
-              <div className="flex-1 flex flex-col items-center justify-center text-center py-10">
-                <svg
-                  width={34}
-                  height={34}
-                  viewBox="0 0 24 24"
-                  fill="white"
-                  className="drop-shadow"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-white mt-3">
-                  INTERACTIVE MAP HERE
-                </span>
-              </div>
-
-              {/* Destination Details Box */}
-              <div className="bg-white p-6 sm:p-7 shadow-md flex flex-col gap-2 text-left relative z-10">
-                <h3 className="font-cinzel text-xl sm:text-2xl uppercase tracking-wider text-dark font-normal">
-                  {mapHeading}
-                </h3>
-                <p className="font-nunito-sans text-sm sm:text-[15px] text-[#6B655B] leading-relaxed">
-                  {mapAddress}
-                </p>
-                <div className="pt-2">
-                  <Link
-                    href={mapDirectionsLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 font-nunito-sans text-xs sm:text-sm font-bold tracking-[0.14em] uppercase text-dark hover:text-primary transition-colors underline underline-offset-4"
-                  >
-                    {mapDirectionsText}
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[100px] items-center w-full">
+        {/* Map Information Card (Desktop) */}
+        <div className="hidden lg:block w-full max-w-[560px] mx-auto lg:mx-0">
+          {renderMapCard()}
         </div>
 
         {/* Enquiry Form Container */}
@@ -100,6 +104,12 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
               heading={title}
               className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] font-cinzel font-normal text-dark uppercase tracking-wide"
             />
+
+            {/* Location & Directions Card (Mobile) */}
+            <div className="lg:hidden w-full my-4">
+              {renderMapCard()}
+            </div>
+
             <Description className="text-light text-[17px] leading-[26px]">
               {description}
             </Description>
