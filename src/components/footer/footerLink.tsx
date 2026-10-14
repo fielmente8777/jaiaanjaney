@@ -30,7 +30,7 @@ export const WebsiteFooterLinks = {
         },
         {
           label: "Contact",
-          href: "/contact-us",
+          href: "/contact",
         },
       ],
     },

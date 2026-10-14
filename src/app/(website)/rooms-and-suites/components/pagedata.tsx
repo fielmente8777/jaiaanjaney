@@ -1,24 +1,24 @@
 import { FinalCtaSectionType } from "@/@types/homePage";
 import {
+  BuildingRoomsSectionType,
   PresidentialVillaType,
   RoomsHeroType,
-  VillasSectionType,
   StayRootedSectionType,
-  BuildingRoomsSectionType,
   ThoughtfulComfortsSectionType,
+  VillasSectionType,
 } from "@/@types/roomsPage";
 
-interface RoomPageDataType {
+const BOOK_CTA = { text: "Book Now", link: "/contact" };
+
+export interface RoomPageDataType {
   hero: RoomsHeroType;
-  welcomeNote: FinalCtaSectionType;
-  villas: VillasSectionType;
-  presidentialVilla: PresidentialVillaType;
   stayRooted: StayRootedSectionType;
   buildingRooms: BuildingRoomsSectionType;
+  villas: VillasSectionType;
+  presidentialVilla: PresidentialVillaType;
   thoughtfulComforts: ThoughtfulComfortsSectionType;
+  welcomeNote: FinalCtaSectionType;
 }
-
-const BOOK_CTA = { text: "Book Now", link: "/contact" };
 
 export const RoomPageData: RoomPageDataType = {
   hero: {
@@ -26,10 +26,10 @@ export const RoomPageData: RoomPageDataType = {
     title: "Rooms & Suites",
     description:
       "Restful rooms, a singular suite and eighteen private villas, each a calm return from darshan, celebration or the long road to Salasar.",
-  
     image: "/rooms.png",
     imageAlt: "Jai Anjaney resort facade seen through three arches",
   },
+
   stayRooted: {
     eyebrow: "Rest, Ritual & Return",
     title: "A Stay Rooted in Salasar",
@@ -44,7 +44,7 @@ export const RoomPageData: RoomPageDataType = {
       },
       {
         value: "151",
-        label: "Rooms",
+      label: "Rooms",
       },
       {
         value: "7",
@@ -86,18 +86,18 @@ export const RoomPageData: RoomPageDataType = {
       },
       {
         number: "02",
-        tag: "Only 2",
-        title: "Super Deluxe Room",
-        subtitle: "Room to linger",
+        tag: "02 Rooms",
+        title: "Executive Room",
+        subtitle: "Room to pause",
         description:
-          "A larger room with its own sitting corner, space for elders to rest and for the family to gather over evening chai.",
+          "Extra living space and sweeping views across the resort's lawns and the Salasar skyline.",
         specs: {
-          guests: "3 Adults",
-          size: "≈ 420 sq ft",
+          guests: "2 Adults + 1 Child",
+          size: "≈ 410 sq ft",
           bed: "King Bed",
         },
         image: "/rooms/room2.png",
-        images: ["/rooms/room2.png", "/rooms/room3.png", "/rooms/room1.png"],
+        images: ["/rooms/room2.png", "/rooms/room1.png", "/rooms/room3.png"],
         cta: {
           viewText: "View Room",
           viewLink: "/rooms-and-suites/super-deluxe-room",
@@ -107,15 +107,15 @@ export const RoomPageData: RoomPageDataType = {
       },
       {
         number: "03",
-        tag: "One of One",
-        title: "The Anjaney Suite",
-        subtitle: "A little ceremony",
+        tag: "01 Suite",
+        title: "The Suite",
+        subtitle: "The estate's singular residence",
         description:
-          "The main building's one & only suite, a separate living room & bedroom for guests who like their stay to feel like an occasion.",
+          "A generous living room, private dining and a master bedroom designed for families who want to stay together.",
         specs: {
-          guests: "2 Adults + 2 Children",
-          size: "≈ 650 sq ft",
-          bed: "King Bed",
+          guests: "4 Adults + 2 Children",
+          size: "≈ 780 sq ft",
+          bed: "Master King",
         },
         image: "/rooms/room3.png",
         images: ["/rooms/room3.png", "/rooms/room1.png", "/rooms/room2.png"],
@@ -128,6 +128,74 @@ export const RoomPageData: RoomPageDataType = {
       },
     ],
   },
+
+  // villas: {
+  //   eyebrow: "In the Garden Quarter",
+  //   title: "The Villas",
+  //   description:
+  //     "Eighteen villas set apart from the main building, near the lawns and the pool, for families who want a little more space and a lot more quiet.",
+  //   items: [
+  //     {
+  //       id: "silver",
+  //       label: "04 · 32 KEYS",
+  //       title: "Silver Villa",
+  //       tagline: "A garden-side address",
+  //       description:
+  //         "Villa living in the estate's quieter quarter, with arched balconies and a short stroll to the lawns and the pool.",
+  //       specs: ["2 Adults + 1 Child", "≈ 400 sq ft", "King Bed"],
+  //       image: "/room.png",
+  //       bookCta: BOOK_CTA,
+  //       viewCta: { text: "View villa", link: "/rooms-and-suites/silver-villa" },
+  //     },
+  //     {
+  //       id: "gold",
+  //       label: "05 · 24 KEYS",
+  //       title: "Gold Villa",
+  //       tagline: "Made for families",
+  //       description:
+  //         "Two bedrooms around a living room of their own, for families who travel together for a yatra, a wedding or a long weekend.",
+  //       specs: ["4 Adults + 2 Children", "≈ 850 sq ft", "2 King Beds"],
+  //       image: "/room.png",
+  //       bookCta: BOOK_CTA,
+  //       viewCta: { text: "View villa", link: "/rooms-and-suites/gold-villa" },
+  //     },
+  //     {
+  //       id: "Diamond Villa",
+  //       label: "04 · 32 KEYS",
+  //       title: "Diamond Villa",
+  //       tagline: "Water & stillness",
+  //       description:
+  //         "Villa rooms gathered around an indoor plunge pool and a living green wall, with a jacuzzi on the floor above.",
+  //       specs: ["2 Adults + 1 Child", "≈ 400 sq ft", "King Bed"],
+  //       image: "/room.png",
+  //       bookCta: BOOK_CTA,
+  //       viewCta: { text: "View villa", link: "/rooms-and-suites/diamond-villa" },
+  //     },
+  //   ],
+  // },
+
+  // presidentialVilla: {
+  //   eyebrow: "07 · The Crown of the Estate",
+  //   title: "The Presidential Villa",
+  //   subtitle: "VVIP Villa · Only two on the estate",
+  //   description:
+  //     "A three-room residence wrapped around a grand living salon, a private pantry and a pool pavilion of its own. Evenings begin under the chandelier and end beside lamplit water — entirely yours, from the gate to the lawn.",
+  //   image: "/room.png",
+  //   features: [
+  //     { icon: "pool", label: "Private pool & pavilion" },
+  //     { icon: "salon", label: "Grand living salon" },
+  //     { icon: "pantry", label: "Private pantry" },
+  //     { icon: "bedrooms", label: "Three bedrooms" },
+  //     { icon: "transfer", label: "Golf-cart transfers" },
+  //     { icon: "guests", label: "Up to 6 adults" },
+  //   ],
+  //   specs: ["≈ 2,400 sq ft", "3 King Beds", "Private lawn"],
+  //   bookCta: BOOK_CTA,
+  //   viewCta: {
+  //     text: "View the Villa",
+  //     link: "/rooms-and-suites/presidential-villa",
+  //   },
+  // },
 
   thoughtfulComforts: {
     eyebrow: "In Every Room & Villa",

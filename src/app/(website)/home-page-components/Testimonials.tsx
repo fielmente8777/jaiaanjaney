@@ -12,7 +12,7 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
   image,
 }) => {
   return (
-    <Section className="grid lg:grid-cols-2 grid-cols-1">
+    <Section defaultPadding={false} className="grid lg:grid-cols-2 grid-cols-1 py-0">
       <div className="w-full relative aspect-4/3.25 max-lg:hidden">
         <Image
           src={image}
