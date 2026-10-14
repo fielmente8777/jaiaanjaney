@@ -1,4 +1,5 @@
 export interface HeroType {
+  eyebrow?: string;
   title: string;
   description: string;
   images?: string[];

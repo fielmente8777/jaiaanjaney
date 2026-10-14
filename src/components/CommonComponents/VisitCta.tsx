@@ -13,7 +13,7 @@ const VisitCta: React.FC<VisitCtaType> = ({
   secondaryCta,
 }) => (
   <SectionWithContainer
-    sectionClassName="isolate bg-image bg-right bg-linear-to-r from-primary to-secondary text-white"
+    sectionClassName="isolate bg-image bg-right-center bg-linear-to-r from-primary to-secondary text-white"
     containerClassName="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
   >
     <div className="flex flex-col gap-2">
@@ -22,7 +22,7 @@ const VisitCta: React.FC<VisitCtaType> = ({
       </p>
       <SectionHeading
         title={title}
-        titleClassName="md:text-[40px]! md:leading-[48px]!"
+        titleClassName="md:text-[40px]! "
       />
       <p className="text-sm text-white/80">{description}</p>
     </div>

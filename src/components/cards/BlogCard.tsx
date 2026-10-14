@@ -8,7 +8,7 @@ type BlogCardProps = Pick<
   "slug" | "category" | "readTime" | "title" | "description" | "bannerImage"
 >;
 
-/** Story card: photo, "CATEGORY · READ TIME", title, teaser and a "Read story →" link. The whole card is the link. */
+
 const BlogCard: React.FC<BlogCardProps> = ({
   slug,
   category,

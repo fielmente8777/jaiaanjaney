@@ -44,7 +44,7 @@ export const RoomPageData: RoomPageDataType = {
       },
       {
         value: "151",
-        label: "Rooms",
+      label: "Rooms",
       },
       {
         value: "7",
@@ -160,16 +160,16 @@ export const RoomPageData: RoomPageDataType = {
         viewCta: { text: "View villa", link: "/rooms-and-suites/gold-villa" },
       },
       {
-        id: "villa-3",
+        id: "Diamond Villa",
         label: "04 · 32 KEYS",
-        title: "Silver Villa",
-        tagline: "A garden-side address",
+        title: "Diamond Villa",
+        tagline: "Water & stillness",
         description:
-          "Villa living in the estate's quieter quarter, with arched balconies and a short stroll to the lawns and the pool.",
+          "Villa rooms gathered around an indoor plunge pool and a living green wall, with a jacuzzi on the floor above.",
         specs: ["2 Adults + 1 Child", "≈ 400 sq ft", "King Bed"],
         image: "/room.png",
         bookCta: BOOK_CTA,
-        viewCta: { text: "View villa", link: "/rooms-and-suites/silver-villa" },
+        viewCta: { text: "View villa", link: "/rooms-and-suites/diamond-villa" },
       },
     ],
   },

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function AboutUs() {
   return (
-    <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-[#FAF6EC] after:z-[-3]">
+    <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-cream after:z-[-3]">
       <AboutHero {...aboutPageData.hero} />
       <SlidingTitle items={aboutPageData.slidingTitleItems} />
       <StorySection {...aboutPageData.story} />

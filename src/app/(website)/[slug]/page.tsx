@@ -5,8 +5,12 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles } from "../blogs/components/pagedata";
+import { articles, ArticlesPageData } from "../blogs/components/pagedata";
 import ArticleContent from "../blogs/components/ArticleContent";
+import VisitCta from "@/components/CommonComponents/VisitCta";
+import { galleryPageData } from "../gallery/components/pageData";
+import WelComeNote from "@/components/CommonComponents/WelComeNote";
+
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -39,7 +43,6 @@ export default async function ArticlePage({ params }: Params) {
   if (index === -1) return notFound();
 
   const post = articles[index];
-  // the next three stories after this one (wraps around), so related posts are stable between builds
   const related = Array.from(
     { length: Math.min(3, articles.length - 1) },
     (_, i) => articles[(index + 1 + i) % articles.length]
@@ -78,7 +81,12 @@ export default async function ArticlePage({ params }: Params) {
         containerClassName="grid items-start gap-10 lg:grid-cols-[5fr_3fr] lg:gap-16"
       >
         <ArticleContent {...post} />
+
       </SectionWithContainer>
+
+      <VisitCta {...galleryPageData.visitCta} />
+
+      <WelComeNote {...ArticlesPageData.welcomeNote} />
 
       {related.length > 0 && (
         <SectionWithContainer
@@ -100,6 +108,7 @@ export default async function ArticlePage({ params }: Params) {
               <BlogCard key={p.slug} {...p} />
             ))}
           </div>
+         
         </SectionWithContainer>
       )}
     </main>
