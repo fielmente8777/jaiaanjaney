@@ -15,6 +15,8 @@ interface ArchFrameProps {
   className?: string;
   /** Text-colour class for the thin inset outline, e.g. `text-cream/70`. */
   outlineClassName?: string;
+
+  outline?: boolean;
 }
 
 /**
@@ -28,6 +30,7 @@ const ArchFrame: React.FC<ArchFrameProps> = ({
   shape = "arch",
   className,
   outlineClassName = "text-cream/70",
+  outline = true,
 }) => {
   const isDome = shape === "dome";
 
@@ -48,7 +51,7 @@ const ArchFrame: React.FC<ArchFrameProps> = ({
         {children}
       </div>
 
-      {isDome ? (
+      {!outline ? null : isDome ? (
         /* Inset copy of the dome silhouette, so the line follows the dome instead of a plain semicircle */
         <svg
           aria-hidden

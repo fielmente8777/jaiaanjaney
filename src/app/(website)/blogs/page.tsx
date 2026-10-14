@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import ArticlesList from "./components/ArticlesList";
 import NewsletterSection from "./components/NewsletterSection";
 import { ArticlesPageData } from "./components/pagedata";
+import WelComeNote from "@/components/CommonComponents/WelComeNote";
 
 export const metadata: Metadata = {
   title: "Stories from Salasar | Jai Anjaney Resort",
@@ -36,6 +37,7 @@ export default function Articles() {
       </SectionWithContainer>
 
       <NewsletterSection {...newsletter} />
+      <WelComeNote {...ArticlesPageData.welcomeNote} />
     </main>
   );
 }

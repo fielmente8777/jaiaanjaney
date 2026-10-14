@@ -1,6 +1,6 @@
-export const enCodeText = encodeURIComponent(`Hi Aroha Palms Team,
+export const enCodeText = encodeURIComponent(`Hi Jai Anjaney Team,
 
-I'm interested in booking a stay at Aroha Palms.
+I'm interested in booking a stay at Jai Anjaney Resort.
 
 Please share the best available options and rates.
 

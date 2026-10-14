@@ -52,7 +52,7 @@ const VillasSection: React.FC<VillasSectionType> = ({
   items,
 }) => (
   <SectionWithContainer
-    // `isolate` keeps the `.bg-image` mandala (z-index: -1) above this section's own gradient
+
     sectionClassName="relative bg-image bg-right bg-linear-to-b from-cream from-35% to-espresso to-65%"
     containerClassName="flex flex-col gap-10 md:gap-16"
   >

@@ -30,7 +30,6 @@
 //         )}
 //       />
 
-
 //       <div className="absolute z-10 bottom-4 md:bottom-0 inset-x-4 md:inset-x-auto md:left-[18%] md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary">
 //         <SectionHeading title={title} titleColor="white" wrapperClassName="mb-2" titleClassName="max-md:text-3xl!" />
 //         <p className="font-light pr-14">{description}</p>
@@ -68,12 +67,17 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
   const [textSwiper, setTextSwiper] = useState<SwiperType | null>(null);
   const arrow = "p-1 text-white/80 hover:text-white transition-colors";
 
-
   useEffect(() => {
     if (!imageSwiper || !textSwiper) return;
-    imageSwiper.controller.control = textSwiper;
+
+    const controller = imageSwiper.controller;
+
+    if (!controller) return;
+
+    controller.control = textSwiper;
+
     return () => {
-      imageSwiper.controller.control = undefined;
+      controller.control = undefined;
     };
   }, [imageSwiper, textSwiper]);
 
@@ -82,7 +86,6 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
       defaultPadding={false}
       className="relative border-t-4 border-secondary pb-10 md:pb-16"
     >
-   
       <SwiperCarousel
         data={items}
         slidesPerView={1}
@@ -105,7 +108,6 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
         )}
       />
 
-   
       <div className="relative z-10 -mt-12 md:-mt-16 mx-4 md:mx-auto md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary">
         <SectionHeading
           title={title}
@@ -114,7 +116,6 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
           titleClassName="max-md:text-3xl!"
         />
 
-       
         <div className="pr-14">
           <SwiperCarousel
             data={items}

@@ -12,8 +12,13 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
   title,
   items,
 }) => {
-  const [selectTitle, setSelectTitle] = useState<string>("");
-  const filteredImage = items.find((item) => item.title === selectTitle);
+  const [selectTitle, setSelectTitle] = useState<string>(
+    items[0]?.title || ""
+  );
+  const filteredImage =
+    items.find((item) => item.title === selectTitle) || items[0];
+  const activeImage = filteredImage?.image;
+
   return (
     <SectionWithContainer sectionClassName="relative bg-image bg-left">
       <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
@@ -33,20 +38,22 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
                 a={item.description}
                 i={index}
                 setSelectTitle={setSelectTitle}
-                image={filteredImage?.image || ""}
+                image={item.image || activeImage || ""}
               />
             ))}
           </div>
         </div>
         {/* show image in md screen */}
         <div className="relative w-full aspect-square hidden md:block">
-          <Image
-            src={filteredImage?.image || ""}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {activeImage && (
+            <Image
+              src={activeImage}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          )}
         </div>
       </div>
     </SectionWithContainer>

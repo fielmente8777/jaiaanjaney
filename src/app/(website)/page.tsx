@@ -17,7 +17,7 @@ import BookingForm from "@/components/Forms/BookingForm";
 
 export default function Home() {
   return (
-    <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-[#FAF6EC] after:z-[-3]">
+    <main className="relative after:content-[''] after:inset-0 after:absolute after:z-[-3]">
       <Banner {...homePageData.hero} />
       <div className="lg:hidden bg-linear-to-r from-primary to-secondary py-4">
         <Container>
