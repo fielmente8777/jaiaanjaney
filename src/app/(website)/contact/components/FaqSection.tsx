@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FaqSectionType } from "@/@types/contactPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { Description, Headings, Tagline } from "@/components/typography";
-import { ChevronDown, Contact } from "@/utils/icons";
+import { ChevronDown } from "@/utils/icons";
 
 const FaqSection: React.FC<FaqSectionType> = ({
   eyebrow,
@@ -39,22 +39,20 @@ const FaqSection: React.FC<FaqSectionType> = ({
           <Headings
             level={2}
             heading={title}
-            className="text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52px] font-cinzel font-normal text-dark uppercase tracking-wide"
+            className="text-3xl sm:text-4xl lg:text-[48px] lg:leading-[56px] font-primary font-normal text-dark uppercase tracking-normal"
           />
 
           {/* Support Narrative & Contact Information (Desktop) */}
           <div className="hidden lg:flex flex-col gap-4">
-            <Description className="text-light text-[17px] leading-[26px] mt-1">
-              {subtitle}
+            <Description className="text-light font-nunito-sans !font-light !text-[17px] !leading-[28px] tracking-normal mt-1">
+              Something else on your mind? Our reservations
+              <span className="block">desk is happy to help.</span>
             </Description>
 
-            <div className="flex items-center gap-3 pt-4">
-              <div className="shrink-0 flex items-center justify-center">
-                <Contact />
-              </div>
+            <div className="pt-2">
               <Link
                 href={`tel:${phone.replace(/\s+/g, "")}`}
-                className="font-cinzel text-xl sm:text-2xl text-primary hover:text-dark transition-colors tracking-wide font-normal"
+                className="inline-block font-nunito-sans font-normal text-[13.5px] leading-[18px] tracking-[0.14em] uppercase text-dark border-b border-[#E9621C] pb-[3px] hover:text-primary transition-colors"
               >
                 {phone}
               </Link>
@@ -75,7 +73,7 @@ const FaqSection: React.FC<FaqSectionType> = ({
                     className="w-full flex items-center justify-between gap-4 text-left group cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-cinzel text-base sm:text-lg lg:text-[19px] text-dark font-normal tracking-wide uppercase group-hover:text-primary transition-colors">
+                    <span className="font-cinzel text-[18px] sm:text-[20px] text-dark font-normal tracking-wide uppercase group-hover:text-primary transition-colors">
                       {faq.question}
                     </span>
                     <span
@@ -99,17 +97,15 @@ const FaqSection: React.FC<FaqSectionType> = ({
 
           {/* Support Narrative & Contact Information (Mobile) */}
           <div className="lg:hidden flex flex-col items-center text-center gap-2.5 mt-8 pt-2">
-            <Description className="text-light text-base sm:text-[17px] leading-[25px] text-center max-w-md mx-auto">
-              {subtitle}
+            <Description className="text-light font-nunito-sans !font-light !text-[17px] !leading-[28px] tracking-normal text-center max-w-md mx-auto">
+              Something else on your mind?
+              <span className="block">Our reservations desk is happy to help.</span>
             </Description>
 
-            <div className="flex items-center justify-center gap-3 pt-1">
-              <div className="shrink-0 flex items-center justify-center">
-                <Contact />
-              </div>
+            <div className="pt-2">
               <Link
                 href={`tel:${phone.replace(/\s+/g, "")}`}
-                className="font-cinzel text-xl sm:text-2xl text-primary hover:text-dark transition-colors tracking-wide font-normal"
+                className="inline-block font-nunito-sans font-normal text-[13.5px] leading-[18px] tracking-[0.14em] uppercase text-dark border-b border-[#E9621C] pb-[3px] hover:text-primary transition-colors"
               >
                 {phone}
               </Link>

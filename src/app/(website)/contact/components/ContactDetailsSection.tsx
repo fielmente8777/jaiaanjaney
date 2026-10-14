@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContactDetailsType } from "@/@types/contactPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
+import { EmailIcon, PhoneIcon, AddressIcon } from "@/utils/icons";
 
 const ContactDetailsSection: React.FC<ContactDetailsType> = ({
   image,
@@ -16,7 +17,7 @@ const ContactDetailsSection: React.FC<ContactDetailsType> = ({
       defaultPadding={false}
       sectionClassName="relative overflow-hidden border-b-[5px] border-[#E9621C] bg-gradient-to-b from-[#E9621C] to-[#DF951D]"
       sectionStyle={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
-      containerClassName="w-full max-lg:!px-0 max-lg:!max-w-none"
+      containerClassName="!max-w-full !p-0 w-full"
     >
       {/* Interior Visual (Desktop) */}
       <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-0 overflow-hidden">
@@ -46,89 +47,56 @@ const ContactDetailsSection: React.FC<ContactDetailsType> = ({
         {/* Contact Information Panel */}
         <div
           style={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
-          className="w-full bg-gradient-to-b from-[#E9621C] to-[#DF951D] text-white flex flex-col justify-center px-8 sm:px-12 md:px-16 lg:px-14 xl:px-18 py-12 sm:py-16 md:py-20 lg:py-24"
+          className="w-full bg-gradient-to-b from-[#E9621C] to-[#DF951D] text-white flex flex-col justify-start px-4 sm:px-6 lg:px-[56px] py-12 sm:py-16 lg:pt-[172px] lg:pb-[172px]"
         >
-          <div className="max-w-xl w-full mx-auto lg:mx-0 flex flex-col">
+          <div className="w-full flex flex-col">
             {/* Email Contact */}
             <div className="flex flex-col">
               <div className="flex items-center gap-3.5">
-                <svg
-                  width={26}
-                  height={26}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.8}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0 text-white"
-                >
-                  <rect width={20} height={16} x={2} y={4} rx={2} />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-                <h3 className="font-cinzel text-2xl sm:text-3xl lg:text-[32px] font-normal tracking-wide text-white uppercase">
+                <EmailIcon />
+                <h3 className="font-ivyora font-normal text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[36px] lg:leading-[40px] tracking-[0.07em] text-white uppercase">
                   {email.label}
                 </h3>
               </div>
               <Link
                 href={email.link}
-                className="font-nunito-sans text-base sm:text-lg text-white/95 hover:text-white mt-2.5 block tracking-wide hover:underline underline-offset-4"
+                className="font-montserrat font-normal text-[15px] sm:text-[16px] leading-[22px] sm:leading-[24px] tracking-normal text-white/95 hover:text-white mt-3 lg:mt-[16px] block hover:underline underline-offset-4"
               >
                 {email.value}
               </Link>
             </div>
 
             {/* Separator */}
-            <div className="w-full h-[1px] bg-white/40 my-6 sm:my-8" />
+            <div className="w-full h-[1px] bg-white/40 my-7 sm:my-8 lg:mt-[48px] lg:mb-[40px]" />
 
             {/* Telephone Contact */}
             <div className="flex flex-col">
               <div className="flex items-center gap-3.5">
-                <svg
-                  width={26}
-                  height={26}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={1.8}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="shrink-0 text-white"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <h3 className="font-cinzel text-2xl sm:text-3xl lg:text-[32px] font-normal tracking-wide text-white uppercase">
+                <PhoneIcon />
+                <h3 className="font-ivyora font-normal text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[36px] lg:leading-[40px] tracking-[0.07em] text-white uppercase">
                   {phone.label}
                 </h3>
               </div>
               <Link
                 href={phone.link}
-                className="font-nunito-sans text-base sm:text-lg text-white/95 hover:text-white mt-2.5 block tracking-wider"
+                className="font-montserrat font-normal text-[15px] sm:text-[16px] leading-[22px] sm:leading-[24px] tracking-normal text-white/95 hover:text-white mt-3 lg:mt-[16px] block"
               >
                 {phone.value}
               </Link>
             </div>
 
             {/* Separator */}
-            <div className="w-full h-[1px] bg-white/40 my-6 sm:my-8" />
+            <div className="w-full h-[1px] bg-white/40 my-7 sm:my-8 lg:mt-[48px] lg:mb-[40px]" />
 
             {/* Physical Location */}
             <div className="flex flex-col">
               <div className="flex items-center gap-3.5">
-                <svg
-                  width={26}
-                  height={26}
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="shrink-0 text-white"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <h3 className="font-cinzel text-2xl sm:text-3xl lg:text-[32px] font-normal tracking-wide text-white uppercase">
+                <AddressIcon />
+                <h3 className="font-ivyora font-normal text-[24px] sm:text-[28px] lg:text-[32px] leading-[32px] sm:leading-[36px] lg:leading-[40px] tracking-[0.07em] text-white uppercase">
                   {address.label}
                 </h3>
               </div>
-              <p className="font-nunito-sans text-base sm:text-lg text-white/95 mt-2.5 leading-relaxed">
+              <p className="font-montserrat font-normal text-[15px] sm:text-[16px] leading-[22px] sm:leading-[24px] tracking-normal text-white/95 mt-3 lg:mt-[16px]">
                 {address.value}
               </p>
               {address.note && (

@@ -1,8 +1,15 @@
-import { Cormorant_Garamond, Cinzel, Nunito_Sans } from "next/font/google";
+import { Cormorant_Garamond, Cinzel, Nunito_Sans, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./style.scss";
 import { WebContextProvider } from "@/context-api/WebContext";
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant-garamond",
@@ -80,15 +87,16 @@ const avenir = localFont({
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://jaiaanjaney.com"),
   title: "Jai Aanjaney",
-  description: "",
+  description: "Luxury Resort & Villas in Salasar",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${cinzel.variable} ${nunitoSans.variable} ${trajanPro.variable} ${avenir.variable}`}
+      className={`${cormorantGaramond.variable} ${cinzel.variable} ${nunitoSans.variable} ${trajanPro.variable} ${avenir.variable} ${montserrat.variable}`}
     >
       <body className="font-sans antialiased" suppressHydrationWarning={true}>
         <WebContextProvider>{children}</WebContextProvider>

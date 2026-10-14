@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function Gallery() {
   return (
-    <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-cream after:z-[-3]">
+    <main>
       <GalleryHero {...galleryPageData.hero} />
       <GallerySection {...galleryPageData.gallery} />
       <FilmSection {...galleryPageData.film} />

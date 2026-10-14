@@ -29,19 +29,19 @@ export const contactPageData: {
     image: "/about.png",
     email: {
       label: "EMAIL ADDRESS:",
-      value: "contact@jaiaanjaney.com",
-      link: "mailto:contact@jaiaanjaney.com",
+      value: "contact@LOREMIPSUM.com",
+      link: "mailto:contact@LOREMIPSUM.com",
     },
     phone: {
       label: "PHONE:",
-      value: "+91 12345 12345",
-      link: "tel:+911234512345",
+      value: "+91 XXXXXXXXXX",
+      link: "tel:+91 XXXXXXXXXX",
     },
     address: {
       label: "ADDRESS:",
       value:
-        "Jai Anjaney Resort, Salasar, Churu District, Rajasthan 331506, India",
-      note: "Near Salasar Balaji Temple Dham",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      
     },
   },
 
@@ -65,23 +65,23 @@ export const contactPageData: {
       {
         title: "BY ROAD",
         items: [
-          { destination: "Jaipur", distance: "170 KM" },
-          { destination: "Delhi", distance: "310 KM" },
-          { destination: "Bikaner", distance: "160 KM" },
+          { destination: "Jaipur", distance: "00 KM" },
+          { destination: "Delhi", distance: "00 KM" },
+          { destination: "Bikaner", distance: "00 KM" },
         ],
       },
       {
         title: "BY RAIL",
         items: [
-          { destination: "Sujangarh Station", distance: "28 KM" },
-          { destination: "Jaipur Junction", distance: "170 KM" },
+          { destination: "Sujangarh Station", distance: "00 KM" },
+          { destination: "Jaipur Junction", distance: "00 KM" },
         ],
       },
       {
         title: "BY AIR",
         items: [
-          { destination: "Jaipur International Airport", distance: "180 KM" },
-          { destination: "Delhi IGI Airport", distance: "300 KM" },
+          { destination: "Jaipur International Airport", distance: "00 KM" },
+          { destination: "Delhi IGI Airport", distance: "00 KM" },
         ],
       },
     ],
@@ -97,7 +97,7 @@ export const contactPageData: {
       {
         question: "What are the check-in and check-out times?",
         answer:
-          "Check-in is from 2:00 PM and check-out is until 11:00 AM. Early check-in and late check-out can be requested, subject to availability.",
+          "[Check-in and check-out times to confirm.] Early check-in and late check-out can be requested, subject to availability.",
       },
       {
         question: "Is the resort vegetarian?",

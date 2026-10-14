@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --ground-ivory: #F7F3EB;
+  --line-default: #E3D3BC;
+  --brand-gold-pale: #F3D5A5;
 }
 
 @theme inline {
@@ -14,16 +17,20 @@
   --color-accent: #a2400d;
   --color-cream: #faf6ec;
   --color-espresso: #3f2416;
-  --color-ground-ivory: #fbf8f2;
-  --color-ground-ivory-light: #fbf8f2;
+  --color-ground-ivory: #F7F3EB;
+  --color-ground-ivory-light: #F7F3EB;
   --color-line-default: #e3d3bc;
+  --color-brand-gold-pale: #F3D5A5;
 
   /* Fonts */
   --font-primary: var(--font-trajan-pro);
   --font-secondary: var(--font-cormorant-garamond);
   --font-body: var(--font-avenir);
+  --font-avenir: var(--font-avenir);
   --font-cinzel: var(--font-cinzel);
   --font-nunito-sans: var(--font-nunito-sans);
+  --font-montserrat: var(--font-montserrat);
+  --font-ivyora: "IvyOra Display", var(--font-cormorant-garamond), serif;
 }
 
 body {

@@ -23,32 +23,32 @@ const ContactHero: React.FC<ContactHeroType> = ({
     >
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[720px] xl:min-h-[784px]">
         {/* Left Column: Full bleed to the left edge of viewport */}
-        <div className="w-full flex flex-col items-center justify-center text-center py-12 sm:py-16 lg:py-20 relative z-10">
+        <div className="w-full flex flex-col items-center pt-12 sm:pt-16 md:pt-[102px] pb-12 sm:pb-16 md:pb-[102px] text-center relative z-10">
           {/* Eyebrow Tagline */}
-          <div className="px-6 sm:px-10 max-w-[560px] text-center">
+          <div className="px-5 sm:px-8 md:px-10 max-w-[560px] text-center">
             <Tagline
               eyebrow={eyebrow}
-              wrapperClassName="items-center justify-center"
-              className="!font-normal !text-[20px] !leading-[26px] text-center"
+              wrapperClassName="items-center justify-center !gap-[16px]"
+              className="!font-normal !text-[24px] !leading-[32px] text-center"
             />
           </div>
 
           {/* Section Heading */}
-          <div className="px-6 sm:px-10 max-w-[560px] text-center mt-3 sm:mt-4">
+          <div className="px-5 sm:px-8 md:px-10 max-w-[600px] text-center mt-[16px]">
             <Headings
               level={1}
               heading={title}
-              className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[68px] lg:leading-[72px] font-cinzel font-normal text-dark uppercase tracking-wide text-center"
+              className="text-3xl sm:text-4xl md:text-[56px] md:leading-[64px] font-primary font-normal text-dark uppercase tracking-wide text-center"
             />
           </div>
 
           {/* Decorative Concierge Bell Graphic */}
-          <div className="w-full my-6 sm:my-8 lg:my-10">
+          <div className="w-full mt-6 sm:mt-8 md:mt-[56px]">
             <ContactUsBell className="w-full h-auto block" />
           </div>
 
           {/* Featured Architecture Visual (Mobile) */}
-          <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/380] min-h-[260px] overflow-hidden shadow-md border-y border-[#DF951D]/30 my-4">
+          <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/380] min-h-[260px] overflow-hidden shadow-md border-y border-[#DF951D]/30 mt-8 mb-6 sm:mt-10 sm:mb-8">
             <Image
               src={image}
               alt={title}
@@ -60,19 +60,19 @@ const ContactHero: React.FC<ContactHeroType> = ({
           </div>
 
           {/* Introductory Description */}
-          <div className="px-6 sm:px-10 max-w-[520px] text-center">
-            <Description className="text-light text-base sm:text-[18px] leading-relaxed text-center font-light">
+          <div className="px-5 sm:px-8 md:px-0 max-w-[520px] w-full text-center mt-6 sm:mt-8 md:mt-[56px]">
+            <Description className="text-light !font-montserrat !font-normal !text-[16px] !leading-[24px] text-center">
               {description}
             </Description>
           </div>
 
           {/* Call to Action */}
-          <div className="pt-6 sm:pt-8 flex justify-center">
+          <div className="mt-8 sm:mt-10 md:mt-[56px] flex justify-center">
             <Link
               href={buttonLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#BA471B] hover:bg-[#A83C15] text-white font-nunito-sans font-semibold text-[15px] leading-[18px] tracking-[0.12em] uppercase px-8 py-3.5 shadow-md transition-all"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-avenir font-medium text-[14px] leading-[20px] tracking-[0.12em] uppercase px-8 py-3.5 shadow-md transition-all"
             >
               {buttonText}
             </Link>
