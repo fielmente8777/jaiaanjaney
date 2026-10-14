@@ -10,6 +10,8 @@ import { aboutPageData } from "./components/pageData";
 import WelComeNote from "@/components/CommonComponents/WelComeNote";
 import { homePageData } from "../home-page-components/pageData";
 import { DayAtJaiAnjaney } from "../home-page-components";
+import { EventFormats } from "../mice/components";
+import VisitCta from "@/components/CommonComponents/VisitCta";
 
 export const metadata: Metadata = {
   title: "About Us | Jai Anjaney Resort, Salasar",
@@ -23,8 +25,10 @@ export default function AboutUs() {
       <SlidingTitle items={aboutPageData.slidingTitleItems} />
       <StorySection {...aboutPageData.story} />
       <VisionSection {...aboutPageData.vision} />
+      <EventFormats {...aboutPageData.formats} />
       {/* <DayAtJaiAnjaney {...homePageData.dayAtJaiAnjaney} /> */}
       <ValuesSection {...aboutPageData.values} />
+      <VisitCta {...aboutPageData.visitCta} />
       <WelComeNote {...aboutPageData.welcomeNote} />
     </main>
   );

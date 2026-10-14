@@ -1,6 +1,7 @@
 import { VillaAmenitiesType } from "@/@types/presidentialVillaPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading, Tagline } from "@/components/typography";
+import Swoosh from "@/components/typography/Swoosh";
 
 const AmenitiesComforts: React.FC<VillaAmenitiesType> = ({
   eyebrow,
@@ -12,7 +13,7 @@ const AmenitiesComforts: React.FC<VillaAmenitiesType> = ({
     containerClassName="flex flex-col items-center gap-8 md:gap-10"
   >
     <div className="flex flex-col items-center gap-3 text-center">
-      <Tagline eyebrow={eyebrow} textColor="text-white" />
+      <Swoosh eyebrow={eyebrow} textColor="text-white" />
       <SectionHeading title={title} titleColor="dark" textCenter />
     </div>
 

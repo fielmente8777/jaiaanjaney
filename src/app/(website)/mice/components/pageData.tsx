@@ -1,9 +1,9 @@
+import { EnquirySectionType } from "@/@types/commonSections";
 import {
   EventFormatsType,
   EventsBannerType,
   EventsIntroType,
   MeetingsHeroType,
-  RfpSectionType,
 } from "@/@types/meetingsPage";
 import { contact } from "@/utils/constent";
 import { AwardIcon, CorporateIcon, GuestIcon, ParkingIcon, PoolIcon, ProductIcon } from "@/utils/Room";
@@ -14,8 +14,7 @@ interface MeetingsPageDataType {
   intro: EventsIntroType;
   formats: EventFormatsType;
   banner: EventsBannerType;
-  rfp: RfpSectionType;
-}
+  rfp: EnquirySectionType;}
 
 
 export const meetingsPageData: MeetingsPageDataType = {
@@ -24,7 +23,7 @@ export const meetingsPageData: MeetingsPageDataType = {
     title: "Meetings & Events",
     description:
       "Conferences, offsites and award nights on a resort estate, with rooms for every delegate and space to unwind between sessions.",
-    images: ["/meetings/hero.jpg"],
+    images: ["/bnr.jpg"],
   },
 
   stats: [
@@ -43,7 +42,7 @@ export const meetingsPageData: MeetingsPageDataType = {
 
       "Between sessions there is a 12,000 sq ft pool, a bowling alley and gaming zone, a spa and meditation lawns — and 151 rooms, so nobody has to travel back at night.",
     ],
-    image: "/meetings/intro.jpg",
+    image: "/mice.jpg",
     cta: { text: "Request a proposal", link: contact.WhatsappCta },
   },
 
@@ -65,26 +64,108 @@ export const meetingsPageData: MeetingsPageDataType = {
     subtitle: "Events at Jai Anjaney",
   },
 
-  rfp: {
+  // rfp: {
+  //   id: "rfp",
+  //   formName: "mice-rfp",
+  //   eyebrow: "Plan Your Event",
+  //   title: "Send an RFP",
+  //   description:
+  //     "Share your dates, delegate count and room needs. Our events team will come back with venues, menus and a proposal.",
+  //   image: "/mice2.png",
+  //   imageCaption: "Business, Beautifully Hosted",
+  //   fields: [
+  //     { label: "Company", name: "company", placeholder: "Company name", autoComplete: "organization" },
+  //     { label: "Full name", name: "name", placeholder: "Your name", autoComplete: "name", required: true },
+  //     { label: "Phone", name: "phone", type: "tel", placeholder: "+91", autoComplete: "tel", required: true },
+  //     { label: "Email", name: "email", type: "email", placeholder: "you@company.com", autoComplete: "email", required: true },
+  //     { as: "daterange", label: "Event dates", name: "eventDates", placeholder: "Select dates", required: true },
+  //     {
+  //       as: "select",
+  //       label: "Delegates",
+  //       name: "delegates",
+  //       placeholder: "Approx. number",
+  //       required: true,
+  //       options: ["Up to 50", "50–150", "150–300", "300–600", "600+"],
+  //     },
+  //     {
+  //       as: "textarea",
+  //       label: "Message",
+  //       name: "message",
+  //       placeholder: "Event format, AV and room-block needs",
+  //       className: "sm:col-span-2",
+  //     },
+  //   ],
+  //   submitLabel: "Request a proposal",
+  //   successMessage: "Thank you. Our events team will get back to you within one working day.",
+  //   errorMessage: "We couldn't send your request. Please try again or call us.",
+  //   phoneLabel: "Or call our team",
+  //   phone: "+91 12345 12345",
+  //   endpoint: "",
+  // },
+    rfp: {
+    id: "rfp",
     eyebrow: "Plan Your Event",
     title: "Send an RFP",
     description:
       "Share your dates, delegate count and room needs. Our events team will come back with venues, menus and a proposal.",
-    image: "/meetings/rfp.jpg",
+    image: "/mice2.png",
     imageCaption: "Business, Beautifully Hosted",
-    eventTypes: [
-      "Conference",
-      "Corporate celebration",
-      "Offsite",
-      "Wedding",
-      "Social gathering",
-      "Cultural / devotional",
+    fields: [
+      {
+        label: "Company",
+        name: "company",
+        placeholder: "Company name",
+        autoComplete: "organization",
+      },
+      {
+        label: "Full name",
+        name: "name",
+        placeholder: "Your name",
+        autoComplete: "name",
+        required: true,
+      },
+      {
+        label: "Phone",
+        name: "phone",
+        type: "tel",
+        placeholder: "+91",
+        autoComplete: "tel",
+        required: true,
+      },
+      {
+        label: "Email",
+        name: "email",
+        type: "email",
+        placeholder: "you@company.com",
+        autoComplete: "email",
+        required: true,
+      },
+      {
+        as: "daterange",
+        label: "Event dates",
+        name: "dates",
+        placeholder: "Select dates",
+      },
+      {
+        as: "select",
+        label: "Delegates",
+        name: "delegates",
+        placeholder: "Approx. number",
+        options: ["Up to 50", "50–150", "150–300", "300–600", "600+"],
+      },
+      {
+        as: "textarea",
+        label: "Message",
+        name: "message",
+        placeholder: "Event format, AV and room-block needs",
+        className: "sm:col-span-2",
+      },
     ],
-    guestRanges: ["Up to 50", "50–150", "150–300", "300–600", "600+"],
-    submitLabel: "Submit RFP",
-    successMessage: "Thank you. Our events team will get back to you within one working day.",
+    submitLabel: "Request a proposal",
+    successMessage:
+      "Thank you. Our events team will get back to you within one working day.",
     errorMessage: "We couldn't send your request. Please try again or call us.",
-    phoneLabel: "Prefer to talk?",
+    phoneLabel: "Or call our team",
     phone: "+91 12345 12345",
     endpoint: "",
   },

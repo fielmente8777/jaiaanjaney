@@ -24,7 +24,7 @@ const GallerySection: React.FC<VillaGallerySectionType> = ({
       />
     </div>
 
-    <GallerySlider images={images} />
+    <GallerySlider images={images} alt={title} />
 
     <p className="mx-auto max-w-5xl text-center text-sm text-light md:text-base lg:text-lg">
       {description}

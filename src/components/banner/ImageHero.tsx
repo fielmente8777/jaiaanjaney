@@ -73,7 +73,7 @@ const ImageHero: React.FC<ImageHeroProps> = ({
         )}
       >
         {eyebrow && (
-          <p className="mb-3 text-sm uppercase text-primary md:text-2xl">
+          <p className="mb-3 text-sm  text-primary md:text-lg">
             {eyebrow}
           </p>
         )}

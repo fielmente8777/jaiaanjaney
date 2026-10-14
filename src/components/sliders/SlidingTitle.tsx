@@ -23,9 +23,9 @@ export default function SlidingTitle({
               className="marquee-item font-secondary font-semibold italic text-lg leading-6 tracking-normal text-center"
             >
               <span dangerouslySetInnerHTML={{ __html: t }}></span>
-              {/* <span className="separator">
+              <span className="separator">
                 <ICon />
-              </span> */}
+              </span>
             </span>
           ))}
         </div>
@@ -35,16 +35,17 @@ export default function SlidingTitle({
 }
 
 export const ICon = () => (
-  <svg
-    width={12}
-    height={12}
-    viewBox="0 0 12 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M5.544 11.077L-4.60818e-06 5.544L5.544 3.57628e-07L11.077 5.544L5.544 11.077ZM5.544 10.076L10.076 5.544L5.544 1.001L1.012 5.544L5.544 10.076ZM5.544 7.843L3.234 5.544L5.544 3.234L7.854 5.544L5.544 7.843Z"
-      fill="#A68668"
-    />
-  </svg>
+<svg
+  width={12}
+  height={12}
+  viewBox="0 0 12 12"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.54445 11.077L0.000453155 5.544L5.54445 3.57628e-07L11.0775 5.544L5.54445 11.077ZM5.54445 10.076L10.0765 5.544L5.54445 1.001L1.01245 5.544L5.54445 10.076ZM5.54445 7.843L3.23445 5.544L5.54445 3.234L7.85445 5.544L5.54445 7.843Z"
+    fill="white"
+  />
+</svg>
+
 );

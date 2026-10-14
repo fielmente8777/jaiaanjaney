@@ -5,7 +5,10 @@ import { ReactNode } from "react";
 export interface VillaGallerySectionType {
   eyebrow: string;
   title: string;
-  description: string;
+  /** One string, or several paragraphs */
+  description: string | string[];
+  /** Optional pull-quote shown under the description */
+  quote?: string;
   images: string[];
 }
 
@@ -49,4 +52,13 @@ export interface PresidentialVillaPageType {
   amenities: VillaAmenitiesType;
   day: VillaDayType;
   goodToKnow: GoodToKnowType;
+}
+
+
+/**
+ * One entry per room / suite / villa. `slug` is the URL segment:
+ * /rooms-and-suites/<slug>
+ */
+export interface RoomDetailPageType extends PresidentialVillaPageType {
+  slug: string;
 }

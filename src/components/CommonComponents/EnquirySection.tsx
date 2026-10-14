@@ -5,12 +5,6 @@ import Image from "next/image";
 import { TbPhone } from "react-icons/tb";
 import EnquiryForm from "./EnquiryForm";
 
-/**
- * Photo + enquiry form (server component; only `EnquiryForm` is client-side).
- * lg+: the photo is absolutely positioned against the <Section> (Container is not `relative`),
- *      so it bleeds from the left edge over the left half while the form takes the right column.
- * Below lg: the same single <Image> sits in normal flow above the form.
- */
 const EnquirySection: React.FC<EnquirySectionType> = ({
   id = "enquiry",
   eyebrow,
@@ -24,7 +18,7 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
 }) => (
   <Section id={id} className="relative border-b-4 border-primary bg-cream">
     <Container className="grid gap-8 lg:grid-cols-2 lg:gap-16">
-      <div className="relative aspect-4/3 overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:aspect-auto lg:w-1/2">
+      <div className="relative aspect-3/4 overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:aspect-auto lg:w-[44.44%]">
         <Image
           src={image}
           alt={imageCaption}

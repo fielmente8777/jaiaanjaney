@@ -15,18 +15,10 @@ export interface EventsIntroType {
   cta: CtaLink;
 }
 
-/* ───────────── Event formats ───────────── */
-export type EventFormatIcon =
-  | "conference"
-  | "corporate"
-  | "offsite"
-  | "wedding"
-  | "social"
-  | "cultural";
-
 export interface EventFormatsType {
   eyebrow: string;
   title: string;
+  desc?: string;
   items: { icon: React.ReactNode; title: string; description: string }[];
 }
 
@@ -34,21 +26,4 @@ export interface EventFormatsType {
 export interface EventsBannerType {
   title: string;
   subtitle: string;
-}
-
-/* ───────────── RFP ───────────── */
-export interface RfpSectionType {
-  eyebrow: string;
-  title: string;
-  description: string;
-  image: string;
-  imageCaption: string;
-  eventTypes: string[];
-  guestRanges: string[];
-  submitLabel: string;
-  successMessage: string;
-  errorMessage: string;
-  phoneLabel: string;
-  phone: string;
-  endpoint?: string;
 }

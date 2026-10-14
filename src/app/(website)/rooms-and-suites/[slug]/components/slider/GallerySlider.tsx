@@ -7,9 +7,10 @@ import { Autoplay, EffectCoverflow, Navigation } from "swiper/modules";
 
 interface GallerySliderProps {
   images: string[];
+  alt?: string;
 }
 
-const GallerySlider: React.FC<GallerySliderProps> = ({ images }) => {
+const GallerySlider: React.FC<GallerySliderProps> = ({ images, alt = "Room photo" }) => {
   const data = images.length < 5 ? [...images, ...images, ...images] : images;
 
   return (
@@ -48,7 +49,7 @@ const GallerySlider: React.FC<GallerySliderProps> = ({ images }) => {
         renderSlide={(src) => (
           <div className="w-full">
             <div className="w-full relative aspect-[4/2.5]">
-              <Image src={src} alt="Presidential Villa" fill className="object-cover" />
+              <Image src={src} alt={alt} fill className="object-cover" />
             </div>
           </div>
         )}

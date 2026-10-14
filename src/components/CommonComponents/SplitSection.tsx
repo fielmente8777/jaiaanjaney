@@ -30,7 +30,6 @@ const SplitSection: React.FC<SplitSectionType> = ({
       className="object-cover"
     />
   );
-  console.log("HIGHLIGHTS:", highlights);
 
   return (
     <SectionWithContainer

@@ -13,11 +13,11 @@ const VisitCta: React.FC<VisitCtaType> = ({
   secondaryCta,
 }) => (
   <SectionWithContainer
-    sectionClassName="isolate bg-image bg-right-center bg-linear-to-r from-primary to-secondary text-white"
-    containerClassName="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+    sectionClassName="isolate mandala mandala-right bg-linear-to-r from-primary to-secondary text-white"
+    containerClassName="flex h-[250px] flex-col gap-6 md:flex-row md:items-center md:justify-between"
   >
     <div className="flex flex-col gap-2">
-      <p className="text-xs uppercase tracking-[0.25em] text-white/80">
+      <p className="text-xs uppercase text-white/80">
         {eyebrow}
       </p>
       <SectionHeading

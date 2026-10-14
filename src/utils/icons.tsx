@@ -464,9 +464,91 @@ export const NextBtn = () => (
   </svg>
 )
 
+export const FamilyIcon = () => (
+  <svg
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M7.5 16.5V12.75C7.5 11.7554 7.89509 10.8016 8.59835 10.0983C9.30161 9.39509 10.2554 9 11.25 9H24.75C25.7446 9 26.6984 9.39509 27.4017 10.0983C28.1049 10.8016 28.5 11.7554 28.5 12.75V16.5"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M4.5 18.75C4.5 18.1533 4.73705 17.581 5.15901 17.159C5.58097 16.7371 6.15326 16.5 6.75 16.5C7.34674 16.5 7.91903 16.7371 8.34099 17.159C8.76295 17.581 9 18.1533 9 18.75V22.5H27V18.75C27 18.1533 27.2371 17.581 27.659 17.159C28.081 16.7371 28.6533 16.5 29.25 16.5C29.8467 16.5 30.419 16.7371 30.841 17.159C31.2629 17.581 31.5 18.1533 31.5 18.75V27H4.5V18.75Z"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M7.5 27V30M28.5 27V30"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
 
+);
 
+export const ExpIcon = () => (
+  <svg
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M28.5 7.5H7.5C6.25736 7.5 5.25 8.50736 5.25 9.75V28.5C5.25 29.7426 6.25736 30.75 7.5 30.75H28.5C29.7426 30.75 30.75 29.7426 30.75 28.5V9.75C30.75 8.50736 29.7426 7.5 28.5 7.5Z"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M5.25 15H30.75M12 4.5V10.5M24 4.5V10.5"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
 
+);
+
+export const SattvicIcon = () =>(
+
+<svg
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M27.75 6H8.25C7.00736 6 6 7.00736 6 8.25V27.75C6 28.9926 7.00736 30 8.25 30H27.75C28.9926 30 30 28.9926 30 27.75V8.25C30 7.00736 28.9926 6 27.75 6Z"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M18 24C21.3137 24 24 21.3137 24 18C24 14.6863 21.3137 12 18 12C14.6863 12 12 14.6863 12 18C12 21.3137 14.6863 24 18 24Z"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);
 
 
 

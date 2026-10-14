@@ -1,28 +1,14 @@
-import { EventFormatIcon, EventFormatsType } from "@/@types/meetingsPage";
+import {  EventFormatsType } from "@/@types/meetingsPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading, Tagline } from "@/components/typography";
-import type { IconType } from "react-icons";
-import {
-  TbBriefcase,
-  TbBuildingChurch,
-  TbGlassFull,
-  TbHeartHandshake,
-  TbPresentation,
-  TbUsersGroup,
-} from "react-icons/tb";
 
-const ICONS: Record<EventFormatIcon, IconType> = {
-  conference: TbPresentation,
-  corporate: TbBriefcase,
-  offsite: TbUsersGroup,
-  wedding: TbHeartHandshake,
-  social: TbGlassFull,
-  cultural: TbBuildingChurch,
-};
+
+
 
 const EventFormats: React.FC<EventFormatsType> = ({
   eyebrow,
   title,
+  desc,
   items,
 }) => (
   <SectionWithContainer
@@ -33,12 +19,13 @@ const EventFormats: React.FC<EventFormatsType> = ({
       <Tagline eyebrow={eyebrow} />
       <SectionHeading
         title={title}
-        titleClassName="md:text-[56px]! md:leading-[64px]!"
+        titleClassName="md:text-[56px]! "
         textCenter
       />
+      <p className="text-sm lg:text-[19px] md:text-[15px] font-light text-light">{desc}</p>
     </div>
 
-    <ul className="grid gap-px border border-secondary/30 bg-secondary/30 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-px border-y border-secondary/30 bg-secondary/30 sm:grid-cols-2 lg:grid-cols-3">
       {items.map(({ icon, title: itemTitle, description }) => (
         <li
           key={itemTitle}

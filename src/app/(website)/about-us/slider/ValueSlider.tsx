@@ -1,6 +1,5 @@
 "use client";
 
-
 import { ValuesSectionType } from "@/@types/aboutPage";
 import SwiperCarousel from "@/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/components/typography";
@@ -16,8 +15,12 @@ const ICONS = {
   heritage: GiOpenBook,
 } as const;
 
-const ValuesSlider: React.FC<ValuesSectionType> = ({ eyebrow, title, items }) => (
-  <div className="w-full relative max-lg:pb-8">
+const ValuesSlider: React.FC<ValuesSectionType> = ({
+  eyebrow,
+  title,
+  items,
+}) => (
+  <div className="relative w-full max-lg:pb-8">
     <SwiperCarousel
       data={items}
       slidesPerView={1}
@@ -25,17 +28,50 @@ const ValuesSlider: React.FC<ValuesSectionType> = ({ eyebrow, title, items }) =>
       loop
       modules={[Autoplay, Pagination, EffectFade]}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
-      pagination={{ clickable: true, el: ".day-pagination" }}
+      pagination={{
+        clickable: true,
+        el: ".day-pagination",
+      }}
       effect="fade"
       fadeEffect={{ crossFade: true }}
       speed={800}
       renderSlide={(item, index) => (
-        <ValuesCard {...item} eyebrow={eyebrow} heading={title} priority={index === 0} />
+        <ValuesCard
+          {...item}
+          eyebrow={eyebrow}
+          heading={title}
+          priority={index === 0}
+        />
       )}
     />
 
-    <div className="absolute z-50 lg:top-1/2 -bottom-4 -translate-y-1/2 lg:left-[52%] max-lg:left-1/2 max-lg:-translate-x-1/2 lg:rotate-90 flex justify-center items-center">
-      <div className="slider-dots day-pagination gap-6 flex justify-center items-center" />
+    <div
+      className="
+        absolute
+        z-50
+        top-1/2
+        -translate-y-1/2
+        left-[calc(50%-28px)]
+
+        max-lg:top-auto
+        max-lg:bottom-[-16px]
+        max-lg:left-1/2
+        max-lg:-translate-x-1/2
+        max-lg:translate-y-0
+      "
+    >
+      <div
+        className="
+          slider-dots
+          day-pagination
+          flex
+          items-center
+          justify-center
+          gap-6
+          rotate-90
+          max-lg:rotate-0
+        "
+      />
     </div>
   </div>
 );

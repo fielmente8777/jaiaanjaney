@@ -52,4 +52,6 @@ export interface EnquirySectionType {
   phoneLabel: string;
   phone: string;
   endpoint?: string;
+  /** Sent as `form` in the payload so one API route can tell the forms apart. */
+  formName?: string;
 }

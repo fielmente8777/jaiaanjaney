@@ -1,5 +1,23 @@
-import { AboutCtaType, AboutHeroType, StorySectionType, ValuesSectionType, VisionSectionType } from "@/@types/aboutPage";
-
+import {
+  AboutCtaType,
+  AboutHeroType,
+  StorySectionType,
+  ValuesSectionType,
+  VisionSectionType,
+} from "@/@types/aboutPage";
+import { VisitCtaType } from "@/@types/galleryPage";
+import { EventFormatsType } from "@/@types/meetingsPage";
+import { contact } from "@/utils/constent";
+import { ExpIcon, FamilyIcon, SattvicIcon } from "@/utils/icons";
+import {
+  AwardIcon,
+  CorporateIcon,
+  GuestIcon,
+  ParkingIcon,
+  PoolIcon,
+  ProductIcon,
+  TempleIcon,
+} from "@/utils/Room";
 
 interface AboutPageData {
   hero: AboutHeroType;
@@ -8,6 +26,8 @@ interface AboutPageData {
   vision: VisionSectionType;
   values: ValuesSectionType;
   welcomeNote: AboutCtaType;
+  formats: EventFormatsType;
+  visitCta: VisitCtaType;
 }
 
 export const aboutPageData: AboutPageData = {
@@ -15,11 +35,11 @@ export const aboutPageData: AboutPageData = {
     title: "Stay in the spirit of Salasar",
     description:
       "A resort built beside a place of faith, for the people who travel to it, together.",
-    images: ["/bnr.png"],
+    images: ["/about.jpg"],
   },
 
   slidingTitleItems: [
-    "Jai Anjaney changes that, bringing devotion, convenience, and comfort together under one roof. &nbsp; ◈ &nbsp; For generations, pilgrims to Salasar had to choose between staying close to the temple and enjoying true comfort. &nbsp; ◈ &nbsp;",
+    "Jai Anjaney changes that, bringing devotion, convenience, and comfort together under one roof. For generations, pilgrims to Salasar had to choose between staying close to the temple and enjoying true comfort.",
   ],
 
   story: {
@@ -39,23 +59,23 @@ export const aboutPageData: AboutPageData = {
         description:
           "To be Rajasthan's most distinguished spiritual resort, where pilgrimage hospitality means grand spaces, refined comfort and timeless cultural elegance.",
       },
-      {
-        image: "/room.png",
-        description: "Give pilgrims and families a comfortable, peaceful stay",
-      },
-      {
-        image: "/room.png",
-        description: "Host weddings and celebrations on a grand scale",
-      },
-      {
-        image: "/room.png",
-        description: "Offer villa living and generous space to relax",
-      },
-      {
-        image: "/room.png",
-        description:
-          "Make every guest's journey feel cared for, from arrival to departure",
-      },
+      // {
+      //   image: "/room.png",
+      //   description: "Give pilgrims and families a comfortable, peaceful stay",
+      // },
+      // {
+      //   image: "/room.png",
+      //   description: "Host weddings and celebrations on a grand scale",
+      // },
+      // {
+      //   image: "/room.png",
+      //   description: "Offer villa living and generous space to relax",
+      // },
+      // {
+      //   image: "/room.png",
+      //   description:
+      //     "Make every guest's journey feel cared for, from arrival to departure",
+      // },
     ],
   },
 
@@ -131,7 +151,57 @@ export const aboutPageData: AboutPageData = {
       },
     ],
   },
-
+  formats: {
+    eyebrow: "What Guides Us",
+    title: "Our Values",
+    desc: "Five beliefs behind every stay, every celebration and every welcome at the gate.",
+    items: [
+      {
+        icon: <GuestIcon />,
+        title: "Heartfelt Hospitality",
+        description:
+          "Warmth, grace and genuine care in every interaction — hospitality as a feeling, not a service.",
+      },
+      {
+        icon: <ProductIcon />,
+        title: "Refined Luxury",
+        description:
+          "Spacious architecture, elegant interiors and seamless comfort, never extravagance for its own sake.",
+      },
+      {
+        icon: <TempleIcon />,
+        title: "Spiritual Connection",
+        description:
+          "The sacred energy of Salasar, held in calm and grounding spaces for reflection.",
+      },
+      {
+        icon: <FamilyIcon />,
+        title: "Family First",
+        description:
+          "Spaces that bring generations together — to celebrate, to play and to rest.",
+      },
+      {
+        icon: <ExpIcon />,
+        title: "Grand Experiences",
+        description:
+          "From weddings to weekend escapes, every occasion shaped with scale and care.",
+      },
+      {
+        icon: <SattvicIcon />,
+        title: "Sattvic by Choice",
+        description:
+          "Pure vegetarian kitchens and an alcohol-free estate, in keeping with the town we serve.",
+      },
+    ],
+  },
+  visitCta: {
+    eyebrow: "Plan Your Visit",
+    title: "Come for the Stay. Stay for the Feeling.",
+    description:
+      "Speak to our team about rooms, villas, celebrations and yatra stays.",
+    cta: { text: "Enquire Now", link: contact.WhatsappCta },
+    secondaryCta: { text: "Call +91 12345 12345", link: contact.callCta },
+  },
   welcomeNote: {
     eyebrow: "जय श्री बालाजी",
     description:

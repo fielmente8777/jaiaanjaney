@@ -79,7 +79,7 @@ export const RoomPageData: RoomPageDataType = {
         images: ["/rooms/room1.png", "/rooms/room2.png", "/rooms/room3.png"],
         cta: {
           viewText: "View Room",
-          viewLink: "#",
+          viewLink: "/rooms-and-suites/deluxe-room",
           bookText: "Book Now",
           bookLink: "/contact",
         },
@@ -100,7 +100,7 @@ export const RoomPageData: RoomPageDataType = {
         images: ["/rooms/room2.png", "/rooms/room3.png", "/rooms/room1.png"],
         cta: {
           viewText: "View Room",
-          viewLink: "#",
+          viewLink: "/rooms-and-suites/super-deluxe-room",
           bookText: "Book Now",
           bookLink: "/contact",
         },
@@ -121,7 +121,7 @@ export const RoomPageData: RoomPageDataType = {
         images: ["/rooms/room3.png", "/rooms/room1.png", "/rooms/room2.png"],
         cta: {
           viewText: "View Suite",
-          viewLink: "#",
+          viewLink: "/rooms-and-suites/anjaney-suite",
           bookText: "Book Now",
           bookLink: "/contact",
         },
@@ -219,7 +219,7 @@ export const RoomPageData: RoomPageDataType = {
         description:
           "Villa living in the estate's quieter quarter, with arched balconies and a short stroll to the lawns and the pool.",
         specs: ["2 Adults + 1 Child", "≈ 400 sq ft", "King Bed"],
-        image: "/room.png",
+        image: "/silvervilla.jpg",
         bookCta: BOOK_CTA,
         viewCta: { text: "View villa", link: "/rooms-and-suites/silver-villa" },
       },
@@ -231,7 +231,7 @@ export const RoomPageData: RoomPageDataType = {
         description:
           "Two bedrooms around a living room of their own, for families who travel together for a yatra, a wedding or a long weekend.",
         specs: ["4 Adults + 2 Children", "≈ 850 sq ft", "2 King Beds"],
-        image: "/room.png",
+        image: "/goldvilla.jpg",
         bookCta: BOOK_CTA,
         viewCta: { text: "View villa", link: "/rooms-and-suites/gold-villa" },
       },
@@ -244,7 +244,7 @@ export const RoomPageData: RoomPageDataType = {
         description:
           "Villa rooms gathered around an indoor plunge pool and a living green wall, with a jacuzzi on the floor above.",
         specs: ["2 Adults + 1 Child", "≈ 400 sq ft", "King Bed"],
-        image: "/room.png",
+        image: "/diamondvilla.jpg",
         bookCta: BOOK_CTA,
         viewCta: { text: "View villa", link: "/rooms-and-suites/diamond-villa" },
       },
@@ -257,7 +257,7 @@ export const RoomPageData: RoomPageDataType = {
     subtitle: "VVIP Villa · Only two on the estate",
     description:
       "A three-room residence wrapped around a grand living salon, a private pantry and a pool pavilion of its own. Evenings begin under the chandelier and end beside lamplit water — entirely yours, from the gate to the lawn.",
-    image: "/room.png",
+    image: "/presidential.jpg",
     features: [
       { icon: "pool", label: "Private pool & pavilion" },
       { icon: "salon", label: "Grand living salon" },

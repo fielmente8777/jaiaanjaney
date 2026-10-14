@@ -793,3 +793,29 @@ export const TempleIcon = () => (
 </svg>
 
 );
+
+export const LocationIcon = () => (
+  <svg
+  width={30}
+  height={30}
+  viewBox="0 0 30 30"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M15 26.25C15 26.25 6.875 18.75 6.875 12.5C6.875 10.3451 7.73102 8.27849 9.25476 6.75476C10.7785 5.23102 12.8451 4.375 15 4.375C17.1549 4.375 19.2215 5.23102 20.7452 6.75476C22.269 8.27849 23.125 10.3451 23.125 12.5C23.125 18.75 15 26.25 15 26.25Z"
+    stroke="#B5490C"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M15 15.375C16.5878 15.375 17.875 14.0878 17.875 12.5C17.875 10.9122 16.5878 9.625 15 9.625C13.4122 9.625 12.125 10.9122 12.125 12.5C12.125 14.0878 13.4122 15.375 15 15.375Z"
+    stroke="#B5490C"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);

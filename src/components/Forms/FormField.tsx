@@ -1,5 +1,9 @@
+"use client";
+
 import clsx from "clsx";
-import { useId } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { BiChevronDown } from "react-icons/bi";
 
 interface BaseProps {
@@ -27,13 +31,75 @@ type TextareaProps = BaseProps & {
   rows?: number;
 };
 
-export type FormFieldProps = InputProps | SelectProps | TextareaProps;
+type DateRangeProps = BaseProps & {
+  as: "daterange";
+  placeholder: string;
+};
+
+export type FormFieldProps =
+  | InputProps
+  | SelectProps
+  | TextareaProps
+  | DateRangeProps;
 
 // 16px on phones stops iOS from zooming into the field; 14px from `md` up.
 const CONTROL =
   "w-full border border-secondary/30 bg-white px-3 text-base text-dark outline-none transition-colors placeholder:text-light/60 focus:border-primary md:text-sm";
 
-/** Label + input / select / textarea in the site's form style. Reusable across forms. */
+const formatDate = (d: Date) =>
+  d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+
+/**
+ * Check-in/check-out style range picker. The visible input is display-only;
+ * the chosen range is submitted through a hidden input named `name`, so the
+ * parent form can read it with FormData like every other field.
+ */
+const DateRangeInput: React.FC<{
+  id: string;
+  name: string;
+  placeholder: string;
+}> = ({ id, name, placeholder }) => {
+  const [range, setRange] = useState<[Date | null, Date | null]>([null, null]);
+  const [start, end] = range;
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const today = useMemo(() => new Date(), []);
+
+  // form.reset() does not touch React state, so clear the range ourselves.
+  useEffect(() => {
+    const form = wrapRef.current?.closest("form");
+    if (!form) return;
+    const clear = () => setRange([null, null]);
+    form.addEventListener("reset", clear);
+    return () => form.removeEventListener("reset", clear);
+  }, []);
+
+  const value = start ? (end ? `${formatDate(start)} – ${formatDate(end)}` : formatDate(start)) : "";
+
+  return (
+    <div ref={wrapRef} className="relative">
+      <DatePicker
+        id={id}
+        selectsRange
+        startDate={start}
+        endDate={end}
+        onChange={(dates) => setRange(dates as [Date | null, Date | null])}
+        minDate={today}
+        placeholderText={placeholder}
+        dateFormat="d MMM yyyy"
+        autoComplete="off"
+        wrapperClassName="w-full"
+        className={clsx(CONTROL, "h-11 cursor-pointer pr-9")}
+      />
+      <input type="hidden" name={name} value={value} />
+      <BiChevronDown
+        aria-hidden
+        className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-light"
+      />
+    </div>
+  );
+};
+
+/** Label + input / select / textarea / date range in the site's form style. Reusable across forms. */
 const FormField: React.FC<FormFieldProps> = (props) => {
   const id = useId();
   const { label, name, required, className } = props;
@@ -70,6 +136,8 @@ const FormField: React.FC<FormFieldProps> = (props) => {
             className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-light"
           />
         </div>
+      ) : props.as === "daterange" ? (
+        <DateRangeInput id={id} name={name} placeholder={props.placeholder} />
       ) : props.as === "textarea" ? (
         <textarea
           id={id}

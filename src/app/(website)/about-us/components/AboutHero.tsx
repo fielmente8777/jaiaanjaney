@@ -19,7 +19,7 @@ const AboutHero: React.FC<HeroType> = ({
       defaultPadding={false}
       className="relative w-full aspect-4/3.5 lg:aspect-16/8"
     >
-      {/* image slider (falls back to the video if no images are passed) */}
+        <div className="absolute inset-0 bg-black/30 z-10" />
       {hasImages ? (
         <div className="absolute inset-0">
           <SwiperCarousel
@@ -51,10 +51,10 @@ const AboutHero: React.FC<HeroType> = ({
         video && <LazyLoadedVideo src={video.src} poster={video.poster} />
       )}
 
-      <div className="absolute inset-0 bg-black/30 z-10 pointer-events-none" />
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4 pointer-events-none">
-        <h1 className="text-3xl md:text-5xl font-primary">{title}</h1>
-        <p className="mt-4 text-lg md:text-xl max-w-3xl font-light max-lg:hidden">
+   
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 className="text-3xl md:text-[56px] font-primary">{title}</h1>
+        <p className="mt-4 text-lg md:text-xl max-w-3xl text-white max-lg:hidden">
           {description}
         </p>
       </div>

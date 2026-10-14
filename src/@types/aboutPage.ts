@@ -22,7 +22,6 @@ export type ValuesSectionType = {
     image: string;
   }[];
 };
-
 export interface AboutHeroType {
   title: string;
   description: string;
