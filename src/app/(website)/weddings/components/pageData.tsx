@@ -4,7 +4,7 @@ import { contact } from "@/utils/constent";
 export const WeddingsPageData: WeddingsPageDataType = {
   hero: {
     eyebrow: "Sacred Vows, Grand Celebrations",
-    title: "WEDDINGS AT JAI <br /> ANJANEY",
+    title: "WEDDINGS AT <br /> JAI ANJANEY",
     description:
       "Pheras blessed beside a temple town, celebrations across lawns and chandeliered halls, and every guest staying on one estate.",
     image: "/room.png",
@@ -92,7 +92,7 @@ export const WeddingsPageData: WeddingsPageDataType = {
   },
 
   weddingsBanner: {
-    title: "Grand Ho Toh Jai Anjaney Ho.",
+    title: "Grand Ho Toh <br class='sm:hidden' /> Jai Anjaney Ho.",
     subtitle: "CELEBRATE AT JAI ANJANEY",
   },
 

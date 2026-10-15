@@ -22,8 +22,13 @@ const RoomsSection: React.FC<RoomsSectionType> = ({ title, cta, images }) => {
           disableOnInteraction: false,
         }}
         renderSlide={(src) => (
-          <div className="w-full md:aspect-16/8 aspect-4/3.5 relative">
-            <Image src={src} alt={title} fill className="object-cover" />
+          <div className="w-full md:aspect-16/8 aspect-4/3.5 relative overflow-hidden group">
+            <Image
+              src={src}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         )}
       />

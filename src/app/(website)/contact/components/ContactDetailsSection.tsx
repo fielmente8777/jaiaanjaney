@@ -15,30 +15,30 @@ const ContactDetailsSection: React.FC<ContactDetailsType> = ({
     <SectionWithContainer
       sectionId="contact-details"
       defaultPadding={false}
-      sectionClassName="relative overflow-hidden border-b-[5px] border-[#E9621C] bg-gradient-to-b from-[#E9621C] to-[#DF951D]"
+      sectionClassName="relative overflow-hidden bg-gradient-to-b from-[#E9621C] to-[#DF951D]"
       sectionStyle={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
       containerClassName="!max-w-full !p-0 w-full"
     >
       {/* Interior Visual (Desktop) */}
-      <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-0 overflow-hidden">
+      <div className="hidden lg:block absolute inset-y-0 left-0 w-1/2 z-20 overflow-hidden group cursor-pointer">
         <Image
           src={image}
           alt="Jai Anjaney Resort Interior"
           fill
           priority={false}
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="50vw"
         />
       </div>
 
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[460px] lg:min-h-[620px] xl:min-h-[680px]">
         {/* Interior Visual (Mobile) */}
-        <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/420] min-h-[280px] overflow-hidden">
+        <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/420] min-h-[280px] overflow-hidden group">
           <Image
             src={image}
             alt="Jai Anjaney Resort Interior"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             sizes="100vw"
           />
         </div>

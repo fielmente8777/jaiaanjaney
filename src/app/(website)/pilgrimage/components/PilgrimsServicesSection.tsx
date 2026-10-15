@@ -29,14 +29,14 @@ const CoachParkingIcon = () => (
       width="24"
       height="24"
       rx="4"
-      stroke="#B5490C"
+      stroke="#E9621C"
       strokeWidth="1.2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M10 20V8H15C17.2091 8 19 9.567 19 11.5C19 13.433 17.2091 15 15 15H10"
-      stroke="#B5490C"
+      stroke="#E9621C"
       strokeWidth="1.2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -94,7 +94,7 @@ const PilgrimsServicesSection: React.FC<PilgrimsServicesSectionType> = ({
       {/* Services Grid */}
       <div className="relative mt-[60px]">
         {/* Background Decorative Mandala Pattern */}
-        <div className="absolute bottom-full -top-[490px] md:-right-12 lg:-right-70 w-[456px] h-[456px] pointer-events-none select-none opacity-[0.08] hidden sm:block">
+        <div className="absolute -top-[380px] -right-[120px] w-[320px] h-[320px] opacity-10 sm:-top-[490px] sm:right-auto md:-right-12 lg:-right-70 sm:w-[456px] sm:h-[456px] sm:opacity-[0.08] pointer-events-none select-none">
           <Image
             src="/rooms/mandala-new-design.png"
             alt="Mandala pattern"
@@ -105,7 +105,7 @@ const PilgrimsServicesSection: React.FC<PilgrimsServicesSectionType> = ({
         </div>
 
         {/* 3-Column Services Grid */}
-        <div className="border-y border-[#E3D3BC] grid grid-cols-1 md:grid-cols-3">
+        <div className="border border-[#E3D3BC] grid grid-cols-1 md:grid-cols-3">
           {items.map((item, index) => {
             const isRow1 = index < 3;
             const isNotLastCol = index % 3 !== 2;
@@ -113,13 +113,11 @@ const PilgrimsServicesSection: React.FC<PilgrimsServicesSectionType> = ({
             return (
               <div
                 key={item.id}
-                className={`flex flex-col items-start pt-[43px] pb-[40px] px-6 sm:px-7 lg:px-8 transition-colors duration-200 hover:bg-white/60 group ${
-                  isRow1 ? "md:border-b md:border-[#E3D3BC]" : ""
-                } ${isNotLastCol ? "md:border-r md:border-[#E3D3BC]" : ""} ${
-                  index < items.length - 1
+                className={`flex flex-col items-start pt-[43px] pb-[40px] px-6 sm:px-7 lg:px-8 transition-colors duration-200 hover:bg-white/60 group ${isRow1 ? "md:border-b md:border-[#E3D3BC]" : ""
+                  } ${isNotLastCol ? "md:border-r md:border-[#E3D3BC]" : ""} ${index < items.length - 1
                     ? "max-md:border-b max-md:border-[#E3D3BC]"
                     : ""
-                }`}
+                  }`}
               >
                 {/* Service Icon */}
                 <div className="h-9 flex items-center transition-transform duration-300 group-hover:scale-105">
@@ -133,9 +131,8 @@ const PilgrimsServicesSection: React.FC<PilgrimsServicesSectionType> = ({
 
                 {/* Service Narrative */}
                 <p
-                  className={`font-nunito-sans text-[15px] leading-[24px] text-[#5A544A] font-light mt-[8px] ${
-                    item.id === "sattvic-kitchens" ? "lg:whitespace-nowrap" : ""
-                  }`}
+                  className={`font-nunito-sans text-[15px] leading-[24px] text-[#5A544A] font-light mt-[8px] ${item.id === "sattvic-kitchens" ? "lg:whitespace-nowrap" : ""
+                    }`}
                 >
                   {item.description}
                 </p>

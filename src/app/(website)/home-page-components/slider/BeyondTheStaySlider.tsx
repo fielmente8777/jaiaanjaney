@@ -43,10 +43,15 @@ export const BeyondTheStaySliderCard = ({
   image: string;
 }) => {
   return (
-    <div className="w-full relative md:aspect-4/5.5 aspect-4/4.75">
-      <Image src={image} alt={title} fill className="object-cover" />
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="absolute inset-0 flex items-center justify-center">
+    <div className="w-full relative md:aspect-4/5.5 aspect-4/4.75 overflow-hidden group">
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <h3 className="text-white text-2xl font-primary font-light text-center px-4">
           {title}
         </h3>

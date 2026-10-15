@@ -55,7 +55,7 @@ const GallerySection: React.FC<GallerySectionType> = ({
   return (
     <SectionWithContainer
       defaultPadding={false}
-      sectionClassName="bg-ground-ivory bg-[#F7F3EB] pt-6 sm:pt-8 md:pt-10 pb-16 sm:pb-20 md:pb-24"
+      sectionClassName="bg-ground-ivory bg-[#F7F3EB] pt-[56px] pb-16 sm:pb-20 md:pb-24"
       sectionStyle={{ backgroundColor: "var(--ground-ivory, #F7F3EB)" }}
       containerClassName="flex flex-col items-center gap-8 md:gap-10"
     >

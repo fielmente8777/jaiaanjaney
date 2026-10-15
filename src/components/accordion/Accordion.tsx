@@ -72,12 +72,12 @@ const Accordion: React.FC<{
       >
         <div className="overflow-hidden">
           {image && (
-            <div className="relative w-full aspect-square md:hidden mb-3">
+            <div className="relative w-full aspect-square md:hidden mb-3 overflow-hidden group">
               <Image
                 src={image}
                 alt={question}
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>

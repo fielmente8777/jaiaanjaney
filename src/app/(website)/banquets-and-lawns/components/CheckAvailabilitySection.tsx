@@ -52,12 +52,12 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
       containerClassName="w-full"
     >
       {/* Featured Venue Media Column (Desktop) */}
-      <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[41%] xl:w-[41.5%] z-0 overflow-hidden shadow-xl">
+      <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[41%] xl:w-[41.5%] z-20 overflow-hidden shadow-xl group cursor-pointer">
         <Image
           src={image}
           alt={imageCaption}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="42vw"
           priority={false}
         />
@@ -65,7 +65,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none" />
 
         {/* Ambient Caption */}
-        <div className="absolute inset-x-0 bottom-8 lg:bottom-12 z-20 px-8 xl:px-12">
+        <div className="absolute inset-x-0 bottom-8 lg:bottom-12 z-20 px-8 xl:px-12 pointer-events-none">
           <p
             style={{
               fontFamily: "var(--font-cormorant-garamond)",
@@ -103,12 +103,12 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
             />
 
             {/* Featured Visual (Mobile) */}
-            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[380px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2">
+            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[380px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2 group">
               <Image
                 src={image}
                 alt={imageCaption}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="100vw"
                 priority={false}
               />

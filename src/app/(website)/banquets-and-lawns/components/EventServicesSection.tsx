@@ -53,7 +53,7 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
       {/* Mandala */}
       <div className="relative">
         {/* Decorative Rotating Mandala */}
-        <div className="absolute bottom-full right-0 -right-6 md:-right-12 lg:-right-16 w-[360px] h-[360px] pointer-events-none select-none opacity-[0.08] hidden sm:block">
+        <div className="absolute -top-[310px] -right-[130px] w-[320px] h-[320px] opacity-7 sm:top-auto sm:bottom-full sm:-right-[300px] sm:w-[456px] sm:h-[456px] sm:opacity-[0.08] pointer-events-none select-none">
           <Image
             src="/rooms/mandala-new-design.png"
             alt="Mandala pattern"
@@ -64,7 +64,7 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
         </div>
 
         {/* 3-Column Event Services Grid */}
-        <div className="border-y border-[#E3D3BC] grid grid-cols-1 md:grid-cols-3">
+        <div className="border border-[#E3D3BC] grid grid-cols-1 md:grid-cols-3">
           {items.map((item, index) => {
             const isRow1 = index < 3;
             const isNotLastCol = index % 3 !== 2;
@@ -72,13 +72,11 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
             return (
               <div
                 key={item.id}
-                className={`flex flex-col items-start p-6 sm:p-8 lg:p-10 transition-colors duration-200 hover:bg-white/60 group ${
-                  isRow1 ? "md:border-b md:border-[#E3D3BC]" : ""
-                } ${isNotLastCol ? "md:border-r md:border-[#E3D3BC]" : ""} ${
-                  index < items.length - 1
+                className={`flex flex-col items-start p-6 sm:p-8 lg:p-10 transition-colors duration-200 hover:bg-white/60 group ${isRow1 ? "md:border-b md:border-[#E3D3BC]" : ""
+                  } ${isNotLastCol ? "md:border-r md:border-[#E3D3BC]" : ""} ${index < items.length - 1
                     ? "max-md:border-b max-md:border-[#E3D3BC]"
                     : ""
-                }`}
+                  }`}
               >
                 {/* Service Icon */}
                 <div className="mb-4 sm:mb-5 h-9 flex items-center transition-transform duration-300 group-hover:scale-105">

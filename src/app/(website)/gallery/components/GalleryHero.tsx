@@ -15,8 +15,16 @@ const GalleryHero: React.FC<GalleryHeroType> = ({
       className="relative overflow-hidden bg-[#F7F3EB] border-b border-[#E3D3BC] pt-16 sm:pt-20 md:pt-[92px] pb-12 sm:pb-16 md:pb-[73px]"
       style={{ backgroundColor: "var(--ground-ivory, #F7F3EB)" }}
     >
+      {/* Top Ambient Primary Gradient */}
+      <div
+        className="absolute top-0 inset-x-0 h-52 sm:h-72 pointer-events-none z-0 bg-linear-to-b from-primary/20 via-primary/5 to-transparent"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(233, 98, 28, 0.20) 0%, rgba(233, 98, 28, 0.05) 55%, transparent 100%)",
+        }}
+      />
       {/* Left Ambient Mandala Motif */}
-      <div className="absolute -left-[170px] top-1/2 -translate-y-1/2 w-[384px] h-[384px] pointer-events-none z-0 select-none opacity-8 hidden sm:block">
+      <div className="absolute -left-[110px] sm:-left-[170px] top-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[384px] sm:h-[384px] pointer-events-none z-0 select-none opacity-8">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"
@@ -27,7 +35,7 @@ const GalleryHero: React.FC<GalleryHeroType> = ({
       </div>
 
       {/* Right Ambient Mandala Motif */}
-      <div className="absolute -right-[170px] top-1/2 -translate-y-1/2 w-[384px] h-[384px] pointer-events-none z-0 select-none opacity-8 hidden sm:block">
+      <div className="absolute -right-[110px] sm:-right-[170px] top-1/2 -translate-y-1/2 w-[220px] h-[220px] sm:w-[384px] sm:h-[384px] pointer-events-none z-0 select-none opacity-8">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"

@@ -18,12 +18,21 @@ const ContactHero: React.FC<ContactHeroType> = ({
     <SectionWithContainer
       sectionId="contact-hero"
       defaultPadding={false}
-      sectionClassName="relative bg-[#FAF6EC] overflow-hidden border-b-[5px] border-[#E9621C]"
+      sectionClassName="relative bg-[#FAF6EC] overflow-hidden"
       containerClassName="!max-w-full !p-0 w-full"
     >
       <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-stretch min-h-[500px] lg:min-h-[720px] xl:min-h-[784px]">
         {/* Left Column: Full bleed to the left edge of viewport */}
         <div className="w-full flex flex-col items-center pt-12 sm:pt-16 md:pt-[102px] pb-12 sm:pb-16 md:pb-[102px] text-center relative z-10">
+          {/* Top Ambient Primary Gradient */}
+          <div
+            className="absolute top-0 inset-x-0 h-52 sm:h-72 pointer-events-none z-0 bg-linear-to-b from-primary/20 via-primary/5 to-transparent"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(233, 98, 28, 0.20) 0%, rgba(233, 98, 28, 0.05) 55%, transparent 100%)",
+            }}
+          />
+
           {/* Eyebrow Tagline */}
           <div className="px-5 sm:px-8 md:px-10 max-w-[560px] text-center">
             <Tagline
@@ -48,13 +57,13 @@ const ContactHero: React.FC<ContactHeroType> = ({
           </div>
 
           {/* Featured Architecture Visual (Mobile) */}
-          <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/380] min-h-[260px] overflow-hidden shadow-md border-y border-[#DF951D]/30 mt-8 mb-6 sm:mt-10 sm:mb-8">
+          <div className="lg:hidden w-full relative aspect-[16/10] sm:aspect-[640/380] min-h-[260px] overflow-hidden shadow-md border-y border-[#DF951D]/30 mt-8 mb-6 sm:mt-10 sm:mb-8 group">
             <Image
               src={image}
               alt={title}
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               sizes="100vw"
             />
           </div>
@@ -80,13 +89,13 @@ const ContactHero: React.FC<ContactHeroType> = ({
         </div>
 
         {/* Right Column: Full bleed visual touching the right edge */}
-        <div className="hidden lg:block relative w-full h-full min-h-[500px] lg:min-h-[720px] xl:min-h-[784px] overflow-hidden">
+        <div className="hidden lg:block relative w-full h-full min-h-[500px] lg:min-h-[720px] xl:min-h-[784px] overflow-hidden group cursor-pointer">
           <Image
             src={image}
             alt={title}
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             sizes="(max-width: 1600px) 50vw, 800px"
           />
         </div>

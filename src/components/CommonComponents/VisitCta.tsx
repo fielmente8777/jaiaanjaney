@@ -19,7 +19,7 @@ const VisitCta: React.FC<VisitCtaType> = ({
       containerClassName="w-full"
     >
       {/* Background Decorative Mandala Motif */}
-      <div className="absolute right-0 bottom-0 w-[514px] h-[514px] pointer-events-none z-0 select-none opacity-8 hidden sm:block">
+      <div className="absolute -top-[100px] -right-[100px] w-[320px] h-[320px] sm:top-auto sm:left-auto sm:right-0 sm:bottom-0 sm:w-[514px] sm:h-[514px] pointer-events-none z-0 select-none opacity-10 sm:opacity-8">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"

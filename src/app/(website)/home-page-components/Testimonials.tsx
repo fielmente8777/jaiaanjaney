@@ -13,12 +13,12 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
 }) => {
   return (
     <Section defaultPadding={false} className="grid lg:grid-cols-2 grid-cols-1 py-0">
-      <div className="w-full relative aspect-4/3.25 max-lg:hidden">
+      <div className="w-full relative aspect-4/3.25 max-lg:hidden overflow-hidden group">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="100vw"
         />
       </div>
@@ -26,12 +26,12 @@ const Testimonials: React.FC<TestimonialsSectionType> = ({
         <div className="flex flex-col gap-2 items-center text-center">
           <Tagline eyebrow={eyebrow} textColor="text-white" showIcon={false} />
           <SectionHeading title={title} titleColor="white" />
-          <div className="w-full relative aspect-4/3.25 lg:hidden">
+          <div className="w-full relative aspect-4/3.25 lg:hidden overflow-hidden group">
             <Image
               src={image}
               alt={title}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="100vw"
             />
           </div>

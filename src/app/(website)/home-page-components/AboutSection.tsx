@@ -33,15 +33,15 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           <div className="absolute inset-y-2 left-2 w-1 bg-primary" />
           <div className="absolute inset-y-2 right-2 w-1 bg-primary" />
           <div className="absolute inset-y-4 right-0 w-1 bg-secondary" />
-          <div className="relative w-[94%] mx-auto aspect-4/4.5 ">
+          <div className="relative w-[94%] mx-auto aspect-4/4.5 overflow-hidden group">
             <Image
               src={image}
               alt={title}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
-            <div className="absolute inset-4 border border-white rounded-t-[300px]" />
+            <div className="absolute inset-4 border border-white rounded-t-[300px] pointer-events-none z-10" />
           </div>
         </div>
         <div className="flex flex-col justify-center items-center text-center gap-4">

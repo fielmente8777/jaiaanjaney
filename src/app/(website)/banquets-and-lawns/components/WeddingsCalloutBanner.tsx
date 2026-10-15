@@ -41,9 +41,10 @@ const WeddingsCalloutBanner: React.FC<WeddingsBannerType> = ({
           <div className="w-2.5 h-2.5 bg-[#F3D5A5] rotate-45 mb-[24px] shadow-xs" />
 
           {/* Primary Display Typography */}
-          <h2 className="font-secondary italic text-3xl sm:text-4xl md:text-5xl lg:text-[54px] lg:leading-[62px] text-white font-normal drop-shadow-sm">
-            {title}
-          </h2>
+          <h2
+            className="font-secondary italic text-3xl sm:text-4xl md:text-5xl lg:text-[54px] lg:leading-[62px] text-white font-normal drop-shadow-sm"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
 
           {/* Subtitle / Category Label */}
           <p className="font-nunito-sans text-xs sm:text-[13px] md:text-[14px] uppercase tracking-[0.2em] text-[#F3D5A5] font-light mt-[24px]">

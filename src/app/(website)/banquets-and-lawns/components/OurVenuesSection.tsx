@@ -28,7 +28,7 @@ const OurVenuesSection: React.FC<OurVenuesSectionType> = ({
         {venues.map((venue) => (
           <div
             key={venue.id}
-            className="flex flex-col bg-white border border-[#E7DECE] rounded-sm overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.12)] transition-all duration-300 group w-full max-w-[413px] min-h-[541px] justify-between"
+            className="flex flex-col bg-white rounded-none overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0px_10px_30px_rgba(0,0,0,0.12)] transition-all duration-300 group w-full max-w-[413px] min-h-[541px] justify-between"
           >
             {/* Venue Preview Media */}
             <div className="relative w-full h-[300px] overflow-hidden bg-[#ECE6DC] shrink-0">
@@ -42,39 +42,37 @@ const OurVenuesSection: React.FC<OurVenuesSectionType> = ({
             </div>
 
             {/* Venue Details Content */}
-            <div className="flex flex-col flex-1 p-6 sm:p-7 justify-between">
-              <div className="space-y-2">
-                <span className="inline-block font-nunito-sans font-normal text-[12px] leading-[16px] tracking-[0.14em] text-[#E9621C] uppercase">
+            <div className="flex flex-col flex-1 px-6 sm:px-7 pt-[22px] pb-6 sm:pb-7 border-x border-b border-primary">
+              <div>
+                <span className="block font-nunito-sans font-normal text-[12px] leading-[16px] tracking-[0.14em] text-[#E9621C] uppercase">
                   {venue.tag}
                 </span>
 
-                <h3 className="font-cinzel text-[22px] sm:text-[26px] leading-[32px] text-dark font-normal uppercase">
+                <h3 className="font-cinzel text-[22px] sm:text-[26px] leading-[32px] text-dark font-normal uppercase mt-[10px]">
                   {venue.title}
                 </h3>
 
-                <p className="font-nunito-sans text-[16px] leading-[24px] text-[#615A4F] font-light">
+                <p className="font-nunito-sans text-[16px] leading-[24px] text-[#615A4F] font-light mt-[10px]">
                   {venue.description}
                 </p>
               </div>
 
               {/* Divider & Guest Capacity & Enquire Link */}
-              <div className="pt-4 mt-auto border-t border-[#E3D3BC] space-y-3">
+              <div className="border-t border-[#E3D3BC] mt-[18px] pt-[14px] flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2 text-sm text-[#4A453E] font-nunito-sans">
                   <span className="w-1.5 h-1.5 rotate-45 bg-[#E9621C] shrink-0" />
                   <span>{venue.capacity}</span>
                 </div>
 
-                <div>
-                  <Link
-                    href={venue.enquireLink || "#check-availability"}
-                    className="group inline-flex items-center gap-2 border-b border-[#E9621C] pb-0.5 font-nunito-sans text-[14px] uppercase tracking-widest text-[#4A453E] hover:text-[#E9621C] transition-colors"
-                  >
-                    <span>ENQUIRE</span>
-                    <span className="text-[15px] transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </Link>
-                </div>
+                <Link
+                  href={venue.enquireLink || "#check-availability"}
+                  className="group inline-flex items-center gap-2 border-b border-[#E9621C] pb-0.5 font-nunito-sans text-[14px] uppercase tracking-widest text-[#4A453E] hover:text-[#E9621C] transition-colors shrink-0"
+                >
+                  <span>ENQUIRE</span>
+                  <span className="text-[15px] transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

@@ -14,14 +14,14 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
     <ArchFrame
       shape="dome"
       outlineClassName="text-secondary/70"
-      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none"
+      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none group cursor-pointer"
     >
       <Image
         src={image}
         alt={title}
         fill
         sizes="(max-width: 1024px) 90vw, 45vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
     </ArchFrame>
   );

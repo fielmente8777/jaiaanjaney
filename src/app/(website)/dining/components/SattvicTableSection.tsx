@@ -13,14 +13,14 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
     <ArchFrame
       shape="dome"
       outlineClassName="text-secondary/70"
-      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none"
+      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none group cursor-pointer"
     >
       <Image
         src={image}
         alt={title}
         fill
         sizes="(max-width: 1024px) 90vw, 45vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
       />
     </ArchFrame>
   );
@@ -43,7 +43,7 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
       <div className="absolute -bottom-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" />
 
       {/* Ambient Pattern */}
-      <div className="absolute -top-[140px] -left-[180px] w-[480px] h-[480px] pointer-events-none z-0 select-none opacity-[0.08] hidden sm:block">
+      <div className="absolute -top-[80px] -left-[80px] w-[280px] h-[280px] sm:-top-[140px] sm:-left-[180px] sm:w-[480px] sm:h-[480px] pointer-events-none z-0 select-none opacity-[0.08]">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"

@@ -16,7 +16,7 @@ const GettingHereSection: React.FC<GettingHereSectionType> = ({
       sectionClassName="relative bg-gradient-to-r from-[#DF5311] via-[#E86E18] to-[#DF951D] text-white overflow-hidden py-14 sm:py-20 md:!py-[120px] border-b-[5px] border-[#E9621C]"
     >
       {/* Ambient Motif Graphic */}
-      <div className="absolute -right-[212px] -top-[200px] w-[552px] h-[552px] pointer-events-none z-0 select-none opacity-10 hidden sm:block">
+      <div className="absolute -right-[100px] -top-[100px] w-[320px] h-[320px] sm:-right-[212px] sm:-top-[200px] sm:w-[552px] sm:h-[552px] pointer-events-none z-0 select-none opacity-10">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"
