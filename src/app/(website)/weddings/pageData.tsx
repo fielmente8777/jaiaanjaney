@@ -6,7 +6,7 @@ import type {
   StatementBannerType,
 } from "@/@types/commonSections";
 import type { HeroType } from "@/@types/homePage";
-import { BedIcon, GolfCartIcon, PureVegIcon, TempleIcon } from "@/utils/Room";
+import { GolfCartIcon, PureVegIcon, TempleIcon, BedIcon } from "@/utils/Room";
 
 interface WeddingsPageDataType {
   hero: HeroType;
@@ -18,8 +18,7 @@ interface WeddingsPageDataType {
   enquiry: EnquirySectionType;
 }
 
-// NOTE: the Figma export was too small to read, so every label and sentence below is a
-// placeholder written from the layout — replace with the final copy.
+
 export const weddingsPageData: WeddingsPageDataType = {
   hero: {
     eyebrow: "Sacred Vows, Grand Celebrations",
@@ -96,7 +95,7 @@ export const weddingsPageData: WeddingsPageDataType = {
     eyebrow: "For the Families",
     title: "Villas for the Wedding Party",
     description: [
-      "Give each family its own address: eighteen villas in a quiet garden quarter, from Silver and Gold to the Diamond Villas with plunge pools — and two Presidential Villas for the guests of honour.",
+      "Give each family its own address: eighteen villas in a quiet garden quarter, from Silver and Gold to the Diamond Villas with plunge pools and two Presidential Villas for the guests of honour.",
     ],
     quote:
       "Room blocks for the baraat, villas for the families, and a suite for the couple.",
@@ -159,12 +158,12 @@ export const weddingsPageData: WeddingsPageDataType = {
   //   phone: "+91 12345 12345",
   //   endpoint: "",
   // },
-    enquiry: {
+  enquiry: {
     id: "enquiry",
     eyebrow: "Begin Planning",
     title: "Plan Your Wedding",
     description:
-      "Tell us about your dates, guests and ceremonies — our wedding team will share venues, room blocks and menus.",
+      "Tell us about your dates, guests and ceremonies our wedding team will share venues, room blocks and menus.",
     image: "/weddings/enquiry.jpg",
     imageCaption: "Where Every Stay Feels Blessed",
     fields: [

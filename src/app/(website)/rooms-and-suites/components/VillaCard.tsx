@@ -22,7 +22,7 @@ const VillaCard: React.FC<VillaType> = ({
         alt={title}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
     </ArchFrame>
 
@@ -53,7 +53,7 @@ const VillaCard: React.FC<VillaType> = ({
           label="Book Now"
           target="_blank"
           rel="noopener noreferrer"
-          className="h-14 flex-1 justify-center border-[#FAF6EC]/60 bg-primary text-sm text-white"
+          className="h-11 flex-1 justify-center border-[#FAF6EC]/60 bg-primary text-sm text-white"
         />
         <ArrowLink
           href={viewCta.link}

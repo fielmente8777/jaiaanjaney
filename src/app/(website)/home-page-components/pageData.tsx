@@ -64,14 +64,14 @@ export const homePageData = {
         title: "Morning",
         subtitle: "A sattvic table",
         description:
-          "Breakfast under open corridors — pure vegetarian, unhurried, taken in the company of pillars older-looking than they are.",
+          "Breakfast under open corridors: pure vegetarian, unhurried, taken in the company of pillars older-looking than they are.",
         images: ["/temple2.png", "/temple1.png"],
       },
       {
         title: "Afternoon",
         subtitle: "Stillness, indoors",
         description:
-          "The wellness spa and meditation lawns hold the heat of the day at bay — quiet spaces built for nothing but rest.",
+          "The wellness spa and meditation lawns hold the heat of the day at bay quiet spaces built for nothing but rest.",
         images: ["/temple1.png", "/temple2.png"],
       },
       {
@@ -85,7 +85,7 @@ export const homePageData = {
         title: "Night",
         subtitle: "Dinner, under the stars",
         description:
-          "The rooftop restaurant closes the day the way it opened — slowly, with good food and the temple lights visible in the distance.",
+          "The rooftop restaurant closes the day the way it opened slowly, with good food and the temple lights visible in the distance.",
         images: ["/temple1.png", "/temple2.png"],
       },
     ],
@@ -155,14 +155,11 @@ export const homePageData = {
   locationSection: {
     eyebrow: "Nearby Attractions",
     title: "Discover the Heart of Rajasthan",
-    // The resort — routes on the map are drawn from here.
-    // TODO: replace with the resort's exact pin from Google Maps (right-click → copy coordinates).
     origin: {
       label: "Jai Anjaney, Salasar",
       coords: { lat: 27.7267, lng: 74.7175 },
     },
 
-    // Distances are approximate road distances from Salasar — verify before launch.
     places: [
       {
         title: "Khatu Shyam Ji",
@@ -217,7 +214,7 @@ export const homePageData = {
         title: "Mandawa",
         distance: "70 KM",
         description:
-          "Called the open-air art gallery of Rajasthan — frescoed havelis, a castle-turned-hotel, and lanes that have appeared in many a Hindi film.",
+          "Called the open-air art gallery of Rajasthan frescoed havelis, a castle-turned-hotel, and lanes that have appeared in many a Hindi film.",
         coords: { lat: 28.055, lng: 75.149 },
       },
       {

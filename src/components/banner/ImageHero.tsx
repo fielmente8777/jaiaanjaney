@@ -25,7 +25,7 @@ const ImageHero: React.FC<ImageHeroProps> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative w-full aspect-4/3.5 lg:aspect-16/8"
+      className="group overflow-hidden relative w-full aspect-4/3.5 lg:aspect-16/8"
     >
       {hasImages ? (
         <div className="absolute inset-0">
@@ -48,7 +48,7 @@ const ImageHero: React.FC<ImageHeroProps> = ({
                   fill
                   priority={i === 0}
                   sizes="100vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             )}

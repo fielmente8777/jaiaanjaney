@@ -71,7 +71,7 @@ const RoomsHero: React.FC<RoomsHeroType> = ({
 }) => (
   <Section
     defaultPadding={false}
-    className="relative border-b-2 border-primary bg-linear-to-b from-cream to-[#FCEBD3] pt-10 pb-12 md:pt-14 md:pb-16 bg-image bg-right bg-image-after"
+    className="relative border-b-2 border-primary bg-linear-to-b from-[#FCEBD3] to-cream pt-10 pb-12 md:pt-14 md:pb-16 bg-image bg-right"
   >
 
 

@@ -18,7 +18,7 @@ export default function Articles() {
   return (
     <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-[#FAF6EC] after:z-[-3]">
       <SectionWithContainer
-        sectionClassName="relative border-b border-secondary/20 bg-image bg-left bg-image-after bg-bottom-right"
+        sectionClassName="relative border-b border-secondary/20 bg-linear-to-b from-[#FCEBD3] to-cream bg-image bg-left bg-image-after bg-bottom-right"
         containerClassName="flex flex-col items-center gap-4 text-center"
       >
         <Tagline eyebrow={hero.eyebrow} />

@@ -76,6 +76,142 @@ export const articles: ArticleType[] = [
       }
     ],
   },
+    {
+    slug: "first-timers-guide-to-salasar-balaji-darshan",
+    category: "Pilgrimage",
+    readTime: "6 min read",
+    title: "A First-Timer's Guide to Salasar Balaji Darshan",
+    description: "What to expect, when to arrive and how to plan a calm, unhurried darshan from check-in to aarti.",
+    publishedAt: "October 1, 2026",
+    author: AUTHOR,
+    bannerImage: "/about.png",
+    metaData: {
+      title: "A First-Timer's Guide to Salasar Balaji Darshan | Jai Anjaney Resort",
+      description: "What to expect, when to arrive and how to plan a calm, unhurried darshan from check-in to aarti.",
+      keyWords: "Salasar, Jai Anjaney Resort, pilgrimage",
+    },
+    intro: "Salasar draws devotees through the year, and a little planning makes the visit feel unhurried. This guide covers how to pace your arrival, what to carry and how to keep the day gentle for every age in your group.",
+    tags: ["Pilgrimage", "Darshan", "Salasar", "Planning"],
+    sections: [
+      {
+        "id": "choosing-when-to-go",
+        "heading": "Choosing when to go",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Starting early keeps the day cooler and the queues shorter. Festival periods bring the largest gatherings and the most atmosphere, while quieter weeks are easier to plan around."
+          },
+          {
+            "type": "paragraph",
+            "text": "Staying close to the temple means your first aarti is a short drive away, and a rest before the evening is always within reach."
+          },
+          {
+            "type": "quote",
+            "text": "Arrive early, move slowly, and leave time to sit quietly afterwards."
+          }
+        ]
+      },
+      {
+        "id": "what-to-expect",
+        "heading": "What to expect",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Expect a steady flow of devotees, simple offerings and a calm, devotional mood. Keep your plans flexible so the day can follow the pace of the crowd."
+          },
+          {
+            "type": "image",
+            "src": "/room.png",
+            "alt": "A quiet corner of the estate",
+            "caption": "Image: a quiet corner of the estate"
+          }
+        ]
+      },
+      {
+        "id": "planning-the-day",
+        "heading": "Planning the day",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Start early to keep the day cool and the queues short",
+              "Carry light and keep essentials within reach",
+              "Plan a rest between darshan and the evening aarti",
+              "Share your travel dates so the team can plan your stay"
+            ]
+          }
+        ]
+      }
+    ],
+  },
+    {
+    slug: "first-timers-guide-to-salasar-balaji-darshan",
+    category: "Pilgrimage",
+    readTime: "6 min read",
+    title: "A First-Timer's Guide to Salasar Balaji Darshan",
+    description: "What to expect, when to arrive and how to plan a calm, unhurried darshan from check-in to aarti.",
+    publishedAt: "October 1, 2026",
+    author: AUTHOR,
+    bannerImage: "/about.png",
+    metaData: {
+      title: "A First-Timer's Guide to Salasar Balaji Darshan | Jai Anjaney Resort",
+      description: "What to expect, when to arrive and how to plan a calm, unhurried darshan from check-in to aarti.",
+      keyWords: "Salasar, Jai Anjaney Resort, pilgrimage",
+    },
+    intro: "Salasar draws devotees through the year, and a little planning makes the visit feel unhurried. This guide covers how to pace your arrival, what to carry and how to keep the day gentle for every age in your group.",
+    tags: ["Pilgrimage", "Darshan", "Salasar", "Planning"],
+    sections: [
+      {
+        "id": "choosing-when-to-go",
+        "heading": "Choosing when to go",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Starting early keeps the day cooler and the queues shorter. Festival periods bring the largest gatherings and the most atmosphere, while quieter weeks are easier to plan around."
+          },
+          {
+            "type": "paragraph",
+            "text": "Staying close to the temple means your first aarti is a short drive away, and a rest before the evening is always within reach."
+          },
+          {
+            "type": "quote",
+            "text": "Arrive early, move slowly, and leave time to sit quietly afterwards."
+          }
+        ]
+      },
+      {
+        "id": "what-to-expect",
+        "heading": "What to expect",
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Expect a steady flow of devotees, simple offerings and a calm, devotional mood. Keep your plans flexible so the day can follow the pace of the crowd."
+          },
+          {
+            "type": "image",
+            "src": "/room.png",
+            "alt": "A quiet corner of the estate",
+            "caption": "Image: a quiet corner of the estate"
+          }
+        ]
+      },
+      {
+        "id": "planning-the-day",
+        "heading": "Planning the day",
+        "blocks": [
+          {
+            "type": "list",
+            "items": [
+              "Start early to keep the day cool and the queues short",
+              "Carry light and keep essentials within reach",
+              "Plan a rest between darshan and the evening aarti",
+              "Share your travel dates so the team can plan your stay"
+            ]
+          }
+        ]
+      }
+    ],
+  },
   // {
   //   slug: "planning-a-destination-wedding-in-salasar",
   //   category: "Celebrations",
@@ -658,7 +794,7 @@ export const ArticlesPageData: ArticlesPageDataType = {
     eyebrow: "Letters from Salasar",
     title: "Stories in Your Inbox",
     description:
-      "Festival dates, darshan guides and quiet offers — once a month, never more.",
+      "Festival dates, darshan guides and quiet offers once a month, never more.",
     inputLabel: "Email address",
     placeholder: "you@example.com",
     buttonText: "Subscribe",

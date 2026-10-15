@@ -53,7 +53,7 @@ const VillasSection: React.FC<VillasSectionType> = ({
 }) => (
   <SectionWithContainer
 
-    sectionClassName="relative bg-image bg-right bg-linear-to-b from-cream from-35% to-espresso to-65%"
+    sectionClassName="group overflow-hidden relative bg-image bg-right bg-linear-to-b from-cream from-35% to-espresso to-65%"
     containerClassName="flex flex-col gap-10 md:gap-16"
   >
     <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">

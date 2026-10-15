@@ -818,21 +818,21 @@ export const FamilyIcon = () => (
 >
   <path
     d="M7.5 16.5V12.75C7.5 11.7554 7.89509 10.8016 8.59835 10.0983C9.30161 9.39509 10.2554 9 11.25 9H24.75C25.7446 9 26.6984 9.39509 27.4017 10.0983C28.1049 10.8016 28.5 11.7554 28.5 12.75V16.5"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
   />
   <path
     d="M4.5 18.75C4.5 18.1533 4.73705 17.581 5.15901 17.159C5.58097 16.7371 6.15326 16.5 6.75 16.5C7.34674 16.5 7.91903 16.7371 8.34099 17.159C8.76295 17.581 9 18.1533 9 18.75V22.5H27V18.75C27 18.1533 27.2371 17.581 27.659 17.159C28.081 16.7371 28.6533 16.5 29.25 16.5C29.8467 16.5 30.419 16.7371 30.841 17.159C31.2629 17.581 31.5 18.1533 31.5 18.75V27H4.5V18.75Z"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
   />
   <path
     d="M7.5 27V30M28.5 27V30"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -851,14 +851,14 @@ export const ExpIcon = () => (
 >
   <path
     d="M28.5 7.5H7.5C6.25736 7.5 5.25 8.50736 5.25 9.75V28.5C5.25 29.7426 6.25736 30.75 7.5 30.75H28.5C29.7426 30.75 30.75 29.7426 30.75 28.5V9.75C30.75 8.50736 29.7426 7.5 28.5 7.5Z"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
   />
   <path
     d="M5.25 15H30.75M12 4.5V10.5M24 4.5V10.5"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -878,14 +878,14 @@ export const SattvicIcon = () =>(
 >
   <path
     d="M27.75 6H8.25C7.00736 6 6 7.00736 6 8.25V27.75C6 28.9926 7.00736 30 8.25 30H27.75C28.9926 30 30 28.9926 30 27.75V8.25C30 7.00736 28.9926 6 27.75 6Z"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
   />
   <path
     d="M18 24C21.3137 24 24 21.3137 24 18C24 14.6863 21.3137 12 18 12C14.6863 12 12 14.6863 12 18C12 21.3137 14.6863 24 18 24Z"
-    stroke="#B5490C"
+    stroke="#E9621C"
     strokeWidth="1.2"
     strokeLinecap="round"
     strokeLinejoin="round"
@@ -899,3 +899,116 @@ export const SattvicIcon = () =>(
 
 
 
+
+
+export const PoolIcon = () => (
+<svg
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M13.4992 19.5V9.3C13.4992 8.42479 13.1515 7.58542 12.5327 6.96655C11.9138 6.34768 11.0744 6 10.1992 6M22.4992 19.5V9.3C22.4992 8.42479 22.1515 7.58542 21.5327 6.96655C20.9138 6.34768 20.0744 6 19.1992 6M13.4992 12H22.4992M13.4992 16.5H22.4992"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M3.75 24.3C6.15 24.3 6.15 26.1 8.55 26.1C10.95 26.1 10.95 24.3 13.35 24.3C15.75 24.3 15.75 26.1 18 26.1C20.25 26.1 20.4 24.3 22.8 24.3C25.2 24.3 25.2 26.1 27.6 26.1C30 26.1 30 24.3 32.25 24.3"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M3.75 30C6.15 30 6.15 31.8 8.55 31.8C10.95 31.8 10.95 30 13.35 30C15.75 30 15.75 31.8 18 31.8C20.25 31.8 20.4 30 22.8 30C25.2 30 25.2 31.8 27.6 31.8C30 31.8 30 30 32.25 30"
+    stroke="#B5490C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);
+export const GuestIcon = () => (
+<svg
+  width={36}
+  height={36}
+  viewBox="0 0 36 36"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M13.5 16.5C15.9853 16.5 18 14.4853 18 12C18 9.51472 15.9853 7.5 13.5 7.5C11.0147 7.5 9 9.51472 9 12C9 14.4853 11.0147 16.5 13.5 16.5Z"
+    stroke="#E9621C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M5.25 29.25C5.25 27.062 6.11919 24.9635 7.66637 23.4164C9.21354 21.8692 11.312 21 13.5 21C15.688 21 17.7865 21.8692 19.3336 23.4164C20.8808 24.9635 21.75 27.062 21.75 29.25"
+    stroke="#E9621C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M25.5008 17.2501C27.4062 17.2501 28.9508 15.7055 28.9508 13.8001C28.9508 11.8947 27.4062 10.3501 25.5008 10.3501C23.5954 10.3501 22.0508 11.8947 22.0508 13.8001C22.0508 15.7055 23.5954 17.2501 25.5008 17.2501Z"
+    stroke="#E9621C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M23.4004 21.5999C24.4015 21.423 25.4294 21.4695 26.4105 21.7361C27.3916 22.0027 28.3017 22.4828 29.0756 23.1421C29.8495 23.8013 30.4682 24.6235 30.8874 25.5497C31.3066 26.4759 31.5159 27.4834 31.5004 28.4999"
+    stroke="#E9621C"
+    strokeWidth="1.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);
+
+export const BedIcon = () => (
+  <svg
+  width={22}
+  height={22}
+  viewBox="0 0 22 22"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M2.75 17.4166V5.95825"
+    stroke="#B5490C"
+    strokeWidth="1.1"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M2.75 13.75H19.25V17.4167"
+    stroke="#B5490C"
+    strokeWidth="1.1"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M19.2497 13.75V11C19.2497 10.2707 18.9599 9.57118 18.4442 9.05546C17.9285 8.53973 17.229 8.25 16.4997 8.25H10.083V13.75"
+    stroke="#B5490C"
+    strokeWidth="1.1"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M6.41634 12.3749C7.42886 12.3749 8.24967 11.5541 8.24967 10.5416C8.24967 9.52906 7.42886 8.70825 6.41634 8.70825C5.40382 8.70825 4.58301 9.52906 4.58301 10.5416C4.58301 11.5541 5.40382 12.3749 6.41634 12.3749Z"
+    stroke="#B5490C"
+    strokeWidth="1.1"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);

@@ -6,7 +6,7 @@ export const PilgrimagePageData: PilgrimagePageDataType = {
     eyebrow: "The Reason Many Arrive",
     title: "A TOWN THAT WAKES FOR BALAJI",
     description1:
-      "Salasar Balaji Dham, dedicated to Lord Hanuman, is one of Rajasthan's most revered temples — and most of our guests arrive for the very same darshan.",
+      "Salasar Balaji Dham, dedicated to Lord Hanuman, is one of Rajasthan's most revered temples and most of our guests arrive for the very same darshan.",
     description2:
       "So every stay is planned around that journey: rest that comes easily before an early start, an environment ready for the first aarti of the day, and kitchens that stay pure vegetarian and alcohol-free.",
     checklist: [
@@ -97,7 +97,7 @@ export const PilgrimagePageData: PilgrimagePageDataType = {
     eyebrow: "Yatra Groups & Families",
     title: "PLAN YOUR PILGRIMAGE STAY",
     description:
-      "Tell us your dates and group size — we will help you plan rooms, meals and the circuit.",
+      "Tell us your dates and group size we will help you plan rooms, meals and the circuit.",
     buttonText: "PLAN MY STAY",
     buttonLink: "/contact",
     phone: contact.phone[0] || "+91 99824 10001",

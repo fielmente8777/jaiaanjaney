@@ -1,16 +1,17 @@
-
 import { StorySectionType } from "@/@types/aboutPage";
+
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { SectionHeading } from "@/components/typography";
 import Tagline from "@/components/typography/Tagline";
 import Image from "next/image";
+import Link from "next/link";
 
 const StorySection: React.FC<StorySectionType> = ({
   title,
   description,
   images,
 }) => (
-  <SectionWithContainer
+  <SectionWithContainer 
     sectionClassName="relative bg-image bg-right"
     containerClassName="md:space-y-10 space-y-6"
   >
@@ -30,7 +31,7 @@ const StorySection: React.FC<StorySectionType> = ({
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-90"
         />
       </div>
       <div className="flex flex-col gap-6 md:gap-8">
@@ -43,10 +44,15 @@ const StorySection: React.FC<StorySectionType> = ({
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col mt-16 gap-6 text-xl text-center text-light md:px-6">
+        <div className="flex flex-col md:mt-16 gap-6 text-xl text-center text-light md:px-6">
           {description.map((text) => (
             <p key={text}>{text}</p>
           ))}
+          <div className="flex justify-center">
+            <Link href="/contact" className="border-b border-primary pb-1">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>

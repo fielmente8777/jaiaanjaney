@@ -17,7 +17,7 @@ const ImageComposition: React.FC<{
         src={images.main}
         alt={title}
         fill
-        className="object-cover"
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
         sizes="(max-width: 768px) 100vw, 464px"
       />
     </div>
@@ -28,7 +28,7 @@ const ImageComposition: React.FC<{
         src={images.small}
         alt="Room interior detail"
         fill
-        className="object-cover"
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
         sizes="230px"
       />
     </div>
@@ -46,7 +46,7 @@ const StayRootedSection: React.FC<StayRootedSectionType> = ({
   return (
     <SectionWithContainer
       defaultPadding={false}
-      sectionClassName="relative bg-white overflow-hidden border-y-[5px] border-[#E9621C] py-16 md:py-[124px]"
+      sectionClassName="group overflow-hidden relative bg-white overflow-hidden border-y-[5px] border-[#E9621C] py-16 md:py-[124px]"
     >
       {/* Mandala Pattern */}
       <div className="absolute -top-[145px] -left-[200px] w-[456px] h-[456px] pointer-events-none z-0 select-none opacity-[0.08] hidden sm:block">
@@ -86,21 +86,21 @@ const StayRootedSection: React.FC<StayRootedSectionType> = ({
             <ImageComposition images={images} title={title} />
           </div>
 
-          <Description className="w-full text-[16px] sm:text-base leading-relaxed text-left max-lg:text-center">
+          <Description className="w-full text-[16px] sm:text-base text-left max-lg:text-center">
             {description}
           </Description>
 
           {/* Stats */}
-          <div className="w-full pt-6 border-t border-secondary/30 grid grid-cols-3 gap-4 sm:gap-6">
+          <div className="w-full mt-6 border-t items-stretch border-b divide-x divide-secondary/30 border-secondary/30 grid grid-cols-3 gap-4 sm:gap-6">
             {stats.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-1 text-left max-lg:text-center"
               >
-                <span className="font-cinzel text-[36px] sm:text-[44px] leading-[44px] text-primary">
+                <span className="font-cinzel text-[36px] sm:text-[44px] text-primary">
                   {item.value}
                 </span>
-                <span className="font-nunito-sans text-[13px] leading-[18px] tracking-[0.14em] uppercase text-light mt-1">
+                <span className="font-nunito-sans text-[13px] uppercase text-light mt-1">
                   {item.label}
                 </span>
               </div>

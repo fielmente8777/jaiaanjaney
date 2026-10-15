@@ -15,7 +15,6 @@ interface GalleryPageDataType {
   welcomeNote: FinalCtaSectionType;
 }
 
-// a placeholder written from the photos — replace with the final copy.
 export const galleryPageData: GalleryPageDataType = {
   hero: {
     eyebrow: "A Glimpse of Jai Anjaney",

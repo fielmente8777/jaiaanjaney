@@ -13,8 +13,7 @@ const NewsletterSection: React.FC<NewsletterType> = ({
   buttonText,
 }) => (
   <SectionWithContainer
-    // `isolate` keeps the `.bg-image` mandala (z-index: -1) above this section's own background
-    sectionClassName="relative isolate border-t border-secondary/20 bg-white/50 bg-image bg-left"
+    sectionClassName="relative isolate border-t border-b border-secondary/20 bg-white/50  bg-image bg-left"
     containerClassName="grid items-center gap-8 lg:grid-cols-[3fr_2fr] lg:gap-16"
   >
     <div className="flex flex-col gap-3">

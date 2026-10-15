@@ -12,7 +12,7 @@ const GalleryHero: React.FC<GalleryHeroType> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative overflow-hidden bg-[#F7F3EB] border-b border-[#E3D3BC] pt-16 sm:pt-20 md:pt-[92px] pb-12 sm:pb-16 md:pb-[73px]"
+      className="relative overflow-hidden bg-linear-to-b from-[#FCEBD3] to-cream pt-16 sm:pt-20 md:pt-[92px] pb-12 sm:pb-16 md:pb-[73px]"
       style={{ backgroundColor: "var(--ground-ivory, #F7F3EB)" }}
     >
       {/* Left Ambient Mandala Motif */}

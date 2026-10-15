@@ -64,7 +64,7 @@ export const BanquetPageData: BanquetPageDataType = {
         title: "PARTY LAWN I",
         tag: "OPEN LAWN",
         description:
-          "Our largest lawn — for wedding receptions, mehfils and gatherings under the open sky.",
+          "Our largest lawn: for wedding receptions, mehfils and gatherings under the open sky.",
         capacity: "26,000 sq ft",
         enquireLink: "#check-availability",
         image: "/about.png",

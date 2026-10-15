@@ -16,7 +16,7 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
   phone,
   ...form
 }) => (
-  <Section id={id} className="relative border-b-4 border-primary bg-cream">
+  <Section id={id} className="relative group overflow-hidden border-b-4 border-primary bg-cream">
     <Container className="grid gap-8 lg:grid-cols-2 lg:gap-16">
       <div className="relative aspect-3/4 overflow-hidden lg:absolute lg:inset-y-0 lg:left-0 lg:aspect-auto lg:w-[44.44%]">
         <Image
@@ -24,7 +24,7 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
           alt={imageCaption}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
         />
         <div
           aria-hidden

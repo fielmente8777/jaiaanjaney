@@ -8,7 +8,7 @@ const ValuesSection: React.FC<ValuesSectionType> = ({
   title,
   items,
 }) => (
-  <SectionWithContainer sectionClassName="border-y-4 bg-image bg-right relative border-secondary">
+  <SectionWithContainer sectionClassName="border-y-4  bg-image bg-right relative border-secondary">
     {/* <div className="absolute -left-60 -bottom-20 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
     <div className="absolute -right-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" /> */}
     <ValuesSlider eyebrow={eyebrow} title={title} items={items} />

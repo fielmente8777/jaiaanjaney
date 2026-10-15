@@ -51,7 +51,7 @@ export interface PresidentialVillaType {
   subtitle: string;
   description: string;
   image: string;
-  features: { icon: VillaFeatureIcon; label: string }[];
+  features: { icon:React.ReactNode; label: string }[];
   specs: string[];
   bookCta: CtaType;
   viewCta: CtaType;

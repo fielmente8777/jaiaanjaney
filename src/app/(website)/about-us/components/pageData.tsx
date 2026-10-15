@@ -8,16 +8,8 @@ import {
 import { VisitCtaType } from "@/@types/galleryPage";
 import { EventFormatsType } from "@/@types/meetingsPage";
 import { contact } from "@/utils/constent";
-import { ExpIcon, FamilyIcon, SattvicIcon } from "@/utils/icons";
-import {
-  AwardIcon,
-  CorporateIcon,
-  GuestIcon,
-  ParkingIcon,
-  PoolIcon,
-  ProductIcon,
-  TempleIcon,
-} from "@/utils/Room";
+import { ExpIcon, FamilyIcon, GuestIcon, SattvicIcon } from "@/utils/icons";
+import { ProductIcon, TempleIcon } from "@/utils/Room";
 
 interface AboutPageData {
   hero: AboutHeroType;
@@ -57,7 +49,17 @@ export const aboutPageData: AboutPageData = {
       {
         image: "/room.png",
         description:
-          "To be Rajasthan's most distinguished spiritual resort, where pilgrimage hospitality means grand spaces, refined comfort and timeless cultural elegance.",
+          "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
+      },
+      {
+        image: "/room.png",
+        description:
+          "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
+      },
+      {
+        image: "/room.png",
+        description:
+          "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
       },
       // {
       //   image: "/room.png",
@@ -121,7 +123,6 @@ export const aboutPageData: AboutPageData = {
           "Warmth, grace and attention in every interaction. We treat hospitality as a feeling, not a service.",
         image: "/temple1.png",
       },
-      // Only the first value is in the snapshot. The rest are placeholders.
       {
         icon: "devotion" as const,
         title: "Spiritual connection",
@@ -160,7 +161,7 @@ export const aboutPageData: AboutPageData = {
         icon: <GuestIcon />,
         title: "Heartfelt Hospitality",
         description:
-          "Warmth, grace and genuine care in every interaction — hospitality as a feeling, not a service.",
+          "Warmth, grace and genuine care in every interaction: hospitality as a feeling, not a service.",
       },
       {
         icon: <ProductIcon />,
@@ -178,7 +179,7 @@ export const aboutPageData: AboutPageData = {
         icon: <FamilyIcon />,
         title: "Family First",
         description:
-          "Spaces that bring generations together — to celebrate, to play and to rest.",
+          "Spaces that bring generations together to celebrate, to play and to rest.",
       },
       {
         icon: <ExpIcon />,

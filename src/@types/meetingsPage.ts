@@ -1,7 +1,6 @@
 import type { HeroType } from "@/@types/homePage";
 import type { CtaLink } from "@/@types/galleryPage";
 
-/* ───────────── Hero (ImageHero + small orange line above the title) ───────────── */
 export interface MeetingsHeroType extends HeroType {
   eyebrow: string;
 }

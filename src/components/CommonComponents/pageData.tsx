@@ -6,8 +6,8 @@ import type {
   StatementBannerType,
 } from "@/@types/commonSections";
 import type { HeroType } from "@/@types/homePage";
-import { GolfCart } from "@/utils/icons";
-import { BedIcon, GolfCartIcon, PureVegIcon, TempleIcon } from "@/utils/Room";
+import { BedIcon, GolfCart } from "@/utils/icons";
+import {  GolfCartIcon, PureVegIcon, TempleIcon } from "@/utils/Room";
 
 interface WeddingsPageDataType {
   hero: HeroType;

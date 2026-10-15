@@ -27,6 +27,7 @@ export const contact = {
 };
 
 interface data_Type {
+  
   name: string;
   code: string;
 }

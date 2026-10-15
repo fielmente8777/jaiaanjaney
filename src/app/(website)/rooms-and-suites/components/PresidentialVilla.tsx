@@ -1,7 +1,6 @@
 // import { PresidentialVillaType, VillaFeatureIcon } from "@/@types/roomsPage";
 // import ArchFrame from "@/components/CommonComponents/ArchFrame";
 
-
 // import LinkButton from "@/components/buttons/LinkButton";
 // import { Container, Section } from "@/components/sectionComponants";
 // import { SectionHeading } from "@/components/typography";
@@ -39,7 +38,6 @@
 //     defaultPadding={false}
 //     className="relative bg-accent py-16 text-cream md:py-24 bg-image bg-left"
 //   >
-  
 
 //     <Container className="relative z-10 grid items-center gap-10 lg:grid-cols-[5fr_6fr] lg:gap-24">
 //       <ArchFrame
@@ -112,7 +110,6 @@
 
 // export default PresidentialVilla;
 
-
 import { PresidentialVillaType, VillaFeatureIcon } from "@/@types/roomsPage";
 import ArrowLink from "@/components/buttons/ArrowLink";
 import LinkButton from "@/components/buttons/LinkButton";
@@ -123,23 +120,6 @@ import { SectionHeading } from "@/components/typography";
 import { contact } from "@/utils/constent";
 import Image from "next/image";
 import type { IconType } from "react-icons";
-import {
-  TbBed,
-  TbCar,
-  TbPool,
-  TbSofa,
-  TbToolsKitchen2,
-  TbUsers,
-} from "react-icons/tb";
-
-const FEATURE_ICONS: Record<VillaFeatureIcon, IconType> = {
-  pool: TbPool,
-  salon: TbSofa,
-  pantry: TbToolsKitchen2,
-  bedrooms: TbBed,
-  transfer: TbCar,
-  guests: TbUsers,
-};
 
 const PresidentialVilla: React.FC<PresidentialVillaType> = ({
   eyebrow,
@@ -153,8 +133,7 @@ const PresidentialVilla: React.FC<PresidentialVillaType> = ({
   viewCta,
 }) => (
   <SectionWithContainer
-  
-    sectionClassName="relative isolate bg-accent text-cream bg-image bg-right"
+    sectionClassName="group overflow-hidden relative isolate bg-accent text-cream bg-image bg-right"
     containerClassName="grid items-center gap-10 lg:grid-cols-[5fr_6fr] lg:gap-16"
   >
     <ArchFrame
@@ -167,7 +146,7 @@ const PresidentialVilla: React.FC<PresidentialVillaType> = ({
         alt={title}
         fill
         sizes="(max-width: 1024px) 90vw, 45vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
     </ArchFrame>
 
@@ -188,30 +167,29 @@ const PresidentialVilla: React.FC<PresidentialVillaType> = ({
       <p className="font-light leading-7 text-cream/80">{description}</p>
 
       <ul className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
-        {features.map(({ icon, label }) => {
-          const Icon = FEATURE_ICONS[icon];
-          return (
-            <li
-              key={label}
-              className="flex items-center gap-3 border-b border-cream/40 pb-4 text-xs uppercase tracking-[0.2em]"
-            >
-              <Icon aria-hidden className="size-6 shrink-0 text-cream/70" />
-              {label}
-            </li>
-          );
-        })}
+        {features.map(({ icon, label }) => (
+          <li
+            key={label}
+            className="flex items-center gap-3 border-b border-cream/40 pb-4 text-xs uppercase tracking-[0.2em]"
+          >
+            <span className="size-6 shrink-0 text-cream/70" aria-hidden>
+              {icon}
+            </span>
+
+            {label}
+          </li>
+        ))}
       </ul>
 
       <p className="text-sm text-cream/60">{specs.join(" · ")}</p>
 
-
       <div className="flex items-center gap-6">
         <LinkButton
-           href={contact.WhatsappCta}
+          href={contact.WhatsappCta}
           label="Book Now"
           target="_blank"
           rel="noopener noreferrer"
-          className="h-14 flex-1 justify-center border-cream/60 bg-primary text-sm text-white"
+          className="h-11 flex-1 justify-center border-cream/60 bg-primary text-sm text-white"
         />
         <ArrowLink
           href={viewCta.link}

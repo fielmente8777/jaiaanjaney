@@ -6,7 +6,8 @@ import {
   MeetingsHeroType,
 } from "@/@types/meetingsPage";
 import { contact } from "@/utils/constent";
-import { AwardIcon, CorporateIcon, GuestIcon, ParkingIcon, PoolIcon, ProductIcon } from "@/utils/Room";
+
+import { AwardIcon, CorporateIcon,  GuestIcon,  ParkingIcon,  PoolIcon,  ProductIcon } from "@/utils/Room";
 
 interface MeetingsPageDataType {
   hero: MeetingsHeroType;
@@ -40,7 +41,7 @@ export const meetingsPageData: MeetingsPageDataType = {
     description: [
       "Bring the whole team to one address. Hold the plenary in the Grand Banquet Hall, break out into the smaller banquet and garden, and close the day with a gala dinner on the lawns.",
 
-      "Between sessions there is a 12,000 sq ft pool, a bowling alley and gaming zone, a spa and meditation lawns — and 151 rooms, so nobody has to travel back at night.",
+      "Between sessions there is a 12,000 sq ft pool, a bowling alley and gaming zone, a spa and meditation lawns and 151 rooms, so nobody has to travel back at night.",
     ],
     image: "/mice.jpg",
     cta: { text: "Request a proposal", link: contact.WhatsappCta },
@@ -108,7 +109,7 @@ export const meetingsPageData: MeetingsPageDataType = {
     title: "Send an RFP",
     description:
       "Share your dates, delegate count and room needs. Our events team will come back with venues, menus and a proposal.",
-    image: "/mice2.png",
+    image: "/rfg.jpg",
     imageCaption: "Business, Beautifully Hosted",
     fields: [
       {

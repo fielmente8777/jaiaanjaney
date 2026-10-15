@@ -7,6 +7,7 @@ import {
   ThoughtfulComfortsSectionType,
   VillasSectionType,
 } from "@/@types/roomsPage";
+import { BedIcon, GolfCartIcon, GuestIcon, PantryIcon, PoolIcon, ProductIcon, SalonIcon } from "@/utils/Room";
 
 const BOOK_CTA = { text: "Book Now", link: "/contact" };
 
@@ -324,15 +325,15 @@ export const RoomPageData: RoomPageDataType = {
     title: "The Presidential Villa",
     subtitle: "VVIP Villa · Only two on the estate",
     description:
-      "A three-room residence wrapped around a grand living salon, a private pantry and a pool pavilion of its own. Evenings begin under the chandelier and end beside lamplit water — entirely yours, from the gate to the lawn.",
+      "A three-room residence wrapped around a grand living salon, a private pantry and a pool pavilion of its own. Evenings begin under the chandelier and end beside lamplit water entirely yours, from the gate to the lawn.",
     image: "/presidential.jpg",
     features: [
-      { icon: "pool", label: "Private pool & pavilion" },
-      { icon: "salon", label: "Grand living salon" },
-      { icon: "pantry", label: "Private pantry" },
-      { icon: "bedrooms", label: "Three bedrooms" },
-      { icon: "transfer", label: "Golf-cart transfers" },
-      { icon: "guests", label: "Up to 6 adults" },
+      { icon: <PoolIcon/>, label: "Private pool & pavilion" },
+      { icon: <SalonIcon/>, label: "Grand living salon" },
+      { icon: <PantryIcon/>, label: "Private pantry" },
+      { icon: <BedIcon/>, label: "Three bedrooms" },
+      { icon: <GolfCartIcon/>, label: "Golf-cart transfers" },
+      { icon: <GuestIcon/>, label: "Up to 6 adults" },
     ],
     specs: ["≈ 2,400 sq ft", "3 King Beds", "Private lawn"],
     bookCta: BOOK_CTA,

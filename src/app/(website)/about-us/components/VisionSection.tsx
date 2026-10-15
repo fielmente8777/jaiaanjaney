@@ -84,7 +84,7 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
   return (
     <Section
       defaultPadding={false}
-      className="relative border-t-4 border-secondary pb-10 md:pb-16"
+      className="group overflow-hidden relative border-t-4 border-secondary pb-10 md:pb-16"
     >
       <SwiperCarousel
         data={items}
@@ -101,14 +101,14 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
               alt={title}
               fill
               sizes="100vw"
-              className="object-cover"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               priority={i === 0}
             />
           </div>
         )}
       />
 
-      <div className="relative z-10 -mt-12 md:-mt-16 mx-4 md:mx-auto md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary">
+      {/* <div className="relative z-10 -mt-12 md:-mt-16 mx-4 md:mx-auto md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary">
         <SectionHeading
           title={title}
           titleColor="white"
@@ -121,8 +121,6 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
             data={items}
             slidesPerView={1}
             loop
-            speed={SPEED}
-            allowTouchMove={false}
             modules={[Controller]}
             onSwiper={setTextSwiper}
             renderSlide={({ description }) => (
@@ -147,6 +145,45 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
             className={arrow}
           >
             <BiChevronRight size={20} />
+          </button>
+        </div>
+      </div> */}
+      <div className="relative mt-0 mx-0 md:z-10 md:-mt-16 md:mx-auto md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary max-md:border-x-0 max-md:border-t-0 text-center md:text-left">
+        <SectionHeading
+          title={title}
+          titleColor="white"
+          wrapperClassName="mb-2 max-md:items-center max-md:text-center"
+          titleClassName="max-md:text-3xl!"
+        />
+        <div className="md:pr-14">
+          <SwiperCarousel
+            data={items}
+            slidesPerView={1}
+            loop
+            allowTouchMove={false}
+            modules={[Controller]}
+            onSwiper={setTextSwiper}
+            renderSlide={({ description }) => (
+              <p className="font-light text-xl">{description}</p>
+            )}
+          />
+        </div>
+        <div className="mt-4 flex justify-center md:absolute md:top-4 md:right-4 md:mt-0">
+          <button
+            type="button"
+            aria-label="Previous slide"
+            onClick={() => imageSwiper?.slidePrev()}
+            className={arrow}
+          >
+            <BiChevronLeft size={24} />
+          </button>
+          <button
+            type="button"
+            aria-label="Next slide"
+            onClick={() => imageSwiper?.slideNext()}
+            className={arrow}
+          >
+            <BiChevronRight size={24} />
           </button>
         </div>
       </div>

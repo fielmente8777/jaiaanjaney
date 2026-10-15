@@ -13,7 +13,7 @@ const EventsIntro: React.FC<EventsIntroType> = ({
   cta,
 }) => (
   <SectionWithContainer
-    sectionClassName="relative bg-image bg-right"
+    sectionClassName="group overflow-hidden relative bg-image bg-right"
     containerClassName="grid items-center gap-8 md:grid-cols-2 lg:gap-20"
   >
     <div className="relative aspect-4/3 w-full md:aspect-square">
@@ -22,7 +22,7 @@ const EventsIntro: React.FC<EventsIntroType> = ({
         alt={title}
         fill
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
     </div>
 

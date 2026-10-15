@@ -5,12 +5,16 @@ import type {
 } from "@/@types/presidentialVillaPage";
 import { contact } from "@/utils/constent";
 
+
+
 import {
   AcIcon,
   AreaIcon,
 
   BathIcon,
+
   BedIcon,
+
   DiningIcon,
   FoodIcon,
   GolfCartIcon,
@@ -21,7 +25,9 @@ import {
 
   PantryIcon,
   ParkingIcon,
+
   PoolIcon,
+
   ProductIcon,
   RainShowerIcon,
   SafeIcon,
@@ -68,16 +74,15 @@ const ROOM_GOOD_TO_KNOW: GoodToKnowType = {
   callLabel: `Call ${contact.phone[0]}`,
   cta: { text: "See Rooms & Suites", link: "/rooms-and-suites" },
   facts: [
-    { label: "Check-in", value: "[Time — to confirm]" },
-    { label: "Check-out", value: "[Time — to confirm]" },
+    { label: "Check-in", value: "[Time: to confirm]" },
+    { label: "Check-out", value: "[Time:  to confirm]" },
     { label: "Dining", value: "100% vegetarian, alcohol-free estate" },
     { label: "On the Estate", value: "On-site mandir · Golf carts available" },
-    { label: "Children & Extra Bed", value: "[Policy — to confirm]" },
-    { label: "Cancellation", value: "[Policy — to confirm]" },
+    { label: "Children & Extra Bed", value: "[Policy: to confirm]" },
+    { label: "Cancellation", value: "[Policy: to confirm]" },
   ],
 };
 
-/** "A Day from the …" — dawn, morning & evening are the same everywhere. */
 const buildDay = (
   title: string,
   afternoon: { title: string; description: string }
@@ -114,7 +119,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
     slug: "deluxe-room",
     hero: {
       title: "Deluxe Room",
-      description: "Restful by design — an easy return after early darshan.",
+      description: "Restful by design, an easy return after early darshan.",
       images: ["/rooms/room1.png", "/rooms/room2.png", "/rooms/room3.png"],
     },
     highlights: {
@@ -130,7 +135,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Room",
       title: "Calm, Light and Close to Everything",
       description:
-        "The Deluxe Room is the heart of the main building — forty-six light-filled rooms on the upper floors, finished in warm marble, soft linen and carved wood. It is an easy place to come home to after an early start and a long day of darshan. A king or twin bed, a quiet seating corner and a marble bath with a rain shower keep everything within reach, with the restaurant, the mandir and the lawns a short walk away.",
+        "The Deluxe Room is the heart of the main building,  forty-six light-filled rooms on the upper floors, finished in warm marble, soft linen and carved wood. It is an easy place to come home to after an early start and a long day of darshan. A king or twin bed, a quiet seating corner and a marble bath with a rain shower keep everything within reach, with the restaurant, the mandir and the lawns a short walk away.",
       images: ["/rooms/room1.png", "/rooms/room2.png", "/rooms/room3.png"],
     },
     amenities: {
@@ -186,7 +191,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Room",
       title: "Space for the Whole Family to Gather",
       description:
-        "One of only two on the estate, the Super Deluxe Room adds a generous sitting corner to everything the Deluxe offers — space for elders to rest and for the family to gather over evening chai. Warm marble, carved wood and soft light set an unhurried mood, with a king bed, a marble bath and the restaurant, mandir and lawns a short walk away.",
+        "One of only two on the estate, the Super Deluxe Room adds a generous sitting corner to everything the Deluxe offers,  space for elders to rest and for the family to gather over evening chai. Warm marble, carved wood and soft light set an unhurried mood, with a king bed, a marble bath and the restaurant, mandir and lawns a short walk away.",
       images: ["/rooms/room2.png", "/rooms/room3.png", "/rooms/room1.png"],
     },
     amenities: {
@@ -242,7 +247,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Suite",
       title: "A Stay That Feels Like an Occasion",
       description:
-        "The Anjaney Suite is the main building's one and only suite — a separate living room and bedroom for guests who like their stay to feel like an occasion, whether a family milestone or a long-awaited yatra. Receive visitors in the living room, retreat to a king bedroom behind closed doors, and end the day beneath a rain shower in marble — with the mandir and the restaurant a short walk away.",
+        "The Anjaney Suite is the main building's one and only suite, a separate living room and bedroom for guests who like their stay to feel like an occasion, whether a family milestone or a long-awaited yatra. Receive visitors in the living room, retreat to a king bedroom behind closed doors, and end the day beneath a rain shower in marble, with the mandir and the restaurant a short walk away.",
       images: ["/rooms/room3.png", "/rooms/room1.png", "/rooms/room2.png"],
     },
     amenities: {
@@ -298,7 +303,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Villa",
       title: "Villa Living in the Quieter Quarter",
       description:
-        "The Silver Villa brings villa living to the estate's quieter garden quarter — arched balconies, carved facades and a short stroll to the lawns and the pool. Inside, a king bedroom with a blossom-panelled headboard, a media wall and wardrobe, and a marble bath with twin vanities keep the stay light and easy.",
+        "The Silver Villa brings villa living to the estate's quieter garden quarter, arched balconies, carved facades and a short stroll to the lawns and the pool. Inside, a king bedroom with a blossom-panelled headboard, a media wall and wardrobe, and a marble bath with twin vanities keep the stay light and easy.",
       images: ["/room.png", "/about.png", "/bnr.png"],
     },
     amenities: {
@@ -355,7 +360,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Villa",
       title: "Two Bedrooms, One Family, One Address",
       description:
-        "The Gold Villa gathers two bedrooms around a living room of its own — made for families who travel together for a yatra, a wedding or a long weekend in Salasar. Marble media partitions, walk-in dressing areas and a marble bath give every generation its own space, while the living room keeps everyone close at the end of the day.",
+        "The Gold Villa gathers two bedrooms around a living room of its own made for families who travel together for a yatra, a wedding or a long weekend in Salasar. Marble media partitions, walk-in dressing areas and a marble bath give every generation its own space, while the living room keeps everyone close at the end of the day.",
       images: ["/room.png", "/about.png", "/bnr.png"],
     },
     amenities: {
@@ -412,7 +417,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       eyebrow: "The Villa",
       title: "A Private Retreat Built Around Water",
       description:
-        "Set in the estate's garden quarter, the Diamond Villa gathers its rooms around an indoor plunge pool beneath timber slats and a living green wall, with a jacuzzi on the floor above. It is the stay for guests who want the calm of their own water after a day of darshan or celebration. Inside, oak floors, marble-veined walls and soft ambient light keep the mood unhurried — a king bedroom, a lounge screened by carved timber, a walk-in dressing area and a glass-walled rain shower.",
+        "Set in the estate's garden quarter, the Diamond Villa gathers its rooms around an indoor plunge pool beneath timber slats and a living green wall, with a jacuzzi on the floor above. It is the stay for guests who want the calm of their own water after a day of darshan or celebration. Inside, oak floors, marble-veined walls and soft ambient light keep the mood unhurried a king bedroom, a lounge screened by carved timber, a walk-in dressing area and a glass-walled rain shower.",
       images: ["/room.png", "/about.png", "/bnr.png"],
     },
     amenities: {

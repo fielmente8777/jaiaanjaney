@@ -13,7 +13,7 @@ const DayFromVilla: React.FC<VillaDayType> = ({
 }) => (
   <SectionWithContainer
 
-    sectionClassName="relative isolate bg-accent text-cream bg-image bg-right"
+    sectionClassName="group overflow-hidden relative isolate bg-accent text-cream bg-image bg-right"
     containerClassName="grid items-center gap-8 lg:grid-cols-[1fr_3fr] lg:gap-16"
   >
     <ArchFrame
@@ -26,7 +26,7 @@ const DayFromVilla: React.FC<VillaDayType> = ({
         alt={title}
         fill
         sizes="(max-width: 1024px) 70vw, 25vw"
-        className="object-cover"
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
       />
     </ArchFrame>
 

@@ -12,7 +12,8 @@ const EventFormats: React.FC<EventFormatsType> = ({
   items,
 }) => (
   <SectionWithContainer
-    sectionClassName="relative bg-image bg-right"
+  defaultPadding={false}
+    sectionClassName="relative bg-image bg-right mb-12"
     containerClassName="flex flex-col gap-8 md:gap-12"
   >
     <div className="flex flex-col items-center gap-3 text-center">
@@ -25,7 +26,7 @@ const EventFormats: React.FC<EventFormatsType> = ({
       <p className="text-sm lg:text-[19px] md:text-[15px] font-light text-light">{desc}</p>
     </div>
 
-    <ul className="grid gap-px border-y border-secondary/30 bg-secondary/30 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-px border border-secondary/30 bg-secondary/30 sm:grid-cols-2 lg:grid-cols-3">
       {items.map(({ icon, title: itemTitle, description }) => (
         <li
           key={itemTitle}
