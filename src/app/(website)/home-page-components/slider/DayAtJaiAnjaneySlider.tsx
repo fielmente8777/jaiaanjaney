@@ -70,11 +70,16 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
             <div
               key={index}
               className={clsx(
-                "w-full relative",
+                "w-full relative overflow-hidden group",
                 index === 0 ? "aspect-[2/2.5]" : "aspect-square"
               )}
             >
-              <Image src={image} alt={title} fill className="object-cover" />
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
           ))}
         </div>
@@ -87,11 +92,16 @@ export const DayAtJaiAnjaneyCard: React.FC<dayAtJaiAnjaneyType["items"][0]> = ({
           <div
             key={index}
             className={clsx(
-              "w-full relative",
+              "w-full relative overflow-hidden group",
               index === 0 ? "aspect-[2/2.5]" : "aspect-square"
             )}
           >
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
           </div>
         ))}
       </div>

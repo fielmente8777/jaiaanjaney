@@ -104,14 +104,14 @@ export const homePageData = {
       },
       {
         title: "Pilgrimage",
-        description: "",
-        image: "/wedding.png",
+        description: "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
+        image: "/presidential.jpg",
       },
 
       {
         title: "MICE",
-        description: "",
-        image: "/weddin.png",
+        description: "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
+        image: "/mice.jpg",
       },
     ],
   },
@@ -124,7 +124,7 @@ export const homePageData = {
       text: "Explore Rooms & Suites",
       link: "/rooms",
     },
-    images: ["/room.png", "/room.png", "/room.png"],
+    images: ["/room.png", "/dining/banner-photo.png", "/wedding.jpg"],
   },
   slidingTitleItems: [
     "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
@@ -133,6 +133,22 @@ export const homePageData = {
     eyebrow: "Beyond The Stay",
     title: "An estate built for rest, ritual, & celebration",
     items: [
+      {
+        title: "Rooftop Restaurant",
+        image: "/rooftop-restaurent.png",
+      },
+      {
+        title: "On-Site Temple",
+        image: "/on-site-temple.png",
+      },
+      {
+        title: "Wellness Spa",
+        image: "/wellness-spa.png",
+      },
+      {
+        title: "BOWLING ALLEY",
+        image: "/bowling-alley.png",
+      },
       {
         title: "Rooftop Restaurant",
         image: "/rooftop-restaurent.png",

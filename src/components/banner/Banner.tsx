@@ -17,7 +17,8 @@ const Banner: React.FC<HeroType> = ({ title, description, images, video }) => {
         </p>
       </div>
       <div className="absolute inset-x-0 bottom-4 z-30 lg:flex hidden items-center justify-center">
-        <Container>
+        <Container
+          className="lg:max-w-5xl!">
           <BookingForm />
         </Container>
       </div>

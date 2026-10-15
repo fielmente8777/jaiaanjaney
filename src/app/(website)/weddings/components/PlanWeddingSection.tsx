@@ -44,12 +44,12 @@ const PlanWeddingSection: React.FC<PlanWeddingSectionType> = ({
       containerClassName="w-full"
     >
       {/* Featured Ballroom Visual (Desktop) */}
-      <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[41%] xl:w-[41.5%] z-0 overflow-hidden shadow-xl">
+      <div className="hidden lg:block absolute inset-y-0 left-0 lg:w-[41%] xl:w-[41.5%] z-0 overflow-hidden shadow-xl group cursor-pointer">
         <Image
           src={image}
           alt={imageCaption}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="42vw"
           priority={false}
         />
@@ -95,12 +95,12 @@ const PlanWeddingSection: React.FC<PlanWeddingSectionType> = ({
             />
 
             {/* Featured Visual (Mobile) */}
-            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[360px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2">
+            <div className="lg:hidden w-full relative aspect-[640/760] min-h-[360px] overflow-hidden shadow-lg border border-[#F6C77A]/50 my-2 group cursor-pointer">
               <Image
                 src={image}
                 alt={imageCaption}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="100vw"
                 priority={false}
               />

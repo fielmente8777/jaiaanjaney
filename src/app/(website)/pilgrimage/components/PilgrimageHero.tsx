@@ -54,14 +54,14 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
     <ArchFrame
       shape="dome"
       outlineClassName="text-secondary/70"
-      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none"
+      className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none group cursor-pointer"
     >
       <Image
         src={image}
         alt={title}
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         sizes="(max-width: 1024px) 100vw, 500px"
       />
     </ArchFrame>
@@ -82,6 +82,14 @@ const PilgrimageHero: React.FC<PilgrimageHeroType> = ({
       defaultPadding={false}
       sectionClassName="relative bg-ground-ivory-light overflow-hidden py-14 sm:py-20 lg:py-24"
     >
+      {/* Top Ambient Primary Gradient */}
+      <div
+        className="absolute top-0 inset-x-0 h-52 sm:h-72 pointer-events-none z-0 bg-linear-to-b from-primary/20 via-primary/5 to-transparent"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(233, 98, 28, 0.20) 0%, rgba(233, 98, 28, 0.05) 55%, transparent 100%)",
+        }}
+      />
 
       <div className="grid lg:grid-cols-12 grid-cols-1 gap-10 lg:gap-14 items-center relative z-10">
         {/* Left Column: Story & Checklist */}

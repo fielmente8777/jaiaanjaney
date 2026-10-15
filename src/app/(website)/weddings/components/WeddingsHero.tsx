@@ -12,7 +12,7 @@ const WeddingsHero: React.FC<WeddingsHeroType> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative w-full aspect-[1440/640] min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] overflow-hidden border-b-[5px] border-[#E9621C]"
+      className="relative w-full aspect-[1440/640] min-h-[500px] sm:min-h-[580px] lg:min-h-[660px] overflow-hidden border-b-[5px] border-[#E9621C] group"
     >
       <div className="absolute inset-0">
         <Image
@@ -21,7 +21,7 @@ const WeddingsHero: React.FC<WeddingsHeroType> = ({
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>
 

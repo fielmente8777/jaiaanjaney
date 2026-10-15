@@ -17,7 +17,7 @@ export const diningPageData: {
   welcomeNote: FinalCtaSectionType;
 } = {
   hero: {
-    title: "DINING AT JAI <br /> ANJANEY",
+    title: "DINING AT <br class='block md:hidden' />JAI ANJANEY",
     subtitle: "Pure Vegetarian · Alcohol-Free",
     description:
       "Sattvic kitchens, Rajasthani warmth and tables set for families, from the first chai after aarti to dinner under the stars.",

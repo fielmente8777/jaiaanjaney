@@ -53,7 +53,8 @@ export const contactPageData: {
     mapHeading: "Jai Anjaney Resort",
     mapAddress: "Salasar, Churu District, Rajasthan",
     mapDirectionsText: "GET DIRECTIONS →",
-    mapDirectionsLink: "https://maps.google.com",
+    mapDirectionsLink:
+      "https://www.google.com/maps/dir/?api=1&destination=27.7267,74.7175",
   },
 
   gettingHere: {

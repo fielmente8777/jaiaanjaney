@@ -22,12 +22,12 @@ const WhereToDineCard: React.FC<DiningVenueType> = ({
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-14 items-center w-full mx-auto py-1">
       {/* Venue Visual Media Showcase */}
       <div className="w-full">
-        <div className="relative w-full aspect-[640/460] sm:aspect-[640/440] min-h-[380px] sm:min-h-[450px] lg:min-h-[490px] overflow-hidden shadow-xl border border-[#DF951D]/40 bg-white">
+        <div className="relative w-full aspect-[640/460] sm:aspect-[640/440] min-h-[380px] sm:min-h-[450px] lg:min-h-[490px] overflow-hidden shadow-xl border border-[#DF951D]/40 bg-white group cursor-pointer">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover object-center"
+            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
 

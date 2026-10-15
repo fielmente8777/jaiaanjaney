@@ -7,13 +7,14 @@ const TestimonialsSlider: React.FC<{
   items: TestimonialsSectionType["items"];
 }> = ({ items }) => {
   return (
-    <div className="w-full">
+    <div className="demo w-full">
       <SwiperCarousel
         slidesPerView={1.2}
         spaceBetween={16}
         loop={true}
+        speed={4500}
         autoplay={{
-          delay: 4000,
+          delay: 0,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}

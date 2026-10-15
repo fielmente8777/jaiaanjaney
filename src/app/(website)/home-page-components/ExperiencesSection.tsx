@@ -44,13 +44,13 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
           </div>
         </div>
         {/* show image in md screen */}
-        <div className="relative w-full aspect-square hidden md:block">
+        <div className="relative w-full aspect-square hidden md:block overflow-hidden group">
           {activeImage && (
             <Image
               src={activeImage}
               alt={title}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           )}

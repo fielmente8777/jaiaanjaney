@@ -17,7 +17,7 @@ const SignatureFlavoursSection: React.FC<SignatureFlavoursSectionType> = ({
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden py-12 md:py-24 border-b-[5px] border-[#E9621C]"
     >
       {/* Ambient Mandala Pattern */}
-      <div className="absolute top-[60px] md:top-[90px] -left-[228px] w-[456px] h-[456px] pointer-events-none z-0 select-none opacity-[0.08] hidden sm:block">
+      <div className="absolute top-[30px] -left-[100px] w-[260px] h-[260px] sm:top-[60px] md:top-[90px] sm:-left-[228px] sm:w-[456px] sm:h-[456px] pointer-events-none z-0 select-none opacity-[0.08]">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"

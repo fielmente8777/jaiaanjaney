@@ -20,13 +20,13 @@ const PilgrimageStayBanner: React.FC<PilgrimageStayBannerType> = ({
       containerClassName="w-full"
     >
       {/* Decorative Rotating Mandala Overlay on Right (514px x 514px, bottom-0 right-0, behind content) */}
-      <div className="absolute right-0 bottom-0 w-[420px] h-[420px] sm:w-[514px] sm:h-[514px] pointer-events-none z-0 select-none opacity-25 hidden sm:block">
+      <div className="absolute -top-[100px] -right-[100px] w-[320px] h-[320px] sm:top-auto sm:left-auto sm:right-0 sm:bottom-0 sm:w-[514px] sm:h-[514px] pointer-events-none z-0 select-none opacity-10 sm:opacity-10">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"
           width={514}
           height={514}
-          className="w-full h-full object-contain animate-[bg-rotate_30s_linear_infinite]"
+          className="w-full h-full object-contain brightness-0 invert animate-[bg-rotate_30s_linear_infinite]"
         />
       </div>
 

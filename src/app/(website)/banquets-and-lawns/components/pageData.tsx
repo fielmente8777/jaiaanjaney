@@ -3,9 +3,9 @@ import { BanquetPageDataType } from "@/@types/banquetPage";
 export const BanquetPageData: BanquetPageDataType = {
   hero: {
     title: "BANQUETS & LAWNS",
-    subtitle: "A Grand Stage in Salasar",
+    subtitle: "Venues for Every Gathering",
     description:
-      "Where devotion meets grand celebration. Expansive indoor and outdoor spaces designed for weddings, sacred gatherings, and unforgettable occasions.",
+      "Chandeliered halls, open lawns under the desert sky and a mandap set among water, room for celebrations of every size.",
     image: "/banquet/banquet-banner.jpg",
   },
 
@@ -74,7 +74,7 @@ export const BanquetPageData: BanquetPageDataType = {
         title: "BANQUET LAWN",
         tag: "LAWN BESIDE THE BANQUET",
         description:
-          "A lawn that opens from the banquet hall for dinners, mehendi afternoons and evening functions.",
+          "A lawn that opens from the banquet hall for dinners, afternoons and evening functions.",
         capacity: "10,000 sq ft",
         enquireLink: "#check-availability",
         image: "/bnr.png",
@@ -206,7 +206,7 @@ export const BanquetPageData: BanquetPageDataType = {
   },
 
   weddingsBanner: {
-    title: "Grand Ho Toh Jai Anjaney Ho.",
+    title: "Grand Ho Toh <br class='sm:hidden' /> Jai Anjaney Ho.",
     subtitle: "CELEBRATE AT JAI ANJANEY",
   },
 

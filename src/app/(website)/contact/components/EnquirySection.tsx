@@ -6,6 +6,11 @@ import { EnquirySectionType } from "@/@types/contactPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { Description, Headings, Tagline } from "@/components/typography";
 import { ChevronDown } from "@/utils/icons";
+import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
+
+const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
+const MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID || "DEMO_MAP_ID";
+const RESORT_COORDS = { lat: 27.7267, lng: 74.7175 };
 
 const EnquirySection: React.FC<EnquirySectionType> = ({
   eyebrow,
@@ -37,39 +42,67 @@ const EnquirySection: React.FC<EnquirySectionType> = ({
   };
 
   const renderMapCard = () => (
-    <div className="relative bg-[#E9621C] p-5 sm:p-7 w-full max-w-[640px] lg:w-[640px] min-h-[520px] lg:h-[760px] flex flex-col justify-between shadow-xl">
-      {/* Inner Border Frame */}
-      <div className="relative flex-1 border-2 border-dashed border-white/90 p-5 sm:p-7 flex flex-col justify-between">
-        {/* Map Location Placeholder */}
-        <div className="flex-1 flex flex-col items-center justify-center text-center py-8 sm:py-10">
-          <svg
-            width={34}
-            height={34}
-            viewBox="0 0 24 24"
-            fill="white"
-            className="drop-shadow"
-          >
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-          </svg>
-          <span className="font-cinzel text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-white mt-3">
-            INTERACTIVE MAP HERE
-          </span>
-        </div>
+    <div
+      style={{ background: "linear-gradient(180deg, #E9621C 0%, #DF951D 100%)" }}
+      className="relative bg-gradient-to-b from-[#E9621C] to-[#DF951D] p-2 sm:p-4 w-full max-w-[640px] lg:w-[640px] min-h-[440px] sm:min-h-[520px] lg:h-[760px] flex flex-col justify-between shadow-xl overflow-hidden"
+    >
+      {/* Live Interactive Google Map */}
+      <div className="absolute inset-2 sm:inset-4 overflow-hidden z-0">
+        {API_KEY ? (
+          <APIProvider apiKey={API_KEY}>
+            <Map
+              mapId={MAP_ID}
+              defaultCenter={RESORT_COORDS}
+              defaultZoom={15}
+              gestureHandling="cooperative"
+              disableDefaultUI
+              zoomControl
+              fullscreenControl
+              clickableIcons={false}
+              className="h-full w-full"
+            >
+              <AdvancedMarker
+                position={RESORT_COORDS}
+                title={mapHeading || "Jai Anjaney Resort"}
+              >
+                <div className="flex flex-col items-center">
+                  <div className="h-5 w-5 rounded-full border-2 border-white bg-primary shadow-md flex items-center justify-center">
+                    <div className="h-2 w-2 rounded-full bg-white" />
+                  </div>
+                  <span className="mt-1 rounded bg-white/95 px-2 py-0.5 text-xs font-semibold text-dark shadow-sm whitespace-nowrap">
+                    {mapHeading || "Jai Anjaney Resort"}
+                  </span>
+                </div>
+              </AdvancedMarker>
+            </Map>
+          </APIProvider>
+        ) : (
+          <div className="w-full h-full bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white font-cinzel text-sm tracking-widest">
+            MAP UNAVAILABLE
+          </div>
+        )}
+      </div>
 
+      {/* Inner Border Frame (Dashed) */}
+      <div className="relative flex-1 border-2 border-dashed border-white/90 p-3 sm:p-7 flex flex-col justify-end pointer-events-none z-10">
         {/* Destination Details Box */}
-        <div className="bg-white px-6 sm:px-7 pt-[22px] pb-[26px] shadow-md flex flex-col text-left relative z-10">
-          <h3 className="font-cinzel font-normal text-[21px] leading-[24px] tracking-normal text-dark uppercase">
+        <div className="bg-white p-3.5 sm:px-7 sm:pt-[22px] sm:pb-[26px] shadow-md flex flex-col text-left relative z-10 pointer-events-auto">
+          <h3 className="font-cinzel font-normal text-base sm:text-[21px] sm:leading-[24px] tracking-normal text-dark uppercase">
             {mapHeading}
           </h3>
-          <p className="font-nunito-sans font-light text-[15px] leading-[23px] tracking-normal text-[#6B655B] mt-[10px]">
+          <p className="font-nunito-sans font-light text-xs sm:text-[15px] sm:leading-[23px] tracking-normal text-[#6B655B] mt-1 sm:mt-[10px]">
             {mapAddress}
           </p>
-          <div className="mt-[10px] flex">
+          <div className="mt-2 sm:mt-[10px] flex">
             <Link
-              href={mapDirectionsLink}
+              href={
+                mapDirectionsLink && mapDirectionsLink !== "https://maps.google.com"
+                  ? mapDirectionsLink
+                  : `https://www.google.com/maps/dir/?api=1&destination=${RESORT_COORDS.lat},${RESORT_COORDS.lng}`
+              }
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-[10px] w-fit whitespace-nowrap min-w-[160px] h-[24px] pb-[5px] border-b border-[#E9621C] font-nunito-sans text-xs sm:text-sm font-bold tracking-[0.14em] uppercase text-dark hover:text-primary transition-colors"
+              className="inline-flex items-center gap-[10px] w-fit whitespace-nowrap min-w-[140px] sm:min-w-[160px] h-[22px] sm:h-[24px] pb-[3px] sm:pb-[5px] border-b border-[#E9621C] font-nunito-sans text-xs sm:text-sm font-bold tracking-[0.14em] uppercase text-dark hover:text-primary transition-colors"
             >
               {mapDirectionsText}
             </Link>

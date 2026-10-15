@@ -57,7 +57,7 @@ const OneEstateSection: React.FC<OneEstateSectionType> = ({
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden py-16 sm:py-20 lg:py-24 border-b-[5px] border-[#E9621C]"
     >
       {/* Subtle Rotating Mandala Watermark in top-right */}
-      <div className="absolute -right-54 -top-38 w-[456px] h-[456px] lg:w-[500px] lg:h-[500px] pointer-events-none select-none opacity-[0.06] hidden md:block">
+      <div className="absolute -top-[100px] -right-[120px] sm:-top-[140px] sm:-right-[150px] md:-top-[160px] md:-right-[180px] w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] lg:w-[500px] lg:h-[500px] pointer-events-none select-none opacity-[0.08] sm:opacity-[0.07] md:opacity-[0.06] z-0">
         <Image
           src="/rooms/mandala-new-design.png"
           alt="Mandala pattern"
@@ -70,13 +70,13 @@ const OneEstateSection: React.FC<OneEstateSectionType> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center relative z-10">
         {/* Left Column: Ceremony Visual (Desktop) */}
         <div className="hidden lg:flex lg:col-span-6 w-full justify-center">
-          <div className="relative w-full max-w-[640px] aspect-[640/480] overflow-hidden">
+          <div className="relative w-full max-w-[640px] aspect-[640/480] overflow-hidden group cursor-pointer">
             <Image
               src={image}
               alt={imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 640px"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
             />
             {/* Architectural Inset Accent Border */}
             <div className="pointer-events-none absolute inset-4 sm:inset-5 md:inset-6 border border-white/75 z-10" />
@@ -99,13 +99,13 @@ const OneEstateSection: React.FC<OneEstateSectionType> = ({
 
           {/* Responsive Media Preview (Mobile) */}
           <div className="lg:hidden w-full my-6 flex justify-center">
-            <div className="relative w-full max-w-[640px] aspect-[640/480] overflow-hidden shadow-md">
+            <div className="relative w-full max-w-[640px] aspect-[640/480] overflow-hidden shadow-md group cursor-pointer">
               <Image
                 src={image}
                 alt={imageAlt}
                 fill
                 sizes="100vw"
-                className="object-cover object-center"
+                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="pointer-events-none absolute inset-4 sm:inset-5 border border-white/75 z-10" />
             </div>

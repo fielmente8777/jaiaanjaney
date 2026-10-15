@@ -63,9 +63,10 @@ const NearbyAttractionsMap: React.FC<Props> = ({ origin, places }) => {
     `&destination=${current.coords.lat},${current.coords.lng}`;
 
   return (
-    <div className="w-full" onKeyDown={onKeyDown}>
+    <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center w-full " onKeyDown={onKeyDown}>
+      
       {/* ───────────── Google Map ───────────── */}
-      <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] md:aspect-[2.4/1] bg-linear-to-br from-primary to-secondary">
+      <div className="lg:order-2 relative w-full aspect-[4/5] sm:aspect-[16/10] md:aspect-[5/3] bg-linear-to-br from-primary to-secondary">
         {API_KEY ? (
           <APIProvider apiKey={API_KEY}>
             <Map
@@ -133,7 +134,7 @@ const NearbyAttractionsMap: React.FC<Props> = ({ origin, places }) => {
       </div>
 
       {/* ───────────── Details ───────────── */}
-      <Container className="pt-8 md:pt-10">
+      <Container className=" lg:order-1 pt-8 md:pt-10">
         <div
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
