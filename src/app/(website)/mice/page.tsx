@@ -11,7 +11,6 @@ import { meetingsPageData } from "./components/pageData";
 import StatsStrip from "@/components/CommonComponents/StatsStrip";
 import WelComeNote from "@/components/CommonComponents/WelComeNote";
 import { ArticlesPageData } from "../blogs/components/pagedata";
-import EnquirySection from "@/components/CommonComponents/EnquirySection";
 
 export const metadata: Metadata = {
   title: "Meetings & Events | Jai Anjaney Resort, Salasar",
@@ -26,7 +25,7 @@ export default function MeetingsAndEvents() {
       <EventsIntro {...meetingsPageData.intro} />
       <EventFormats {...meetingsPageData.formats} />
       <EventsBanner {...meetingsPageData.banner} />
-      <EnquirySection {...meetingsPageData.rfp} />
+      <RfpSection {...meetingsPageData.rfp} />
       <WelComeNote {...ArticlesPageData.welcomeNote} />
     </main>
   );

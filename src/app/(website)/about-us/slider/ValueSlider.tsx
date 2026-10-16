@@ -48,7 +48,7 @@ const ValuesSlider: React.FC<ValuesSectionType> = ({
     <div
       className="
         absolute
-        z-50
+        z-10
         top-1/2
         -translate-y-1/2
         left-[calc(50%-28px)]
