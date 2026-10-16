@@ -236,7 +236,7 @@ const WebsiteNav = () => {
                         "text-[15px] transition-colors",
                         isActive
                           ? "text-secondary"
-                          : "text-black hover:text-secondary"
+                          : "text-black/70 hover:text-secondary"
                       )}
                     >
                       {link.label}

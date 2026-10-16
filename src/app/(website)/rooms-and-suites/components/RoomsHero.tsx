@@ -17,7 +17,6 @@
 //     className="relative border-b-2 border-primary bg-linear-to-b from-cream to-[#FCEBD3] pt-10 pb-12 md:pt-14 md:pb-16"
 //   >
 
-
 //     <div className="relative z-10 flex flex-col items-center gap-3 px-4 text-center">
 //       <Tagline eyebrow={eyebrow} />
 //       <SectionHeading
@@ -73,8 +72,6 @@ const RoomsHero: React.FC<RoomsHeroType> = ({
     defaultPadding={false}
     className="relative border-b-2 border-primary bg-linear-to-b from-[#FCEBD3] to-cream pt-10 pb-12 md:pt-14 md:pb-16 bg-image bg-right"
   >
-
-
     <div className="relative z-10 flex flex-col items-center gap-3 px-4 text-center">
       <Tagline eyebrow={eyebrow} />
       <SectionHeading
@@ -101,7 +98,7 @@ const RoomsHero: React.FC<RoomsHeroType> = ({
 
       {/* booking bar sits half over the bottom edge of the arches on desktop */}
       <div className="relative z-20 mx-auto mt-4 w-full max-w-[975px] lg:-mt-10">
-        <BookingForm/>
+        <BookingForm bg="bg-white shadow-md" textColor="text-black" />
       </div>
     </div>
 
