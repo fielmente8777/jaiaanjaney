@@ -27,7 +27,7 @@ export default function MeetingsAndEvents() {
       <EventsIntro {...meetingsPageData.intro} />
       <EventFormats {...meetingsPageData.formats} />
       <EventsBanner {...meetingsPageData.banner} />
-      <EnquirySection {...meetingsPageData.rfp} />
+      <RfpSection {...meetingsPageData.rfp} />
       <WelComeNote {...ArticlesPageData.welcomeNote} />
     </main>
   );
