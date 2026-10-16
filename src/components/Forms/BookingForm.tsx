@@ -302,7 +302,7 @@ export default function BookingForm({
   return (
     <div className="w-full">
       <div
-        className={`grid w-full grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_auto] lg:h-[56px] items-stretch backdrop-blur-sm border border-current/30 lg:border-0 divide-y lg:divide-y-0 lg:divide-x divide-current/30 ${bg} ${textColor}`}
+        className={`grid w-full grid-cols-1 lg:grid-cols-[1fr_1fr_1fr_auto] lg:h-[56px] items-stretch backdrop-blur-sm border border-current/60 lg:border-0 divide-y lg:divide-y-0 lg:divide-x divide-current/30 shadow-xl lg:shadow-none ${bg} ${textColor}`}
       >
         {/* Dates */}
         <div className={`${fieldCls} cursor-pointer`}>

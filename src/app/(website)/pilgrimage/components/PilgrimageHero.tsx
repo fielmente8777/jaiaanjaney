@@ -17,7 +17,11 @@ const renderHeroChecklistIcon = (item: { text: string; icon?: string }) => {
       </div>
     );
   }
-  if (key.includes("catering") || key.includes("kitchen") || key.includes("sattvic")) {
+  if (
+    key.includes("catering") ||
+    key.includes("kitchen") ||
+    key.includes("sattvic")
+  ) {
     return (
       <div className="w-7 h-7 flex items-center justify-center shrink-0 [&>svg]:w-[23px] [&>svg]:h-[23px] [&>svg_*]:stroke-[#E9621C]">
         <CateringIcon />
@@ -53,7 +57,6 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
   return (
     <ArchFrame
       shape="dome"
-      outlineClassName="text-secondary/70"
       className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none group cursor-pointer"
     >
       <Image

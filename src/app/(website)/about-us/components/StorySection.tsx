@@ -11,13 +11,12 @@ const StorySection: React.FC<StorySectionType> = ({
   description,
   images,
 }) => (
-  <SectionWithContainer 
+  <SectionWithContainer
     sectionClassName="relative bg-image bg-right"
     containerClassName="md:space-y-10 space-y-6"
   >
-    <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
-
-    <div className="absolute -right-60 bottom-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+    <div className="pointer-events-none absolute z-0 -left-24 -bottom-10 w-48 md:-left-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
+    <div className="pointer-events-none absolute z-0 -right-24 top-0 w-48 md:-right-60 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
 
     <div className="flex flex-col items-center text-center gap-4">
       <Tagline eyebrow="" />

@@ -21,7 +21,7 @@ export default function Home() {
       <Banner {...homePageData.hero} />
       <div className="lg:hidden bg-linear-to-r from-primary to-secondary py-4">
         <Container>
-          <BookingForm />
+          <BookingForm/>
           <p className="mt-4 text-lg md:text-xl text-white text-center font-light">
             {homePageData.hero.description}
           </p>

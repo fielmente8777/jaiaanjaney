@@ -88,8 +88,9 @@ const WhereToDineSection: React.FC<WhereToDineSectionType> = ({
       sectionClassName="relative bg-[#FAF6EC] overflow-hidden py-16 md:py-24 border-b-[5px] border-[#E9621C]"
     >
       {/* Background Radial Accent Glow */}
-      <div className="absolute -top-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" />
-
+      {/* <div className="absolute -top-[205px] -left-[205px] w-[411px] h-[411px] rounded-full bg-linear-95 blur-[300px] from-primary to-secondary pointer-events-none z-0" /> */}
+      {/* <div className="pointer-events-none absolute z-0 -left-24 -bottom-10 w-48 md:-left-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" /> */}
+      <div className="pointer-events-none absolute z-0 -left-24 top-0 w-48 md:-right-60 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
       {/* Section Header */}
       <div className="flex flex-col items-center text-center gap-3 mb-12 md:mb-16">
         <Tagline eyebrow={eyebrow} className="!font-normal !text-[20px]" />

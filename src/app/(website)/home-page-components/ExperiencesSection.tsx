@@ -21,8 +21,8 @@ const ExperiencesSection: React.FC<ExperiencesSectionType> = ({
 
   return (
     <SectionWithContainer sectionClassName="relative bg-image bg-left">
-      <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
-
+ <div className="pointer-events-none absolute z-0 -left-24 -bottom-10 w-48 md:-left-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
+    
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-12 gap-6">
         {/* content */}
         <div className="flex flex-col justify-center items-center text-center gap-4">

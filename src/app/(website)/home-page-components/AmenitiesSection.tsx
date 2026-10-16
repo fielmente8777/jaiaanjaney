@@ -12,7 +12,7 @@ const AmenitiesSection: React.FC<AmenitiesSectionType> = ({
 }) => {
   return (
     <Section className="relative bg-image bg-left">
-      <div className="absolute -left-60 -bottom-20 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+      <div className="pointer-events-none absolute z-0 -left-24 -bottom-10 w-48 md:-left-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
 
       <div className="flex flex-col items-center justify-center md:gap-12 gap-10">
         <Container className="flex flex-col items-center justify-center gap-4">
