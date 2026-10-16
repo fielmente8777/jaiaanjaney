@@ -76,8 +76,8 @@ export const RoomPageData: RoomPageDataType = {
           size: "≈ 320 sq ft",
           bed: "King or Twin",
         },
-        image: "/rooms/room1.png",
-        images: ["/rooms/room1.png", "/rooms/room2.png", "/rooms/room3.png"],
+        image: "/rooms/room1.jpg",
+        images: ["/rooms/room1.jpg", "/rooms/room2.jpg", "/rooms/room3.jpg"],
         cta: {
           viewText: "View Room",
           viewLink: "/rooms-and-suites/deluxe-room",
@@ -97,8 +97,8 @@ export const RoomPageData: RoomPageDataType = {
           size: "≈ 410 sq ft",
           bed: "King Bed",
         },
-        image: "/rooms/room2.png",
-        images: ["/rooms/room2.png", "/rooms/room1.png", "/rooms/room3.png"],
+        image: "/rooms/room2.jpg",
+        images: ["/rooms/room2.jpg", "/rooms/room1.jpg", "/rooms/room3.jpg"],
         cta: {
           viewText: "View Room",
           viewLink: "/rooms-and-suites/super-deluxe-room",
@@ -118,8 +118,8 @@ export const RoomPageData: RoomPageDataType = {
           size: "≈ 780 sq ft",
           bed: "Master King",
         },
-        image: "/rooms/room3.png",
-        images: ["/rooms/room3.png", "/rooms/room1.png", "/rooms/room2.png"],
+        image: "/rooms/room3.jpg",
+        images: ["/rooms/room3.jpg", "/rooms/room1.jpg", "/rooms/room2.jpg"],
         cta: {
           viewText: "View Suite",
           viewLink: "/rooms-and-suites/anjaney-suite",

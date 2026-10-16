@@ -44,23 +44,21 @@ export const aboutPageData: AboutPageData = {
   },
 
   vision: {
-    title: "Our vision",
+
     items: [
+            {
+         title: "Our Vision",
+        image: "/room.png",
+        description:
+          "To become Rajasthan's most distinguished spiritual luxury resort, redefining pilgrimage hospitality through grand experiences, refined comfort and timeless cultural elegance.",
+      },
       {
+         title: "Our Mission",
         image: "/room.png",
         description:
           "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
       },
-      {
-        image: "/room.png",
-        description:
-          "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
-      },
-      {
-        image: "/room.png",
-        description:
-          "To give pilgrims and families a comfortable, peaceful stay while creating memorable spaces for weddings and celebrations on a grand scale. With generous villas and thoughtfully designed spaces to relax, we ensure every guest feels cared for throughout their journey, from arrival to departure.",
-      },
+ 
       // {
       //   image: "/room.png",
       //   description: "Give pilgrims and families a comfortable, peaceful stay",

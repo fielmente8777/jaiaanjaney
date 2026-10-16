@@ -115,57 +115,54 @@ import { NavLink, NavUpperLinks } from "./navlink";
 
 const WebsiteNav = () => {
   const pathname = usePathname();
-
   const { setIsOpenNav, isOpenNav } = useWebContext();
 
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState<number | null>(null);
 
   const lastScrollY = useRef(0);
-  const ticking = useRef(false);
-
-  const openNav = () => {
-    setIsOpenNav(!isOpenNav);
-  };
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const update = () => {
-      const y = window.scrollY;
-
-      setScrolled(y > 50);
-
-      // Hide navbar when scrolling down, show when scrolling up
-      setVisible(!(y > lastScrollY.current && y > 120));
-
-      lastScrollY.current = y;
-      ticking.current = false;
-    };
-
     const onScroll = () => {
-      if (!ticking.current) {
-        window.requestAnimationFrame(update);
-        ticking.current = true;
-      }
+      const y = window.scrollY;
+      setScrolled(y > 50);
+      setVisible(!(y > lastScrollY.current && y > 120));
+      lastScrollY.current = y;
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const measure = () => {
+      if (window.scrollY <= 50) setHeaderHeight(el.offsetHeight);
+    };
+
+    measure();
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const links = NavLink.links.slice(0, -1);
+  const cta = NavLink.links[NavLink.links.length - 1];
 
   return (
     <>
       <header
         className={clsx(
-          "max_screen_width fixed top-0 left-0 z-50 w-full",
-          "transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)]",
-          "will-change-transform",
+          "max_screen_width fixed top-0 left-0 z-50 w-full transition-transform duration-500",
           visible ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        {/* Upper Nav */}
         <div
           className={clsx(
             "grid transition-all duration-500",
@@ -174,25 +171,21 @@ const WebsiteNav = () => {
         >
           <div className="overflow-hidden">
             <div className="bg-linear-to-r from-primary to-secondary">
-              <Container className="flex items-center justify-center py-2 text-white lg:justify-between">
-                <p className="font-secondary text-lg font-semibold leading-6">
+              <Container className="flex items-center justify-center py-1.5 text-white lg:justify-between">
+                <p className="font-secondary text-base font-semibold leading-6">
                   {NavUpperLinks.text}
                 </p>
-
                 <ul className="flex items-center divide-x divide-white max-lg:hidden">
-                  {NavUpperLinks.links.map((link, index) => (
-                    <li key={index}>
+                  {NavUpperLinks.links.map((link, i) => (
+                    <li key={i}>
                       <Link
                         href={link.href}
                         className={clsx(
-                          "flex items-center gap-2 px-3 transition-colors hover:text-gray-300",
+                          "flex items-center gap-2 px-3 text-sm hover:text-gray-300",
                           link.className
                         )}
                       >
                         <span>{link.icon}</span>
-
-                        <span className="sr-only">{link.label}</span>
-
                         {link.label}
                       </Link>
                     </li>
@@ -203,23 +196,23 @@ const WebsiteNav = () => {
           </div>
         </div>
 
-        {/* Main Navigation */}
+        {/* Main Nav */}
         <nav
           className={clsx(
-            "bg-[#FAF6EC] transition-shadow duration-500",
+            "bg-cream transition-shadow duration-500",
             scrolled && "shadow-sm"
           )}
         >
           <Container
             className={clsx(
               "flex items-center justify-between transition-all duration-500",
-              scrolled ? "py-2" : "py-4"
+              scrolled ? "py-1" : "py-2"
             )}
           >
-            {/* Logo */}
+            {/* Logo - chhota kiya */}
             <Link
               href="/"
-              className="relative block aspect-4/3 w-[90px] lg:w-[120px]"
+              className="relative block aspect-4/3 w-[75px] lg:w-[100px]"
             >
               <Image
                 fill
@@ -230,18 +223,17 @@ const WebsiteNav = () => {
             </Link>
 
             {/* Desktop Links */}
-            <ul className="flex items-center justify-center gap-10 max-lg:hidden">
-              {NavLink.links.slice(0, -1).map((link, index) => {
+            <ul className="flex items-center gap-10 max-lg:hidden">
+              {links.map((link, i) => {
                 const isActive =
                   pathname === link.href ||
                   (link.href !== "/" && pathname.startsWith(`${link.href}/`));
-
                 return (
-                  <li key={index}>
+                  <li key={i}>
                     <Link
                       href={link.href}
                       className={clsx(
-                        "text-base leading-6 transition-colors duration-200",
+                        "text-[15px] transition-colors",
                         isActive
                           ? "text-secondary"
                           : "text-black hover:text-secondary"
@@ -256,15 +248,15 @@ const WebsiteNav = () => {
 
             {/* Desktop CTA */}
             <LinkButton
-              href={NavLink.links[NavLink.links.length - 1].href}
-              label={NavLink.links[NavLink.links.length - 1].label}
-              className="bg-primary uppercase text-white hover:bg-secondary lg:px-6 lg:py-3 max-lg:hidden"
+              href={cta.href}
+              label={cta.label}
+              className="bg-primary uppercase text-white hover:bg-secondary lg:px-5 lg:py-2 max-lg:hidden"
             />
 
             {/* Mobile Menu */}
             <button
               type="button"
-              onClick={openNav}
+              onClick={() => setIsOpenNav(!isOpenNav)}
               aria-label="Open mobile navigation"
               aria-expanded={isOpenNav}
               className="lg:hidden"
@@ -274,9 +266,11 @@ const WebsiteNav = () => {
           </Container>
         </nav>
       </header>
-
-      {/* Header space */}
-      <div className="h-[100px] w-full lg:h-[130px]" />
+      <div
+        aria-hidden="true"
+        style={headerHeight ? { height: headerHeight } : undefined}
+        className={clsx("w-full", !headerHeight && "h-[108px] lg:h-[127px]")}
+      />
     </>
   );
 };

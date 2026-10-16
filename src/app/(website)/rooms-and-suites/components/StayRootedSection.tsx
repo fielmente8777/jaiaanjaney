@@ -91,16 +91,16 @@ const StayRootedSection: React.FC<StayRootedSectionType> = ({
           </Description>
 
           {/* Stats */}
-          <div className="w-full mt-6 border-t items-stretch border-b divide-x divide-secondary/30 border-secondary/30 grid grid-cols-3 gap-4 sm:gap-6">
+          <div className="w-full mt-4 border-t items-stretch border-b divide-x divide-secondary/30 border-secondary/30 grid grid-cols-3 gap-4 sm:gap-6">
             {stats.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col gap-1 text-left max-lg:text-center"
+                className="flex flex-col gap-1 text-left max-lg:text-center py-5 sm:py-6 "
               >
-                <span className="font-cinzel text-[36px] sm:text-[44px] text-primary">
+                <span className="font-cinzel text-3xl sm:text-4xl md:text-[44px] text-primary">
                   {item.value}
                 </span>
-                <span className="font-nunito-sans text-[13px] uppercase text-light mt-1">
+                <span className="font-nunito-sans text-[11px] sm:text-[13px] uppercase text-light  mt-1">
                   {item.label}
                 </span>
               </div>

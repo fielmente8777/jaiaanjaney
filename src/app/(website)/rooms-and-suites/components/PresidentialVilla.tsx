@@ -138,7 +138,7 @@ const PresidentialVilla: React.FC<PresidentialVillaType> = ({
   >
     <ArchFrame
       shape="dome"
-      outlineClassName="text-secondary/70"
+     
       className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none"
     >
       <Image

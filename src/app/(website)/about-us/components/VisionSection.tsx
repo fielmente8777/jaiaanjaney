@@ -62,7 +62,7 @@ import { VisionSectionType } from "@/@types/aboutPage";
 
 const SPEED = 1000;
 
-const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
+const VisionSection: React.FC<VisionSectionType> = ({ items }) => {
   const [imageSwiper, setImageSwiper] = useState<SwiperType | null>(null);
   const [textSwiper, setTextSwiper] = useState<SwiperType | null>(null);
   const arrow = "p-1 text-white/80 hover:text-white transition-colors";
@@ -98,7 +98,7 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
           <div className="relative w-full md:aspect-16/8 aspect-4/3.5">
             <Image
               src={image}
-              alt={title}
+              alt="vision"
               fill
               sizes="100vw"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
@@ -149,12 +149,6 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
         </div>
       </div> */}
       <div className="relative mt-0 mx-0 md:z-10 md:-mt-16 md:mx-auto md:w-[64%] bg-linear-to-r from-primary to-secondary text-white p-6 md:px-8 md:py-6 border border-secondary max-md:border-x-0 max-md:border-t-0 text-center md:text-left">
-        <SectionHeading
-          title={title}
-          titleColor="white"
-          wrapperClassName="mb-2 max-md:items-center max-md:text-center"
-          titleClassName="max-md:text-3xl!"
-        />
         <div className="md:pr-14">
           <SwiperCarousel
             data={items}
@@ -163,8 +157,16 @@ const VisionSection: React.FC<VisionSectionType> = ({ title, items }) => {
             allowTouchMove={false}
             modules={[Controller]}
             onSwiper={setTextSwiper}
-            renderSlide={({ description }) => (
-              <p className="font-light text-xl">{description}</p>
+            renderSlide={({ title, description }) => (
+              <div>
+                <SectionHeading
+                  title={title}
+                  titleColor="white"
+                  wrapperClassName="mb-2 max-md:items-center max-md:text-center"
+                  titleClassName="max-md:text-3xl!"
+                />
+                <p className="text-xl font-light">{description}</p>
+              </div>
             )}
           />
         </div>

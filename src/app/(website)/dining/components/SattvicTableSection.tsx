@@ -68,7 +68,6 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
             className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] lg:leading-[62px] font-cinzel font-normal text-dark uppercase tracking-wide"
           />
 
-          {/* Philosophy Visual (Mobile) */}
           <div className="lg:hidden w-full max-w-[420px] mx-auto py-2">
             <ArchImage image={image} title={title} />
           </div>
@@ -82,7 +81,7 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
           </Description>
 
           {/* Highlights Summary Grid */}
-          <div className="w-full border-t border-b border-[#E8BF73]/60 mt-4 grid grid-cols-3 divide-x divide-[#E8BF73]/60 items-stretch">
+          <div className="w-full border-t border-b border-secondary/30 mt-4 grid grid-cols-3 divide-x divide-secondary/30 items-stretch">
             {stats.map((item, index) => (
               <div
                 key={index}

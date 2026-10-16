@@ -5,8 +5,8 @@ export interface StorySectionType {
 }
 
 export interface VisionSectionType {
-  title: string;
   items: {
+    title: string;
     description: string;
     image: string;
   }[];
