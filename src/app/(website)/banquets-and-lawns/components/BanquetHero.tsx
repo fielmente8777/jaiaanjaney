@@ -37,7 +37,7 @@ const BanquetHero: React.FC<BanquetHeroType> = ({
       {/* Hero Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-end text-center text-white px-4 sm:px-6 pb-12 sm:pb-14 md:pb-16 lg:pb-20">
         {subtitle && (
-          <p className="font-secondary italic font-bold text-lg sm:text-xl md:text-2xl text-[#E9621C] mb-2 md:mb-3 drop-shadow-md">
+          <p className="font-secondary italic font-bold text-lg sm:text-xl md:text-2xl text-white mb-2 md:mb-3 drop-shadow-md">
             {subtitle}
           </p>
         )}

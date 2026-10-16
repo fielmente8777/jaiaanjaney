@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { EyebrowIcon } from "@/utils/icons";
 interface TaglineProps {
   eyebrow: string;
   className?: string;
@@ -14,16 +14,16 @@ const Tagline: React.FC<TaglineProps> = ({
   textColor,
   showIcon = true,
 }) => {
-  return (
+ return (
     <div className={`flex flex-col items-center gap-2 ${wrapperClassName}`}>
       {showIcon && (
-        <Image
-          src="/tagline.png"
-          alt="tagline"
-          width={74}
-          height={17}
-          className={wrapperClassName.includes("items-start") ? "" : "mx-auto"}
-        />
+        <div
+          className={
+            wrapperClassName.includes("items-start") ? "" : "mx-auto"
+          }
+        >
+          <EyebrowIcon />
+        </div>
       )}
       <p
         className={`text-lg italic font-secondary ${textColor || "text-primary"} font-semibold ${className || ""}`}

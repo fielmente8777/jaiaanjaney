@@ -43,9 +43,9 @@ const DiningHero: React.FC<DiningHeroProps> = ({
       />
 
       {/* Hero Content */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end md:justify-center text-center text-white px-4 sm:px-6 pb-6 md:pb-0">
         {subtitle && (
-          <p className="font-secondary italic text-lg sm:text-xl md:text-2xl text-[#E8BF73] mb-2 md:mb-3">
+          <p className="font-secondary italic text-lg sm:text-xl md:text-2xl text-white mb-2 md:mb-3">
             {subtitle}
           </p>
         )}

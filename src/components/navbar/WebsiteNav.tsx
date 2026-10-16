@@ -159,7 +159,7 @@ const WebsiteNav = () => {
     <>
       <header
         className={clsx(
-          "max_screen_width fixed top-0 left-0 z-50 w-full transition-transform duration-500",
+          "max_screen_width fixed inset-x-0 top-0 z-50 mx-auto w-full transition-transform duration-500",
           visible ? "translate-y-0" : "-translate-y-full"
         )}
       >

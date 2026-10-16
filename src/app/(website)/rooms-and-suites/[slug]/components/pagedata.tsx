@@ -5,29 +5,20 @@ import type {
 } from "@/@types/presidentialVillaPage";
 import { contact } from "@/utils/constent";
 
-
-
 import {
   AcIcon,
   AreaIcon,
-
   BathIcon,
-
   BedIcon,
-
   DiningIcon,
   FoodIcon,
   GolfCartIcon,
   GuestIcon,
   LawnIcon,
-
   LocationIcon,
-
   PantryIcon,
   ParkingIcon,
-
   PoolIcon,
-
   ProductIcon,
   RainShowerIcon,
   SafeIcon,
@@ -38,8 +29,6 @@ import {
   TvIcon,
   WifiIcon,
 } from "@/utils/Room";
-
-
 
 const STAY_CONNECTED = {
   title: "Stay Connected",
@@ -458,8 +447,7 @@ export const RoomDetailPages: RoomDetailPageType[] = [
     slug: "presidential-villa",
     hero: {
       title: "Presidential Villa",
-      description:
-        "The crown of the estate: a private residence for guests who want the whole villa to themselves.",
+      description: "The crown of the estate, entirely yours from gate to lawn",
       images: ["/room.png", "/about.png"],
     },
 
@@ -478,7 +466,13 @@ export const RoomDetailPages: RoomDetailPageType[] = [
       title: "A Private Residence Around a Grand Salon",
       description:
         "One of only two on the estate, the Presidential Villa is a three-bedroom residence wrapped around a grand living salon, a private pantry and a pool pavilion of its own. Evenings begin beneath the chandelier and end beside lamplit water, with golf-cart transfers, a private lawn and the on-site mandir close at hand.",
-      images: ["/room.png", "/about.png", "/bnr.png", "/room.png", "/about.png"],
+      images: [
+        "/room.png",
+        "/about.png",
+        "/bnr.png",
+        "/room.png",
+        "/about.png",
+      ],
     },
 
     amenities: {
@@ -536,7 +530,11 @@ export const RoomDetailPages: RoomDetailPageType[] = [
           label: "On the Estate",
           value: "On-site mandir · Golf carts available",
         },
-        { label: "Cancellation policy", value: "View policy", link: "/contact" },
+        {
+          label: "Cancellation policy",
+          value: "View policy",
+          link: "/contact",
+        },
         { label: "House rules", value: "View policy", link: "/contact" },
       ],
     },

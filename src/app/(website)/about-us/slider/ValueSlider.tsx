@@ -20,7 +20,7 @@ const ValuesSlider: React.FC<ValuesSectionType> = ({
   title,
   items,
 }) => (
-  <div className="relative w-full max-lg:pb-8">
+  <div className="relative w-full max-lg:pb-14">
     <SwiperCarousel
       data={items}
       slidesPerView={1}
@@ -54,7 +54,7 @@ const ValuesSlider: React.FC<ValuesSectionType> = ({
         left-[calc(50%-28px)]
 
         max-lg:top-auto
-        max-lg:bottom-[-16px]
+        max-lg:bottom-2
         max-lg:left-1/2
         max-lg:-translate-x-1/2
         max-lg:translate-y-0
@@ -96,8 +96,8 @@ export const ValuesCard: React.FC<ValuesCardProps> = ({
   const Icon = icon ? ICONS[icon] : null;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[1fr_0.9fr] gap-10 lg:gap-14 items-center">
-      <div className="group overflow-hidden relative w-full aspect-4/3.5 h-[600px] md:aspect-4/4.25">
+    <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-[1fr_0.9fr] md:gap-10 lg:gap-14">
+      <div className="group relative w-full overflow-hidden max-md:order-2 max-md:aspect-4/3 md:aspect-4/4.25 md:h-[600px]">
         <Image
           src={image}
           alt={title}
@@ -108,14 +108,19 @@ export const ValuesCard: React.FC<ValuesCardProps> = ({
         />
       </div>
 
-      <div className="flex flex-col items-center text-center gap-4 lg:pl-12">
-        <Tagline eyebrow={eyebrow} />
-        <SectionHeading title={heading} />
-        {Icon && <Icon className="text-primary size-12" aria-hidden />}
-        <h3 className="text-2xl italic font-secondary font-semibold text-primary capitalize">
-          {title}
-        </h3>
-        <p className="text-light text-xl max-w-xs">{description}</p>
+      <div className="flex flex-col items-center gap-4 text-center max-md:contents lg:pl-12">
+        <div className="flex flex-col items-center gap-4 text-center max-md:order-1">
+          <Tagline eyebrow={eyebrow} />
+          <SectionHeading title={heading} />
+          {Icon && <Icon className="size-12 text-primary" aria-hidden />}
+          <h3 className="font-secondary text-2xl font-semibold capitalize italic text-primary">
+            {title}
+          </h3>
+        </div>
+
+        <p className="text-light max-w-xs text-xl max-md:order-3 max-md:mx-auto">
+          {description}
+        </p>
       </div>
     </div>
   );

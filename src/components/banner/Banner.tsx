@@ -8,17 +8,17 @@ const Banner: React.FC<HeroType> = ({ title, description, images, video }) => {
     <Section className="relative w-full aspect-4/3.5 lg:aspect-16/8">
       {video && <LazyLoadedVideo src={video.src} poster={video.poster} />}
       <div className="absolute inset-0 bg-black/30 z-10" />
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-end md:justify-center text-center  text-white px-4">
         <h1 className="text-3xl md:text-[56px] md:leading-[64px] font-primary">
           {title}
         </h1>
-        <p className="mt-4 text-lg md:text-xl max-w-3xl font-light max-lg:hidden">
+        {/* <p className="mt-4 text-lg md:text-xl max-w-3xl font-light max-lg:hidden"> */}
+        <p className="mt-3 md:mt-4 text-sm sm:text-base md:text-lg max-w-2xl font-light text-white/80 leading-relaxed font-nunito-sans">
           {description}
         </p>
       </div>
       <div className="absolute inset-x-0 bottom-4 z-30 lg:flex hidden items-center justify-center">
-        <Container
-          className="lg:max-w-5xl!">
+        <Container className="lg:max-w-5xl!">
           <BookingForm />
         </Container>
       </div>

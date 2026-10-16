@@ -8,7 +8,7 @@ Thank you!`);
 
 
 export const contact = {
-  email: "reserve@arohapalms.com",
+  email: "",
   mapUrl: "",
   phone: ["+91 12345 12345"],
   address:

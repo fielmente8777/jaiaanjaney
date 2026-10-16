@@ -105,7 +105,7 @@ const RoomsHero: React.FC<RoomsHeroType> = ({
       </div>
     </div>
 
-    <p className="relative z-10 mx-auto mt-8 max-w-xl px-4 text-center text-sm text-light md:text-base">
+    <p className="relative z-10 mx-auto mt-8 max-w-2xl px-4 text-center text-base text-light md:text-lg">
       {description}
     </p>
   </Section>

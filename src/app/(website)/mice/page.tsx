@@ -12,6 +12,7 @@ import StatsStrip from "@/components/CommonComponents/StatsStrip";
 import WelComeNote from "@/components/CommonComponents/WelComeNote";
 import { ArticlesPageData } from "../blogs/components/pagedata";
 import EnquirySection from "@/components/CommonComponents/EnquirySection";
+import { Highlights } from "../home-page-components";
 
 export const metadata: Metadata = {
   title: "Meetings & Events | Jai Anjaney Resort, Salasar",
@@ -22,7 +23,7 @@ export default function MeetingsAndEvents() {
   return (
     <main className="relative after:content-[''] after:inset-0 after:absolute after:bg-cream after:z-[-3]">
       <ImageHero {...meetingsPageData.hero} contentPosition="bottom" />
-      <StatsStrip items={meetingsPageData.stats} />
+      <Highlights items={meetingsPageData.stats} />
       <EventsIntro {...meetingsPageData.intro} />
       <EventFormats {...meetingsPageData.formats} />
       <EventsBanner {...meetingsPageData.banner} />

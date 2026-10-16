@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: Params) {
   );
 
   return (
-    <main className="relative after:content-[''] after:inset-0 after:absolute bg-linear-to-b from-[#FCEBD3] to-cream  after:bg-[#FAF6EC] after:z-[-3]">
+    <main className="relative after:content-[''] after:inset-0 after:absolute bg-linear-to-b from-[#FCEBD3]/40 to-cream  after:bg-[#FAF6EC] after:z-[-3]">
       <SectionWithContainer containerClassName="flex flex-col items-center gap-8 md:gap-10 ">
         <div className="flex max-w-3xl flex-col items-center gap-4 text-center">
           <Tagline eyebrow={`${post.category} · ${post.readTime}`} />

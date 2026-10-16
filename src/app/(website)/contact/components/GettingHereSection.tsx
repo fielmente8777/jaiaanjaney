@@ -3,6 +3,7 @@ import Image from "next/image";
 import { GettingHereSectionType } from "@/@types/contactPage";
 import { SectionWithContainer } from "@/components/sectionComponants";
 import { Description, Headings, Tagline } from "@/components/typography";
+import Swoosh from "@/components/typography/Swoosh";
 
 const GettingHereSection: React.FC<GettingHereSectionType> = ({
   eyebrow,
@@ -29,7 +30,7 @@ const GettingHereSection: React.FC<GettingHereSectionType> = ({
       <div className="relative z-10 w-full flex flex-col items-center">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center gap-3 mb-8 sm:mb-10 md:mb-[56px] max-w-5xl w-full">
-          <Tagline
+          <Swoosh
             eyebrow={eyebrow}
             className="!font-normal !text-[20px] !text-[#FAF6EC]"
           />

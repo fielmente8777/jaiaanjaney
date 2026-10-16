@@ -12,7 +12,7 @@ const ArchImage: React.FC<{ image: string; title: string }> = ({
   return (
     <ArchFrame
       shape="dome"
-      outlineClassName="text-secondary/70"
+
       className="mx-auto aspect-559/765 w-full max-w-md lg:max-w-none group cursor-pointer"
     >
       <Image
@@ -89,8 +89,8 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
                   index === 0
                     ? "pr-4 sm:pr-6"
                     : index === 1
-                    ? "px-4 sm:px-6"
-                    : "pl-4 sm:pl-6"
+                      ? "px-4 sm:px-6"
+                      : "pl-4 sm:pl-6"
                 }`}
               >
                 <span className="font-cinzel text-3xl sm:text-4xl md:text-[44px] leading-[44px] text-primary font-normal">

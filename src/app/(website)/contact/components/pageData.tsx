@@ -41,7 +41,6 @@ export const contactPageData: {
       label: "ADDRESS:",
       value:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      
     },
   },
 
@@ -66,23 +65,23 @@ export const contactPageData: {
       {
         title: "BY ROAD",
         items: [
-          { destination: "Jaipur", distance: "00 KM" },
-          { destination: "Delhi", distance: "00 KM" },
-          { destination: "Bikaner", distance: "00 KM" },
+          { destination: "Jaipur", distance: "170 km" },
+          { destination: "Delhi", distance: "300 km" },
+          { destination: "Bikaner", distance: "150 km" },
         ],
       },
       {
         title: "BY RAIL",
         items: [
-          { destination: "Sujangarh Station", distance: "00 KM" },
-          { destination: "Jaipur Junction", distance: "00 KM" },
+          { destination: "Sujangarh Station", distance: "25 km" },
+          { destination: "Jaipur Junction", distance: "170 km" },
         ],
       },
       {
         title: "BY AIR",
         items: [
-          { destination: "Jaipur International Airport", distance: "00 KM" },
-          { destination: "Delhi IGI Airport", distance: "00 KM" },
+          { destination: "Jaipur International Airport", distance: "170 km" },
+          { destination: "Delhi IGI Airport", distance: "290 KM" },
         ],
       },
     ],

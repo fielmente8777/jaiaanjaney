@@ -210,7 +210,7 @@ export const RoomPageData: RoomPageDataType = {
         icon: "wifi",
       },
       {
-        title: "Air Conditioning",
+        title: "AC",
         subtitle: "Individually controlled",
         icon: "ac",
       },
@@ -250,7 +250,7 @@ export const RoomPageData: RoomPageDataType = {
         icon: "coffee",
       },
       {
-        title: "Daily Housekeeping",
+        title: "Housekeeping",
         subtitle: "Turn-down on request",
         icon: "housekeeping",
       },

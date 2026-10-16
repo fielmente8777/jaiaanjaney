@@ -72,29 +72,51 @@ export default function BookingForm() {
     console.log("book rooms", query);
   };
 
+  // const theme = isRoomsPage
+  //   ? {
+  //       wrapper: "bg-white shadow-md",
+  //       field: "border-black text-black hover:bg-black/5",
+  //       placeholder: "placeholder:text-black",
+  //       icon: "text-black",
+  //     }
+  //   : {
+  //       wrapper: "bg-white/20 backdrop-blur-sm",
+  //       field: "border-white text-white hover:bg-white/5",
+  //       placeholder: "placeholder:text-white",
+  //       icon: "text-white",
+  //     };
+
+  // const fieldCls = `relative flex items-center gap-2.5 px-5 h-14 border transition-colors ${theme.field}`;
+  // const labelCls =
+  //   "tracking-wide whitespace-nowrap text-sm font-medium leading-5";
+  // const inputCls = `w-full bg-transparent ${theme.placeholder} placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-sm font-medium leading-5 outline-none`;
+
   const theme = isRoomsPage
     ? {
         wrapper: "bg-white shadow-md",
-        field: "border-black text-black hover:bg-black/5",
+        field: "border-black/20 text-black hover:bg-black/5",
         placeholder: "placeholder:text-black",
         icon: "text-black",
       }
     : {
         wrapper: "bg-white/20 backdrop-blur-sm",
-        field: "border-white text-white hover:bg-white/5",
+        field: "border-white/30 text-white hover:bg-white/10",
         placeholder: "placeholder:text-white",
         icon: "text-white",
       };
 
-  const fieldCls = `relative flex items-center gap-2.5 px-5 h-14 border transition-colors ${theme.field}`;
+  const fieldCls = `relative flex items-center gap-3 px-5 h-12 lg:h-full border-b lg:border-b-0 lg:border-r transition-colors ${theme.field}`;
   const labelCls =
-    "tracking-wide whitespace-nowrap text-sm font-medium leading-5";
-  const inputCls = `w-full bg-transparent ${theme.placeholder} placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-sm font-medium leading-5 outline-none`;
+    "whitespace-nowrap text-base font-normal leading-6 capitalize";
+  const inputCls = `w-full bg-transparent ${theme.placeholder} placeholder:capitalize placeholder:text-base placeholder:font-normal placeholder:leading-6 text-base font-normal leading-6 outline-none`;
 
   return (
     <div className="w-full">
-      <div
+      {/* <div
         className={`grid w-full lg:grid-cols-[1fr_1fr_1fr_auto] md:grid-cols-2 grid-cols-1 gap-4 items-stretch p-4 ${theme.wrapper} `}
+      > */}
+      <div
+        className={`grid w-full lg:grid-cols-[1fr_1fr_1fr_auto] md:grid-cols-2 grid-cols-1 items-stretch ${theme.wrapper}`}
       >
         {/* Dates */}
         <div className={`${fieldCls} cursor-pointer `}>
@@ -128,9 +150,7 @@ export default function BookingForm() {
             className="flex w-full items-center gap-2.5 text-left"
           >
             <FillUserIcon className={theme.icon} />
-            <span
-              className={`${labelCls} ${adults || children ? "" : "uppercase"}`}
-            >
+            <span className={`${labelCls} ${adults || children ? "" : ""}`}>
               {adults || children ? guestLabel : "Occupancy"}
             </span>
           </button>
@@ -161,7 +181,9 @@ export default function BookingForm() {
         </div>
 
         {/* Promo code */}
-        <div className={fieldCls}>
+        {/* <div className={fieldCls}> */}
+
+        <div className={`${fieldCls} lg:border-r-0`}>
           <label htmlFor="promo-code" className="sr-only">
             Promo code
           </label>
@@ -177,11 +199,18 @@ export default function BookingForm() {
         </div>
 
         {/* CTA */}
-        <button
+        {/* <button
           type="button"
           onClick={handleSearch}
           // disabled={!startDate || !endDate}
           className="h-14 px-7 bg-primary text-white uppercase text-sm font-medium leading-5 tracking-widest transition-colors whitespace-nowrap disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          Book Now
+        </button> */}
+        <button
+          type="button"
+          onClick={handleSearch}
+          className="h-16 lg:h-[70px] px-8 bg-primary text-white uppercase text-sm font-medium leading-5 tracking-widest transition-colors whitespace-nowrap disabled:cursor-not-allowed disabled:opacity-60"
         >
           Book Now
         </button>
