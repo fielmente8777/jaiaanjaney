@@ -91,19 +91,20 @@ export default function BookingForm() {
   //   "tracking-wide whitespace-nowrap text-sm font-medium leading-5";
   // const inputCls = `w-full bg-transparent ${theme.placeholder} placeholder:uppercase placeholder:text-sm placeholder:font-medium placeholder:leading-5 placeholder:tracking-wide text-sm font-medium leading-5 outline-none`;
 
-  const theme = isRoomsPage
-    ? {
-        wrapper: "bg-white shadow-md",
-        field: "border-black/20 text-black hover:bg-black/5",
-        placeholder: "placeholder:text-black",
-        icon: "text-black",
-      }
-    : {
-        wrapper: "bg-white/20 backdrop-blur-sm",
-        field: "border-white/30 text-white hover:bg-white/10",
-        placeholder: "placeholder:text-white",
-        icon: "text-white",
-      };
+const theme = isRoomsPage
+  ? {
+      wrapper: "bg-white shadow-md border border-black/30 lg:border-0",
+      field: "border-black/20 text-black hover:bg-black/5",
+      placeholder: "placeholder:text-black",
+      icon: "text-black",
+    }
+  : {
+      wrapper:
+        "bg-white/20 backdrop-blur-sm border border-white/60 lg:border-0",
+      field: "border-white/30 text-white hover:bg-white/10",
+      placeholder: "placeholder:text-white",
+      icon: "text-white",
+    };
 
   const fieldCls = `relative flex items-center gap-3 px-5 h-12 lg:h-full border-b lg:border-b-0 lg:border-r transition-colors ${theme.field}`;
   const labelCls =

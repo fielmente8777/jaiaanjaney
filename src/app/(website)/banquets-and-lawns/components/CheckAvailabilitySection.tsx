@@ -20,7 +20,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
   eyebrow = "Plan Your Event",
   title = "CHECK VENUE AVAILABILITY",
   subtitle = "Share your dates and guest count — our events team will suggest the right venues and send a proposal.",
-  image = "/banquet/banquet-hall.png",
+  image = "/bnr.jpg",
   imageCaption = "Room for Every Celebration",
   phone = "+91 12345 12345",
 }) => {
@@ -141,7 +141,9 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
           >
             {submitted && (
               <div className="bg-green-50 border border-green-300 text-green-800 p-4 rounded text-sm mb-2 font-nunito-sans">
-                Thank you! Your event inquiry has been received. Our events team will connect with you shortly with venue availability and a customized proposal.
+                Thank you! Your event inquiry has been received. Our events team
+                will connect with you shortly with venue availability and a
+                customized proposal.
               </div>
             )}
 
@@ -215,13 +217,36 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                     <option value="" className="text-[#8E8B85]">
                       Wedding, reception, corporate...
                     </option>
-                    <option value="Wedding" className="text-dark">Wedding</option>
-                    <option value="Reception" className="text-dark">Reception</option>
-                    <option value="Engagement / Pre-wedding" className="text-dark">Engagement / Pre-wedding</option>
-                    <option value="Corporate / MICE" className="text-dark">Corporate / Conference</option>
-                    <option value="Spiritual / Satsang / Puja" className="text-dark">Spiritual / Satsang / Puja</option>
-                    <option value="Birthday / Anniversary" className="text-dark">Birthday / Anniversary</option>
-                    <option value="Other Celebration" className="text-dark">Other Celebration</option>
+                    <option value="Wedding" className="text-dark">
+                      Wedding
+                    </option>
+                    <option value="Reception" className="text-dark">
+                      Reception
+                    </option>
+                    <option
+                      value="Engagement / Pre-wedding"
+                      className="text-dark"
+                    >
+                      Engagement / Pre-wedding
+                    </option>
+                    <option value="Corporate / MICE" className="text-dark">
+                      Corporate / Conference
+                    </option>
+                    <option
+                      value="Spiritual / Satsang / Puja"
+                      className="text-dark"
+                    >
+                      Spiritual / Satsang / Puja
+                    </option>
+                    <option
+                      value="Birthday / Anniversary"
+                      className="text-dark"
+                    >
+                      Birthday / Anniversary
+                    </option>
+                    <option value="Other Celebration" className="text-dark">
+                      Other Celebration
+                    </option>
                   </select>
                   <div className="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none flex items-center justify-center">
                     <ChevronDown />
@@ -273,11 +298,21 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                     <option value="" className="text-[#8E8B85]">
                       Approx. number
                     </option>
-                    <option value="50–150" className="text-dark">50–150 guests</option>
-                    <option value="150–300" className="text-dark">150–300 guests</option>
-                    <option value="300–600" className="text-dark">300–600 guests</option>
-                    <option value="600–1000" className="text-dark">600–1,000 guests</option>
-                    <option value="1000+" className="text-dark">1,000+ guests</option>
+                    <option value="50–150" className="text-dark">
+                      50–150 guests
+                    </option>
+                    <option value="150–300" className="text-dark">
+                      150–300 guests
+                    </option>
+                    <option value="300–600" className="text-dark">
+                      300–600 guests
+                    </option>
+                    <option value="600–1000" className="text-dark">
+                      600–1,000 guests
+                    </option>
+                    <option value="1000+" className="text-dark">
+                      1,000+ guests
+                    </option>
                   </select>
                   <div className="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none flex items-center justify-center">
                     <ChevronDown />
