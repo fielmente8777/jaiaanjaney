@@ -12,7 +12,7 @@ const BanquetHero: React.FC<BanquetHeroType> = ({
   return (
     <Section
       defaultPadding={false}
-      className="relative w-full aspect-[1440/640] min-h-[480px] sm:min-h-[560px] lg:min-h-[640px] overflow-hidden border-b-[5px] border-[#E9621C]"
+      className="relative w-full aspect-[1440/640] min-h-[480px] sm:min-h-[560px] lg:min-h-[640px] overflow-hidden border-b-[5px] border-primary"
     >
       <div className="absolute inset-0">
         <Image

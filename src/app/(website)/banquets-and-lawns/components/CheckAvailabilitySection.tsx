@@ -48,7 +48,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
     <SectionWithContainer
       sectionId="check-availability"
       defaultPadding={false}
-      sectionClassName="relative bg-[#FAF6EC] overflow-hidden border-t-2 border-[#E9621C] border-b-[5px] border-[#E9621C]"
+      sectionClassName="relative bg-cream overflow-hidden border-t-2 border-primary border-b-[5px] border-primary"
       containerClassName="w-full"
     >
       {/* Featured Venue Media Column (Desktop) */}
@@ -161,7 +161,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] text-dark placeholder:text-[#8E8B85] outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
+                  className="w-full h-[50px] bg-white border border-gold/60 px-[14px] text-dark placeholder:text-muted outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
                 />
               </div>
 
@@ -177,7 +177,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  className="w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] text-dark placeholder:text-[#8E8B85] outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
+                  className="w-full h-[50px] bg-white border border-gold/60 px-[14px] text-dark placeholder:text-muted outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] text-dark placeholder:text-[#8E8B85] outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
+                  className="w-full h-[50px] bg-white border border-gold/60 px-[14px] text-dark placeholder:text-muted outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
                 />
               </div>
 
@@ -210,11 +210,11 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                     onChange={(e) =>
                       setFormData({ ...formData, eventType: e.target.value })
                     }
-                    className={`w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] pr-9 outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer ${
-                      formData.eventType ? "text-dark" : "text-[#8E8B85]"
+                    className={`w-full h-[50px] bg-white border border-gold/60 px-[14px] pr-9 outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer ${
+                      formData.eventType ? "text-dark" : "text-muted"
                     }`}
                   >
-                    <option value="" className="text-[#8E8B85]">
+                    <option value="" className="text-muted">
                       Wedding, reception, corporate...
                     </option>
                     <option value="Wedding" className="text-dark">
@@ -273,7 +273,7 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                     onChange={(e) =>
                       setFormData({ ...formData, eventDates: e.target.value })
                     }
-                    className="w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] pr-9 text-dark placeholder:text-[#8E8B85] outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer"
+                    className="w-full h-[50px] bg-white border border-gold/60 px-[14px] pr-9 text-dark placeholder:text-muted outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer"
                   />
                   <div className="absolute right-[14px] top-1/2 -translate-y-1/2 pointer-events-none flex items-center justify-center">
                     <ChevronDown />
@@ -291,8 +291,8 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                     onChange={(e) =>
                       setFormData({ ...formData, guests: e.target.value })
                     }
-                    className={`w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] pr-9 outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer ${
-                      formData.guests ? "text-dark" : "text-[#8E8B85]"
+                    className={`w-full h-[50px] bg-white border border-gold/60 px-[14px] pr-9 outline-none focus:border-primary font-nunito-sans font-normal text-[16px] appearance-none cursor-pointer ${
+                      formData.guests ? "text-dark" : "text-muted"
                     }`}
                   >
                     <option value="" className="text-[#8E8B85]">
@@ -333,14 +333,14 @@ const CheckAvailabilitySection: React.FC<CheckAvailabilitySectionProps> = ({
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                className="w-full h-[50px] bg-white border border-[#E8BF73]/60 px-[14px] text-dark placeholder:text-[#8E8B85] outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
+                className="w-full h-[50px] bg-white border border-gold/60 px-[14px] text-dark placeholder:text-muted outline-none focus:border-primary font-nunito-sans font-normal text-[16px]"
               />
             </div>
 
             {/* Submit Action Button */}
             <button
               type="submit"
-              className="mt-2 w-full h-[50px] bg-[#BA471B] hover:bg-[#A83C15] text-white font-nunito-sans font-semibold text-[16px] leading-[20px] tracking-[0.12em] uppercase flex items-center justify-center shadow-md transition-all cursor-pointer"
+              className="mt-2 w-full h-[50px] bg-rust hover:bg-rust-dark text-white font-nunito-sans font-semibold text-[16px] leading-[20px] tracking-[0.12em] uppercase flex items-center justify-center shadow-md transition-all cursor-pointer"
             >
               REQUEST A PROPOSAL
             </button>

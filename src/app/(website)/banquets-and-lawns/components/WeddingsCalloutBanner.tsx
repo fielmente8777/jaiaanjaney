@@ -38,7 +38,7 @@ const WeddingsCalloutBanner: React.FC<WeddingsBannerType> = ({
       <Container className="w-full relative z-10">
         <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-4xl mx-auto px-4">
           {/* Geometric Accent */}
-          <div className="w-2.5 h-2.5 bg-[#F3D5A5] rotate-45 mb-[24px] shadow-xs" />
+          <div className="w-2.5 h-2.5 bg-brand-gold-pale rotate-45 mb-[24px] shadow-xs" />
 
           {/* Primary Display Typography */}
           <h2
@@ -47,7 +47,7 @@ const WeddingsCalloutBanner: React.FC<WeddingsBannerType> = ({
           />
 
           {/* Subtitle / Category Label */}
-          <p className="font-nunito-sans text-xs sm:text-[13px] md:text-[14px] uppercase tracking-[0.2em] text-[#F3D5A5] font-light mt-[24px]">
+          <p className="font-nunito-sans text-xs sm:text-[13px] md:text-[14px] uppercase tracking-[0.2em] text-brand-gold-pale font-light mt-[24px]">
             {subtitle}
           </p>
         </div>

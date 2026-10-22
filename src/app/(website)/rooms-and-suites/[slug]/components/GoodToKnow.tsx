@@ -16,8 +16,11 @@ const GoodToKnow: React.FC<GoodToKnowType> = ({
     sectionClassName="relative bg-image bg-right"
     containerClassName="grid gap-8 lg:grid-cols-[1fr_2fr] lg:gap-16"
   >
-    <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
-    <div className="absolute -right-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+    {/* <div className="absolute -left-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+    <div className="absolute -right-60 top-0 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" /> */}
+        <div className="pointer-events-none absolute z-0 md:z-10 -left-24 top-0 w-48 md:-left-60 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
+    <div className="pointer-events-none absolute z-0 md:z-10 -right-24 top-0 w-48 md:-right-60 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
+
     <div className="flex flex-col items-start gap-3">
       <Tagline eyebrow={eyebrow} />
       <SectionHeading title={title} titleColor="dark" />

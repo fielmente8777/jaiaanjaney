@@ -24,7 +24,7 @@ const WelComeNote: React.FC<WelcomeNoteProps> = ({
   return (
     <SectionWithContainer
       containerClassName="relative z-10 md:space-y-8 space-y-4"
-      sectionClassName={`relative bg-[#FCF9F4] bg-image bg-bottom-left bg-bottom-right bg-image-after ${
+      sectionClassName={`relative bg-cream bg-image bg-bottom-left bg-bottom-right bg-image-after ${
         sectionClassName || ""
       }`}
     >

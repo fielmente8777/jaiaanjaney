@@ -13,11 +13,11 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
 }) => {
   return (
     <SectionWithContainer
-      sectionClassName="relative bg-[#FAF6EC] py-14 md:py-24 overflow-hidden border-b-4 border-[#E9621C]"
+      sectionClassName="relative bg-cream py-12 md:py-24 overflow-hidden border-b-4 border-primary"
       containerClassName="space-y-16 md:space-y-24"
     >
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 md:pb-10 border-b border-[#E3D3BC]">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 md:pb-10 border-b border-line-default">
         <div className="flex flex-col items-start gap-2">
           <Tagline
             eyebrow={eyebrow}
@@ -43,7 +43,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
             <div key={index} className="relative w-full">
               {/* Gradient Glow */}
               <div
-                className={`absolute w-[400px] sm:w-[473px] h-[400px] sm:h-[473px] aspect-square rounded-full bg-linear-95 from-primary/30 to-secondary/25 blur-[100px] sm:blur-[140px] md:blur-[160px] pointer-events-none z-30 -bottom-20 md:-bottom-28 ${
+                className={`absolute w-[400px] sm:w-[473px] h-[240px] sm:h-[473px] aspect-square rounded-full bg-linear-95 from-primary/30 to-secondary/25 blur-[80px] sm:blur-[140px] md:blur-[160px] pointer-events-none z-0 md:z-30 -bottom-20 md:-bottom-28 ${
                   isEven
                     ? "-left-16 sm:-left-24 md:-left-32"
                     : "-right-16 sm:-right-24 md:-right-32"
@@ -59,7 +59,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
 
               {/* Details Card */}
               <div
-                className={`relative md:absolute md:top-1/2 md:-translate-y-1/2 w-full md:w-[48%] lg:w-[45%] bg-white bg-linear-to-b from-white to-[#FAF6EC]/40 p-5 sm:p-7 md:px-8 lg:px-10 md:pt-[44px] md:pb-[40px] border border-secondary shadow-lg md:shadow-xl z-20 max-md:mt-0 max-md:border-t-0 ${
+                className={`relative md:absolute md:top-1/2 md:-translate-y-1/2 w-full md:w-[48%] lg:w-[45%] bg-white bg-linear-to-b from-white to-cream/40 p-5 sm:p-7 md:px-8 lg:px-10 md:pt-[44px] md:pb-[40px] border border-secondary shadow-lg md:shadow-xl z-20 max-md:mt-0 max-md:border-t-0 ${
                   isEven ? "md:left-0" : "md:right-0"
                 }`}
               >
@@ -90,7 +90,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
 
                 {/* Specs Table */}
                 <div className="mt-5 sm:mt-6 md:mt-[34px] flex flex-col">
-                  <div className="flex items-center justify-between border-b border-dashed border-[#E3D3BC] pb-2 sm:pb-2.5 md:pb-[10px]">
+                  <div className="flex items-center justify-between border-b border-dashed border-line-default pb-2 sm:pb-2.5 md:pb-[10px]">
                     <span className="font-nunito-sans text-[11.5px] leading-[16px] tracking-[0.14em] uppercase text-light">
                       Guests
                     </span>
@@ -99,7 +99,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between border-b border-dashed border-[#E3D3BC] pt-2.5 sm:pt-3 md:pt-[14px] pb-2 sm:pb-2.5 md:pb-[10px]">
+                  <div className="flex items-center justify-between border-b border-dashed border-line-default pt-2.5 sm:pt-3 md:pt-[14px] pb-2 sm:pb-2.5 md:pb-[10px]">
                     <span className="font-nunito-sans text-[11.5px] leading-[16px] tracking-[0.14em] uppercase text-light">
                       Size
                     </span>
@@ -108,7 +108,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between border-b border-dashed border-[#E3D3BC] pt-2.5 sm:pt-3 md:pt-[14px] pb-2 sm:pb-2.5 md:pb-[10px]">
+                  <div className="flex items-center justify-between border-b border-dashed border-line-default pt-2.5 sm:pt-3 md:pt-[14px] pb-2 sm:pb-2.5 md:pb-[10px]">
                     <span className="font-nunito-sans text-[11.5px] leading-[16px] tracking-[0.14em] uppercase text-light">
                       Bed
                     </span>
@@ -122,7 +122,7 @@ const BuildingRoomsSection: React.FC<BuildingRoomsSectionType> = ({
                 <div className="flex items-center justify-between gap-6 sm:gap-8 pt-5 sm:pt-6 md:pt-[28px]">
                   <Link
                     href={room.cta.viewLink}
-                    className="font-body font-medium text-[14px] leading-[20px] text-dark hover:text-primary transition-colors inline-flex items-center gap-2 border-b border-[#E9621C] pb-0.5 group/link shrink-0"
+                    className="font-body font-medium text-[14px] leading-[20px] text-dark hover:text-primary transition-colors inline-flex items-center gap-2 border-b border-primary pb-0.5 group/link shrink-0"
                   >
                     <span>{room.cta.viewText}</span>
                     <span className="text-base leading-none transition-transform duration-300 group-hover/link:translate-x-1">

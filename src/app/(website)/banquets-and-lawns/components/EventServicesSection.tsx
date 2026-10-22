@@ -39,7 +39,7 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
 }) => {
   return (
     <SectionWithContainer
-      sectionClassName="relative bg-[#FBF8F2] py-16 sm:py-20 lg:py-28 overflow-hidden"
+      sectionClassName="relative bg-cream py-16 sm:py-20 lg:py-28 overflow-hidden"
       containerClassName="relative z-10 space-y-12 sm:space-y-16"
     >
       {/* Header */}
@@ -64,7 +64,7 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
         </div>
 
         {/* 3-Column Event Services Grid */}
-        <div className="border border-[#E3D3BC] grid grid-cols-1 md:grid-cols-3">
+        <div className="border border-line-default grid grid-cols-1 md:grid-cols-3">
           {items.map((item, index) => {
             const isRow1 = index < 3;
             const isNotLastCol = index % 3 !== 2;
@@ -72,9 +72,9 @@ const EventServicesSection: React.FC<EventServicesSectionType> = ({
             return (
               <div
                 key={item.id}
-                className={`flex flex-col items-start p-6 sm:p-8 lg:p-10 transition-colors duration-200 hover:bg-white/60 group ${isRow1 ? "md:border-b md:border-[#E3D3BC]" : ""
-                  } ${isNotLastCol ? "md:border-r md:border-[#E3D3BC]" : ""} ${index < items.length - 1
-                    ? "max-md:border-b max-md:border-[#E3D3BC]"
+                className={`flex flex-col items-start p-6 sm:p-8 lg:p-10 transition-colors duration-200 hover:bg-white/60 group ${isRow1 ? "md:border-b md:border-line-default" : ""
+                  } ${isNotLastCol ? "md:border-r md:border-line-default" : ""} ${index < items.length - 1
+                    ? "max-md:border-b max-md:border-line-default"
                     : ""
                   }`}
               >

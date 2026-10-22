@@ -3,9 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --ground-ivory: #F7F3EB;
-  --line-default: #E3D3BC;
-  --brand-gold-pale: #F3D5A5;
+  --ground-ivory: #f7f3eb;
+  --line-default: #e3d3bc;
+  --brand-gold-pale: #f3d5a5;
 }
 
 @theme inline {
@@ -17,10 +17,16 @@
   --color-accent: #a2400d;
   --color-cream: #faf6ec;
   --color-espresso: #3f2416;
-  --color-ground-ivory: #F7F3EB;
-  --color-ground-ivory-light: #F7F3EB;
+  --color-ground-ivory: #f7f3eb;
+  --color-ground-ivory-light: #f7f3eb;
   --color-line-default: #e3d3bc;
-  --color-brand-gold-pale: #F3D5A5;
+  --color-brand-gold-pale: #f3d5a5;
+  --color-muted: #8e8b85;
+  --color-gold: #e8bf73;
+  --color-rust: #ba471b;
+  --color-rust-dark: #a83c15;
+  --color-cream-deep: #fcebd3;
+  --color-cream-soft: #fbf8f2;
 
   /* Fonts */
   --font-primary: var(--font-trajan-pro);

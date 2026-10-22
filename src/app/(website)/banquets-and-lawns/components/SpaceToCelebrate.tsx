@@ -17,7 +17,7 @@ const SpaceToCelebrate: React.FC<SpaceToCelebrateType> = ({
   return (
     <SectionWithContainer
       defaultPadding={false}
-      sectionClassName="relative bg-[#FAF6EC] py-16 sm:py-20 lg:py-[120px] overflow-hidden"
+      sectionClassName="relative bg-cream py-16 sm:py-20 lg:py-[120px] overflow-hidden"
       containerClassName="relative z-10"
     >
       {/* Subtle Rotating Mandala in Background (Top-Left) */}
@@ -67,7 +67,7 @@ const SpaceToCelebrate: React.FC<SpaceToCelebrateType> = ({
           <div className="pt-2 w-full flex justify-center lg:justify-start">
             <Link
               href={ctaLink}
-              className="inline-flex items-center justify-center w-[254px] h-[54px] px-[40px] py-[18px] bg-[#E9621C] hover:bg-[#D55312] text-white font-nunito-sans font-normal text-sm uppercase tracking-wider rounded-[4px] shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center w-[254px] h-[54px] px-[40px] py-[18px] bg-primary hover:bg-[#D55312] text-white font-nunito-sans font-normal text-sm uppercase tracking-wider rounded-[4px] shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
             >
               {ctaText}
             </Link>

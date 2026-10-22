@@ -11,23 +11,22 @@ const LocationSection: React.FC<LocationSectionType> = ({
   places,
 }) => {
   return (
-    <Section id="nearby-attractions" className="relative bg-image  bg-bottom-left">
-      <div className="absolute -right-60 -bottom-20 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" />
+    <Section
+      id="nearby-attractions"
+      className="relative bg-image  bg-bottom-left"
+    >
+      {/* <div className="absolute -right-60 -bottom-20 max-w-md w-full z-10 aspect-square rounded-full bg-linear-95 blur-[300px] from-primary to-secondary" /> */}
+      <div className="absolute z-0 md:z-10 -right-24 -bottom-10 w-48 md:-right-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
 
       <Container className="">
         <div className="flex flex-col items-center justify-center gap-4 mb-10 md:mb-12">
-          
           <Tagline eyebrow={eyebrow} />
-          <SectionHeading
-            title={title}
-            wrapperClassName="max-md:text-center"
-          />
+          <SectionHeading title={title} wrapperClassName="max-md:text-center" />
         </div>
         <NearbyAttractionsMap origin={origin} places={places} />
       </Container>
 
       {/* The map runs full-bleed; its details panel sits back inside the container */}
-      
     </Section>
   );
 };

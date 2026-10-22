@@ -10,8 +10,8 @@ const BanquetMetrics: React.FC<BanquetMetricsProps> = ({ metrics }) => {
   return (
     <SectionWithContainer
       defaultPadding={false}
-      sectionClassName="border-b-[0.5px] border-[#585858] bg-white"
-      containerClassName="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 px-0! items-center divide-x divide-[#585858]"
+      sectionClassName="border-b-[0.5px] border-light bg-white"
+      containerClassName="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 px-0! items-center divide-x divide-light"
     >
       {metrics.map((item, index) => (
         <div
