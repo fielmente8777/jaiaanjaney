@@ -41,7 +41,6 @@ const SattvicTableSection: React.FC<SattvicTableSectionType> = ({
     >
       {/* Background Accent Glow */}
       <div className="pointer-events-none absolute z-0 -left-24 -bottom-10 w-48 md:-left-60 md:-bottom-20 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
-      <div className="pointer-events-none absolute z-0 -right-24 top-0 w-48 md:-right-60 md:w-full md:max-w-md aspect-square rounded-full bg-linear-95 from-primary to-secondary opacity-40 md:opacity-100 blur-[100px] md:blur-[300px]" />
 
       {/* Ambient Pattern */}
       <div className="absolute -top-[80px] -left-[80px] w-[280px] h-[280px] sm:-top-[140px] sm:-left-[180px] sm:w-[480px] sm:h-[480px] pointer-events-none z-0 select-none opacity-[0.08]">

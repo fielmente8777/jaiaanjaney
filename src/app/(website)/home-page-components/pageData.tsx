@@ -105,13 +105,13 @@ export const homePageData = {
       {
         title: "Pilgrimage",
         description: "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
-        image: "/presidential.jpg",
+        image: "/pilgrimage.jpg",
       },
 
       {
         title: "MICE",
         description: "lorem ipsum dolor sit amet consectetur adipiscing elit fuga aliqua sed rerum quos consequat nobis repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm repellendus deleniti do lorem optio placeat ad exm",
-        image: "/mice.jpg",
+        image: "/meeting.jpg",
       },
     ],
   },
